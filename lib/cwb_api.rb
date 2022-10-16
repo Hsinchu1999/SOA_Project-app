@@ -6,7 +6,6 @@ require_relative 'location'
 module TravellingSuggestions
   # Library for Github Web API
   class CWBApi
-
     module Errors
       class NotFound < StandardError; end
       class Unauthorized < StandardError; end
