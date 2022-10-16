@@ -7,7 +7,7 @@ module TravellingSuggestions
       @location_data = parse_location(data)
     end
     def parse_location(data)
-      data['records']['location'][@name]
+      data['records']['location'].select{|data| data['locationName'] == @name}
     end
     def prob_rain
       @location_data['weatherElement'].select{|data| data['elementName'] == 'PoP'}
