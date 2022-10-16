@@ -22,8 +22,8 @@ module TravellingSuggestions
     end
 
     def location(location)
-      data = call_cwb_url('F-C0032-001')
-      Location.new(data)
+      data = call_cwb_url('F-C0032-001').parse
+      Location.new(location, data)
     end
 
     private
