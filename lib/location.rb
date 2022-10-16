@@ -2,8 +2,12 @@
 
 module TravellingSuggestions
   class Location
-    def initialize(data)
-      @location_data = data
+    def initialize(name, data)
+      @name = name
+      @location_data = parse_location(data)
+    end
+    def parse_location(data)
+      data['records']['location'][@name]
     end
     def prob_rain
       @location_data['weatherElement'].select{|data| data['elementName'] == 'PoP'}

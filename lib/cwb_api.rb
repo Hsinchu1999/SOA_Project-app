@@ -22,9 +22,8 @@ module TravellingSuggestions
     end
 
     def location(location)
-      data = call_cwb_url('F-C0032-001').parse
-      location_data = data['records']['location'].select{|data| data['locationName'] == location}
-      Location.new(location_data)
+      data = call_cwb_url('F-C0032-001').parse_location
+      Location.new(data)
     end
 
     private
