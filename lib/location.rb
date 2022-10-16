@@ -13,10 +13,10 @@ module TravellingSuggestions
       @location_data['weatherElement'].select{|data| data['elementName'] == 'PoP'}[0]
     end
     def min_temperature
-        @location_data['weatherElement'][0].select{|data| data['elementName'] == 'minT'}[0]
+        @location_data['weatherElement'].select{|data| data['elementName'] == 'MinT'}[0]
     end
     def max_temperature
-        @location_data['weatherElement'][0].select{|data| data['elementName'] == 'maxT'}[0]
+        @location_data['weatherElement'].select{|data| data['elementName'] == 'MaxT'}[0]
     end
   end
 end

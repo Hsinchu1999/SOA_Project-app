@@ -16,6 +16,9 @@ describe 'Tests CWB API library' do
     it 'HAPPY: should provide correct location attributes' do 
         location = TravellingSuggestions::CWBApi.new(CWB_TOKEN).location(LOCATION)
         _(location.prob_rain).must_equal CORRECT[0]['weatherElement'].select{|data| data['elementName'] == 'PoP'}[0]
+        _(location.min_temperature).must_equal CORRECT[0]['weatherElement'].select{|data| data['elementName'] == 'MinT'}[0]
+        _(location.max_temperature).must_equal CORRECT[0]['weatherElement'].select{|data| data['elementName'] == 'MaxT'}[0]
     end
+
   end
 end
