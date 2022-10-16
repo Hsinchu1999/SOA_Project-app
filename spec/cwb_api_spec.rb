@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 require 'minitest/autorun'
+<<<<<<< HEAD
 #require 'minitest/rg'
+=======
+>>>>>>> c3f1d25a232b10e9a893b28db49bbd40cb7c3aae
 require 'yaml'
 require_relative '../lib/cwb_api'
 
