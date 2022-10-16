@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'minitest/autorun'
-require 'minitest/rg'
+#require 'minitest/rg'
 require 'yaml'
 require_relative '../lib/cwb_api'
 
@@ -16,7 +16,8 @@ describe 'Tests CWB API library' do
   describe 'Location information' do 
     it 'HAPPY: should provide correct location attributes' do 
         location = TravellingSuggestions::CWBApi.new(CWB_TOKEN).location(LOCATION)
-        _(location.prob_rain).must_equal CORRECT['weatherElement'].select{|data| data['elementName'] == 'PoP'}
+        _(location.prob_rain).must_equal CORRECT[0]['weatherElement'].select{|data| data['elementName'] == 'PoP'}
     end
   end
+  describe
 end
