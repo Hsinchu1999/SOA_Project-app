@@ -30,8 +30,7 @@ module TravellingSuggestions
 
     def call_cwb_url(functionality)
       result =
-        HTTP.get('https://opendata.cwb.gov.tw/api/v1/rest/datastore/#{functionality}?Authorization=#{@cwb_token}')
-
+        HTTP.get("https://opendata.cwb.gov.tw/api/v1/rest/datastore/#{functionality}?Authorization=#{@cwb_token}")
       successful?(result) ? result : raise(HTTP_ERROR[result.code])
     end
 
