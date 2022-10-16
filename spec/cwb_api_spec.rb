@@ -18,5 +18,4 @@ describe 'Tests CWB API library' do
         _(location.prob_rain).must_equal CORRECT[0]['weatherElement'].select{|data| data['elementName'] == 'PoP'}[0]
     end
   end
-  describe
 end
