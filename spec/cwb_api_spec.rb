@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'minitest/autorun'
+require 'minitest/rg'
 require 'yaml'
 require_relative '../lib/cwb_api'
 
@@ -19,8 +20,8 @@ describe 'Tests CWB API library' do
     it 'HAPPY: should provide correct location attributes' do
       location = TravellingSuggestions::CWBApi.new(CWB_TOKEN).location(LOCATION)
       _(location.prob_rain).must_equal CORRECTPOP
-      _(location.min_temperature).must_equal
-      _(location.max_temperature).must_equal
+      _(location.min_temperature).must_equal CORRECTMINT
+      _(location.max_temperature).must_equal CORRECTMAXT
     end
 
     it 'SAD: should raise exception when unauthorized' do
