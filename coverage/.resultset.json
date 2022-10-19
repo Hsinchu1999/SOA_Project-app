@@ -1,0 +1,82 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/peter/NTHUISA/SOA/project/lib/cwb_api.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/peter/NTHUISA/SOA/project/lib/location.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          23,
+          null,
+          null,
+          1,
+          6,
+          null,
+          null,
+          1,
+          6,
+          null,
+          null,
+          1,
+          6,
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1666165586
+  }
+}
