@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/celine25lin/project/SOA_Project/lib/cwb_api.rb": {
+      "/home/daybreak99/soa/SOA_Project/lib/cwb_api.rb": {
         "lines": [
           null,
           null,
@@ -12,16 +12,6 @@
           null,
           1,
           1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
           2,
           null,
           null,
@@ -35,17 +25,39 @@
           1,
           null,
           2,
+          null,
           2,
+          2,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
           null,
           null,
           1,
           2,
+          null,
+          null,
+          1,
+          1,
+          null,
           null,
           null,
           null
         ]
       },
-      "/home/celine25lin/project/SOA_Project/lib/location.rb": {
+      "/home/daybreak99/soa/SOA_Project/lib/location.rb": {
         "lines": [
           null,
           null,
@@ -77,6 +89,6 @@
         ]
       }
     },
-    "timestamp": 1666173090
+    "timestamp": 1666191015
   }
 }
