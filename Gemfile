@@ -10,5 +10,5 @@ gem 'simplecov', '~> 0'
 gem 'vcr', '~> 6'
 gem 'webmock', '~> 3'
 
-# reek
+# Code Quality
 gem 'reek'
