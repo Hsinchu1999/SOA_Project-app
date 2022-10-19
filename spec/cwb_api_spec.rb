@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
+require_relative 'spec_helper.rb'
 require 'minitest/autorun'
 require 'minitest/rg'
 require 'yaml'
 require_relative '../lib/cwb_api'
-require_relative 'spec_helper.rb'
+
 
 describe 'Tests CWB API library' do
   VCR.configure do |c|
