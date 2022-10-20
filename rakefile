@@ -1,38 +1,40 @@
+# frozen_string_literal: true
+
 require 'rake/testtask'
 
 CODE = 'lib/'
 
-task :defult do 
-    puts `rake -T`
+task :defult do
+  puts `rake -T`
 end
 
 desc 'run tests'
-task :spec do 
-    sh 'ruby spec/cwb_api_spec.rb'
+task :spec do
+  sh 'ruby spec/cwb_api_spec.rb'
 end
 
 namespace :vcr do
-    desc 'delete cassette fixtures'
-    task :wipe do
-        sh 'rm spec/fixtures/cassettes/*.yml' do |ok, _|
-            puts(ok ? 'Cassettes deleted' : 'No cassettes found')
-        end
+  desc 'delete cassette fixtures'
+  task :wipe do
+    sh 'rm spec/fixtures/cassettes/*.yml' do |ok, _|
+      puts(ok ? 'Cassettes deleted' : 'No cassettes found')
     end
+  end
 end
 
 namespace :quality do
-    desc 'run all quality checks'
-    task all: %i[rubocop reek flog]
+  desc 'run all quality checks'
+  task all: %i[rubocop reek flog]
 
-    task :rubocop do
-        sh 'rubocop'
-    end
+  task :rubocop do
+    sh 'rubocop lib/'
+  end
 
-    task :reek do
-        sh 'reek'
-    end
+  task :reek do
+    sh 'reek lib/cwb_api.rb'
+  end
 
-    task :flog do
-        sh "flog #(CODE)"
-    end
+  task :flog do
+    sh 'flog #(CODE)'
+  end
 end
