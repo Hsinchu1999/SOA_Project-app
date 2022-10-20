@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/daybreak99/soa/SOA_Project/lib/cwb_api.rb": {
+      "/home/peter/NTHUISA/SOA/project/lib/cwb_api.rb": {
         "lines": [
           null,
           null,
@@ -57,7 +57,7 @@
           null
         ]
       },
-      "/home/daybreak99/soa/SOA_Project/lib/location.rb": {
+      "/home/peter/NTHUISA/SOA/project/lib/location.rb": {
         "lines": [
           null,
           null,
@@ -89,6 +89,6 @@
         ]
       }
     },
-    "timestamp": 1666191015
+    "timestamp": 1666249220
   }
 }
