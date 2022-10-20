@@ -12,7 +12,6 @@ require 'webmock'
 
 require_relative '../lib/cwb_api'
 
-
 LOCATION = '新竹縣'
 CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
 CWB_TOKEN = CONFIG['cwb-gov']

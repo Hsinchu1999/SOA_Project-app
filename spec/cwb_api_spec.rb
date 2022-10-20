@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
-require_relative 'spec_helper.rb'
+require_relative 'spec_helper'
 require 'minitest/autorun'
 require 'minitest/rg'
 require 'yaml'
 require_relative '../lib/cwb_api'
-
 
 describe 'Tests CWB API library' do
   VCR.configure do |c|
@@ -14,8 +13,8 @@ describe 'Tests CWB API library' do
 
     c.filter_sensitive_data('<CWB_TOKEN>') { CWB_TOKEN }
   end
-  
-  before do 
+
+  before do
     VCR.insert_cassette CASSETTE_FILE, record: :new_episodes, match_requests_on: %i[method uri headers]
   end
 
