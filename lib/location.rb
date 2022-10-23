@@ -9,19 +9,19 @@ module TravellingSuggestions
     end
 
     def parse_location(data)
-      data['records']['location'].select { |e| e['locationName'] == @name }[0]
+      data['records']['location'].select { |element| element['locationName'] == @name }[0]
     end
 
     def prob_rain
-      @location_data['weatherElement'].select { |e| e['elementName'] == 'PoP' }[0]
+      @location_data['weatherElement'].select { |element| element['elementName'] == 'PoP' }[0]
     end
 
     def min_temperature
-      @location_data['weatherElement'].select { |e| e['elementName'] == 'MinT' }[0]
+      @location_data['weatherElement'].select { |element| element['elementName'] == 'MinT' }[0]
     end
 
     def max_temperature
-      @location_data['weatherElement'].select { |e| e['elementName'] == 'MaxT' }[0]
+      @location_data['weatherElement'].select { |element| element['elementName'] == 'MaxT' }[0]
     end
   end
 end

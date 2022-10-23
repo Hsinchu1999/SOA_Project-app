@@ -1,26 +1,33 @@
 # frozen_string_literal: true
 
+require_relative 'spec_helper'
 require 'minitest/autorun'
+require 'minitest/rg'
 require 'yaml'
 require_relative '../lib/cwb_api'
 
-LOCATION = '新竹縣'
-
-CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
-CWB_TOKEN = CONFIG['cwb-gov']
-YML_FILE = YAML.safe_load(File.read('spec/fixtures/cwb_results.yml'))
-CORRECT = YML_FILE.select { |data| data['locationName'] == LOCATION }
-CORRECTPOP = CORRECT[0]['weatherElement'].select { |data| data['elementName'] == 'PoP' }[0]
-CORRECTMINT = CORRECT[0]['weatherElement'].select { |data| data['elementName'] == 'MinT' }[0]
-CORRECTMAXT = CORRECT[0]['weatherElement'].select { |data| data['elementName'] == 'MaxT' }[0]
-UNAUTHORIZED = TravellingSuggestions::CWBApi::Errors::Unauthorized
 describe 'Tests CWB API library' do
+  VCR.configure do |c|
+    c.cassette_library_dir = CASSETTE_FOLDER
+    c.hook_into :webmock
+
+    c.filter_sensitive_data('<CWB_TOKEN>') { CWB_TOKEN }
+  end
+
+  before do
+    VCR.insert_cassette CASSETTE_FILE, record: :new_episodes, match_requests_on: %i[method uri headers]
+  end
+
+  after do
+    VCR.eject_cassette
+  end
+
   describe 'Location information' do
     it 'HAPPY: should provide correct location attributes' do
       location = TravellingSuggestions::CWBApi.new(CWB_TOKEN).location(LOCATION)
       _(location.prob_rain).must_equal CORRECTPOP
-      _(location.min_temperature).must_equal
-      _(location.max_temperature).must_equal
+      _(location.min_temperature).must_equal CORRECTMINT
+      _(location.max_temperature).must_equal CORRECTMAXT
     end
 
     it 'SAD: should raise exception when unauthorized' do

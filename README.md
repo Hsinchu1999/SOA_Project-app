@@ -20,10 +20,10 @@ The APIs we currently using is the weather API from Central Weather Bureau (api 
 
 ### Elements
 
-1. users's location
+1. users's __location__
 2. route planning
-3. weather forecast
-4. weather records
+3. weather __forecast__
+4. weather __records__
 5. map layers
 
 ### Entities
