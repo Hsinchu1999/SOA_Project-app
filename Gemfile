@@ -12,3 +12,7 @@ gem 'webmock', '~> 3'
 
 # Code Quality
 gem 'reek'
+
+#entities
+gem 'dry-types'
+gem 'dry-struct'
