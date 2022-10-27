@@ -4,7 +4,7 @@ require_relative 'spec_helper'
 require 'minitest/autorun'
 require 'minitest/rg'
 require 'yaml'
-require_relative '../lib/cwb_api'
+require_relative '../lib/gateways/cwb_api.rb'
 
 describe 'Tests CWB API library' do
   VCR.configure do |c|
@@ -24,14 +24,12 @@ describe 'Tests CWB API library' do
 
   describe 'Location information' do
     it 'HAPPY: should provide correct location attributes' do
-      location = TravellingSuggestions::CWBApi.new(CWB_TOKEN).location(LOCATION)
-      _(location.prob_rain).must_equal CORRECTPOP
-      _(location.min_temperature).must_equal CORRECTMINT
-      _(location.max_temperature).must_equal CORRECTMAXT
+      location = TravellingSuggestions::CWB::CWBApi.new(CWB_TOKEN).location_data(LOCATION)
+      _(location).must_equal CORRECTLOCATION
     end
 
     it 'SAD: should raise exception when unauthorized' do
-      _(proc do TravellingSuggestions::CWBApi.new('BAD_TOKEN').location(LOCATION) end).must_raise UNAUTHORIZED
+      _(proc do TravellingSuggestions::CWB::CWBApi.new('BAD_TOKEN').location_data(LOCATION) end).must_raise UNAUTHORIZED
     end
   end
 end
