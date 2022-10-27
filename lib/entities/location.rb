@@ -1,14 +1,15 @@
 require 'dry-types'
 require 'dry-struct'
 
-module CodePraise
+module TravellingSuggestions
   module Entity
-    class Location < Dry::struct
-      include Dry.types
+    class Location < Dry::Struct
+      include Dry.Types
 
-      attribute :prob_rain,        types::Integer
-      attribute :min_temperature,  types::Integer
-      attribute :max_temperature,  types::Integer
+      attribute :name,             Strict::String
+      attribute :prob_rain,        Strict::Integer
+      attribute :min_temperature,  Strict::Integer
+      attribute :max_temperature,  Strict::Integer
     end
   end
 end
