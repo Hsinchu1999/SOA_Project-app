@@ -13,6 +13,10 @@ task :spec do
   sh 'ruby spec/gateway_cwb_api_spec.rb'
 end
 
+task :run do
+  sh 'bundle exec puma'
+end
+
 namespace :vcr do
   desc 'delete cassette fixtures'
   task :wipe do

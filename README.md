@@ -34,3 +34,7 @@ The APIs we currently using is the weather API from Central Weather Bureau (api 
 
 ### Data Mappers
 1. cwb api data mapper
+
+### Web Application
+1. Using MVC architecture
+2. Using Puma <--> Rack <--> Roda framework
