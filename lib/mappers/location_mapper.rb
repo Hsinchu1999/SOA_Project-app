@@ -1,47 +1,51 @@
-module CodePraise
-  module Github
+module TravellingSuggestions
+  module CWB
     class LocationMapper
       def initialize(cwb_token, gateway_class)
         @token = cwb_token
         @gateway_class = gateway_class
         @gateway = gateway_class.new(@token)
       end
-
-      def load_several(url)
-        @gateway.contributors_data(url).map do |data|
-          LocationMapper.build_entity(data)
-        end
+      
+      def find(location)
+        data = @gateway.location_data(location)
+        build_entity(location, data)
       end
 
-      def self.build_entity(data)
-        DataMapper.new(data).build_entity
+      def build_entity(location, data)
+        DataMapper.new(location, data).build_entity
       end
 
       class DataMapper
-        def initialize(data)
-          @data = data
+        def initialize(location, data)
+          @location = location
+          @location_data = parse_location(data)
         end
 
         def build_entity
-          Entity::Location.new(
-            prob_rain:,
-            min_temperature:,
-            max_temperature:
+          TravellingSuggestions::Entity::Location.new(
+            name: @location,
+            prob_rain: prob_rain,
+            min_temperature: min_temperature,
+            max_temperature: max_temperature
           )
         end
-
+        
         private
-
+        def parse_location(data)
+          data[0]
+        end
+    
         def prob_rain
-          @data['PoP']
+          res = @location_data['weatherElement'].select { |element| element['elementName'] == 'PoP' }[0]['time'][0]['parameter']['parameterName'].to_i
         end
-
+    
         def min_temperature
-          @data['MinT']
+          res = @location_data['weatherElement'].select { |element| element['elementName'] == 'MinT' }[0]['time'][0]['parameter']['parameterName'].to_i
         end
-
+    
         def max_temperature
-          @data['MaxT']
+          res = @location_data['weatherElement'].select { |element| element['elementName'] == 'MaxT' }[0]['time'][0]['parameter']['parameterName'].to_i
         end
       end
     end
