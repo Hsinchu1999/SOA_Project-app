@@ -24,8 +24,11 @@ describe 'Tests CWB API library' do
 
   describe 'Location information' do
     it 'HAPPY: should provide correct location attributes' do
-      location = TravellingSuggestions::CWB::CWBApi.new(CWB_TOKEN).location_data(LOCATION)
-      _(location).must_equal CORRECTLOCATION
+      location = TravellingSuggestions::CWB::LocationMapper.new(CWB_TOKEN, TravellingSuggestions::CWB::CWBApi).find(LOCATION)
+      _(location.name).must_equal LOCATION
+      _(location.prob_rain).must_equal CORRECTPOP
+      _(location.min_temperature).must_equal CORRECTMINT
+      _(location.max_temperature).must_equal CORRECTMAXT
     end
 
     it 'SAD: should raise exception when unauthorized' do
