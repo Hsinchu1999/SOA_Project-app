@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+# Web Application
+gem 'puma', '~> 5'
+gem 'roda', '~> 3'
+gem 'slim', '~> 4'
+
 # Networking
 gem 'http', '~> 5'
 
@@ -13,6 +18,6 @@ gem 'webmock', '~> 3'
 # Code Quality
 gem 'reek'
 
-#entities
-gem 'dry-types'
-gem 'dry-struct'
+# Entities
+gem 'dry-types', '~> 1'
+gem 'dry-struct', '~> 1'
