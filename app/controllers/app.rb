@@ -19,4 +19,4 @@ module TravellingSuggestions
 
   end
 end
- 
+
