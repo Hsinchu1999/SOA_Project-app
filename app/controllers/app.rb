@@ -13,8 +13,9 @@ module TravellingSuggestions
     route do |routing|
       routing.assets
 
-    roting.root do 
-      view 'home'
+      routing.root do 
+        view 'home'
+      end
     end
 
   end
