@@ -4,7 +4,7 @@ require_relative 'spec_helper'
 require 'minitest/autorun'
 require 'minitest/rg'
 require 'yaml'
-require_relative '../lib/gateways/cwb_api.rb'
+require_relative '../app/models/gateways/cwb_api.rb'
 
 describe 'Tests CWB API library' do
   VCR.configure do |c|
