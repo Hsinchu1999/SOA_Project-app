@@ -10,7 +10,11 @@ end
 
 desc 'run tests'
 task :spec do
-  sh 'ruby spec/cwb_api_spec.rb'
+  sh 'ruby spec/gateway_cwb_api_spec.rb'
+end
+
+task :run do
+  sh 'bundle exec puma'
 end
 
 namespace :vcr do

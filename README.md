@@ -32,3 +32,9 @@ The APIs we currently using is the weather API from Central Weather Bureau (api 
 2. weather
 3. user's personality
 
+### Data Mappers
+1. cwb api data mapper
+
+### Web Application
+1. Using MVC architecture
+2. Using Puma <--> Rack <--> Roda framework
