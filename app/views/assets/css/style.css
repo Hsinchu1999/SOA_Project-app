@@ -7,3 +7,8 @@ h3 {
   background-color:beige;
   text-align: center;
 }
+
+ul.weather {
+  list-style: none;
+  line-height: 0.5;
+}
