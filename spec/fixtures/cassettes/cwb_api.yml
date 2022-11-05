@@ -403,5 +403,42 @@ http_interactions:
       string: '401 Forbidden: Authorization key is not correct.
 
         '
-  recorded_at: Sun, 30 Oct 2022 11:03:21 GMT
+  recorded_at: Thu, 27 Oct 2022 14:07:53 GMT
+- request:
+    method: get
+    uri: https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - opendata.cwb.gov.tw
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Sat, 05 Nov 2022 13:09:07 GMT
+      Content-Type:
+      - application/octet-stream
+      Connection:
+      - close
+      Strict-Transport-Security:
+      - max-age=16070400; includeSubDomains; preload
+      Set-Cookie:
+      - TS01a5ae52=0107dddfefc0f25649f6208bbabb0245ba900ea0d9ff3945147a658633a39b425720e814b021660a2b97ca5996f8b98e30e581545d;
+        Path=/; Domain=.opendata.cwb.gov.tw
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '401 Forbidden: Authorization key is not correct.
+
+        '
+  recorded_at: Sat, 05 Nov 2022 13:09:07 GMT
 recorded_with: VCR 6.1.0

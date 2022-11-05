@@ -2,10 +2,22 @@
 
 require 'roda'
 require 'yaml'
+require 'sequel'
+require 'figaro'
 
 module TravellingSuggestions
   class App < Roda
-    CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
-    CWB_TOKEN = CONFIG['cwb-gov']
+    plugin :environments
+      
+      Figaro.application = Figaro::Application.new(
+        environment: environment,
+        path: File.expand_path('config/secrets.yml')
+      )
+      Figaro.load
+      ENV['DATABASE_URL'] = 'sqlite://#{config.DB_FILENAME}'
+
+      def self.config() = Figaro.env
+      #DB = Sequel.connect(ENV.fetch('DATABASE_URL'))
+      #def self.DB = DB
   end
 end
