@@ -20,7 +20,7 @@ module TravellingSuggestions
       configure :development, :test do
         ENV['DATABASE_URL'] = "sqlite://#{config.DB_FILENAME}"
       end
-      
+      CWB_TOKEN = config.CWB_TOKEN
       DB = Sequel.connect(ENV.fetch('DATABASE_URL'))
       def self.DB = DB
     end

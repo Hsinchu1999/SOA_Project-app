@@ -4,7 +4,7 @@ require 'yaml'
 config = YAML.safe_load(File.read('config/secrets.yml'))
 
 def generate_url_path(functionality, config)
-    'https://opendata.cwb.gov.tw/api/v1/rest/datastore/' + functionality + '?Authorization=' + config['test']['cwb-gov']
+    'https://opendata.cwb.gov.tw/api/v1/rest/datastore/' + functionality + '?Authorization=' + config['test']['CWB_TOKEN']
 end
 
 def call_cwb_api(url)
