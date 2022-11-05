@@ -45,5 +45,5 @@ end
 
 desc 'Run application console'
 task :console do
-  sh 'pry -r ./load_all'
+  sh 'pry -r ./init.rb'
 end
