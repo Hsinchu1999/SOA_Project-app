@@ -30,3 +30,6 @@ gem 'reek'
 # Entities
 gem 'dry-types', '~> 1'
 gem 'dry-struct', '~> 1'
+
+# Debugging
+gem 'pry'
