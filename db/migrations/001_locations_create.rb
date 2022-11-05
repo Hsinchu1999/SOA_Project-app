@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require 'sequal'
+require 'sequel'
 
 Sequel.migration do
   change do
-    create_tabel(:locations) do
+    create_table(:locations) do
       primary_key :id
       foreign_key :region_id, :regions
 

@@ -4,7 +4,7 @@ require 'sequel'
 
 module TravellingSuggestions
   module Database
-    class LocationOrm < Sequel::Model(:regions)
+    class LocationOrm < Sequel::Model(:locations)
       many_to_one :in_region,
                   class: :'TravellingSuggestions::Database::RegionOrm'
 
