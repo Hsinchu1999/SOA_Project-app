@@ -4,7 +4,7 @@ require 'sequel'
 
 module TravellingSuggestions
   module Database
-    class MBTIOrm < Sequel::Model(:MBTI_questions)
+    class MBTIMainActivityRatingOrm < Sequel::Model(:mbti_mainactivity_ratings)
       
       plugin :timestamps,update_on_create: true
     end
