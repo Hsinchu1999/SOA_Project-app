@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module TravellingSuggestions
   module CWB
     class LocationMapper
@@ -37,15 +39,15 @@ module TravellingSuggestions
         end
     
         def prob_rain
-          res = @location_data['weatherElement'].select { |element| element['elementName'] == 'PoP' }[0]['time'][0]['parameter']['parameterName'].to_i
+          @location_data['weatherElement'].select { |element| element['elementName'] == 'PoP' }[0]['time'][0]['parameter']['parameterName'].to_i
         end
     
         def min_temperature
-          res = @location_data['weatherElement'].select { |element| element['elementName'] == 'MinT' }[0]['time'][0]['parameter']['parameterName'].to_i
+          @location_data['weatherElement'].select { |element| element['elementName'] == 'MinT' }[0]['time'][0]['parameter']['parameterName'].to_i
         end
     
         def max_temperature
-          res = @location_data['weatherElement'].select { |element| element['elementName'] == 'MaxT' }[0]['time'][0]['parameter']['parameterName'].to_i
+          @location_data['weatherElement'].select { |element| element['elementName'] == 'MaxT' }[0]['time'][0]['parameter']['parameterName'].to_i
         end
       end
     end
