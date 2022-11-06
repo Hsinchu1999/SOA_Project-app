@@ -45,4 +45,3 @@ module TravellingSuggestions
 
   end
 end
-

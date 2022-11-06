@@ -3,83 +3,83 @@
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰時多雲
-        parameterValue: '6'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰短暫陣雨
-        parameterValue: '11'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 晴時多雲
+        parameterValue: '2'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 多雲時陰短暫陣雨
-        parameterValue: '9'
+        parameterName: 多雲時晴
+        parameterValue: '3'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '20'
+        parameterName: '10'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '60'
+        parameterName: '0'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '50'
+        parameterName: '0'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '23'
+        parameterName: '20'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '23'
+        parameterName: '20'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '21'
+        parameterName: '20'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '26'
+        parameterName: '23'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: '28'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '24'
         parameterUnit: C
@@ -87,167 +87,167 @@
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 陰短暫雨
+        parameterValue: '11'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 多雲時陰
+        parameterValue: '5'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
+        parameterName: 陰時多雲
+        parameterValue: '6'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '90'
+        parameterName: '30'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '100'
+        parameterName: '20'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '100'
+        parameterName: '20'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
-      parameter:
-        parameterName: '23'
-        parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: '22'
-        parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '21'
         parameterUnit: C
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: '21'
+        parameterUnit: C
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
+      parameter:
+        parameterName: '22'
+        parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
-      parameter:
-        parameterName: '23'
-        parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: '23'
-        parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '22'
+        parameterUnit: C
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: '25'
+        parameterUnit: C
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
+      parameter:
+        parameterName: '23'
         parameterUnit: C
 - locationName: 嘉義市
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰時多雲
-        parameterValue: '6'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰短暫陣雨
-        parameterValue: '11'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 晴時多雲
+        parameterValue: '2'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 多雲時陰短暫陣雨
-        parameterValue: '9'
+        parameterName: 多雲時晴
+        parameterValue: '3'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '20'
+        parameterName: '10'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '60'
+        parameterName: '0'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '50'
+        parameterName: '10'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '19'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '19'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '20'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 稍有寒意至舒適
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 稍有寒意至舒適
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '26'
+        parameterName: '23'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '28'
+        parameterName: '29'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '24'
         parameterUnit: C
@@ -255,335 +255,335 @@
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 多雲時陰
+        parameterValue: '5'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
+        parameterName: 陰時多雲
+        parameterValue: '6'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '70'
+        parameterName: '20'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '80'
+        parameterName: '0'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '80'
+        parameterName: '0'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '23'
+        parameterName: '21'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '21'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '21'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
-      parameter:
-        parameterName: '24'
-        parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: '24'
-        parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '22'
+        parameterUnit: C
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: '27'
+        parameterUnit: C
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
+      parameter:
+        parameterName: '23'
         parameterUnit: C
 - locationName: 新竹市
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 陰時多雲
+        parameterValue: '6'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
+        parameterName: 陰時多雲
+        parameterValue: '6'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '70'
+        parameterName: '20'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '80'
+        parameterName: '0'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '80'
+        parameterName: '0'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '23'
+        parameterName: '21'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '21'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '21'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
-      parameter:
-        parameterName: '24'
-        parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: '24'
-        parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '22'
+        parameterUnit: C
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: '26'
+        parameterUnit: C
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
+      parameter:
+        parameterName: '23'
         parameterUnit: C
 - locationName: 臺北市
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 陰短暫雨
+        parameterValue: '11'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 陰天
+        parameterValue: '7'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
+        parameterName: 陰天
+        parameterValue: '7'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '100'
+        parameterName: '40'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '100'
+        parameterName: '20'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '100'
+        parameterName: '20'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
-      parameter:
-        parameterName: '22'
-        parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: '21'
-        parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '20'
         parameterUnit: C
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: '20'
+        parameterUnit: C
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
+      parameter:
+        parameterName: '21'
+        parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
-      parameter:
-        parameterName: '23'
-        parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: '23'
-        parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '21'
+        parameterUnit: C
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: '23'
+        parameterUnit: C
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
+      parameter:
+        parameterName: '22'
         parameterUnit: C
 - locationName: 臺南市
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰時多雲短暫陣雨
-        parameterValue: '10'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰時多雲短暫陣雨
-        parameterValue: '10'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 晴時多雲
+        parameterValue: '2'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰時多雲短暫陣雨
-        parameterValue: '10'
+        parameterName: 晴時多雲
+        parameterValue: '2'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '30'
+        parameterName: '10'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '70'
+        parameterName: '10'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '70'
+        parameterName: '10'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
-      parameter:
-        parameterName: '23'
-        parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: '23'
-        parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '21'
         parameterUnit: C
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: '21'
+        parameterUnit: C
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
+      parameter:
+        parameterName: '22'
+        parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 舒適至悶熱
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 舒適
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '27'
+        parameterName: '24'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: '28'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '25'
         parameterUnit: C
@@ -591,83 +591,83 @@
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 陰短暫雨
+        parameterValue: '11'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 陰短暫雨
+        parameterValue: '11'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
+        parameterName: 陰短暫雨
+        parameterValue: '11'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '100'
+        parameterName: '80'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '100'
+        parameterName: '80'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '100'
+        parameterName: '80'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '20'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '20'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '20'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
+      parameter:
+        parameterName: '21'
+        parameterUnit: C
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: '24'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: '24'
-        parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '22'
         parameterUnit: C
@@ -675,167 +675,167 @@
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
+      parameter:
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: 多雲
+        parameterValue: '4'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 多雲時陰
         parameterValue: '5'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
-      parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '20'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '70'
+        parameterName: '0'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '70'
+        parameterName: '0'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '23'
+        parameterName: '20'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '20'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '20'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 稍有寒意至舒適
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 稍有寒意至舒適
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
-      parameter:
-        parameterName: '25'
-        parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: '25'
-        parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '22'
+        parameterUnit: C
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: '27'
+        parameterUnit: C
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
+      parameter:
+        parameterName: '23'
         parameterUnit: C
 - locationName: 雲林縣
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰時多雲
-        parameterValue: '6'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰短暫陣雨
-        parameterValue: '11'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰時多雲短暫陣雨
-        parameterValue: '10'
+        parameterName: 晴時多雲
+        parameterValue: '2'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '20'
+        parameterName: '10'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '50'
+        parameterName: '0'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '40'
+        parameterName: '10'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '23'
+        parameterName: '19'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '23'
+        parameterName: '19'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '21'
+        parameterName: '20'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 稍有寒意至舒適
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 稍有寒意至舒適
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '26'
+        parameterName: '23'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: '28'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '24'
         parameterUnit: C
@@ -843,167 +843,167 @@
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 陰時多雲短暫雨
+        parameterValue: '10'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰時多雲陣雨
-        parameterValue: '13'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 陰時多雲短暫雨
+        parameterValue: '10'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
+        parameterName: 陰時多雲短暫雨
+        parameterValue: '10'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '100'
+        parameterName: '30'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '100'
+        parameterName: '80'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '90'
+        parameterName: '60'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '20'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '20'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '21'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '24'
+        parameterName: '22'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '26'
+        parameterName: '25'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '24'
+        parameterName: '23'
         parameterUnit: C
 - locationName: 臺中市
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 多雲時陰
-        parameterValue: '5'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰時多雲短暫陣雨
-        parameterValue: '10'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰時多雲短暫陣雨
-        parameterValue: '10'
+        parameterName: 陰時多雲
+        parameterValue: '6'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '20'
+        parameterName: '10'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '30'
+        parameterName: '0'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '30'
+        parameterName: '0'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '24'
+        parameterName: '22'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '24'
+        parameterName: '22'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '22'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '27'
+        parameterName: '24'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '27'
+        parameterName: '29'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '25'
         parameterUnit: C
@@ -1011,251 +1011,251 @@
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 陰時多雲短暫雨
+        parameterValue: '10'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 多雲時陰短暫雨
+        parameterValue: '9'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰時多雲陣雨
-        parameterValue: '13'
+        parameterName: 晴時多雲
+        parameterValue: '2'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '100'
+        parameterName: '30'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '90'
+        parameterName: '50'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '90'
+        parameterName: '20'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '21'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '21'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '22'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '25'
+        parameterName: '23'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: '27'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '25'
+        parameterName: '24'
         parameterUnit: C
 - locationName: 桃園市
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 多雲時陰
+        parameterValue: '5'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 多雲時陰
+        parameterValue: '5'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
+        parameterName: 陰時多雲
+        parameterValue: '6'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '90'
+        parameterName: '20'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '100'
+        parameterName: '10'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '100'
+        parameterName: '10'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
-      parameter:
-        parameterName: '22'
-        parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '21'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '20'
+        parameterName: '21'
+        parameterUnit: C
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
+      parameter:
+        parameterName: '21'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
-      parameter:
-        parameterName: '23'
-        parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: '23'
-        parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '21'
+        parameterUnit: C
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: '25'
+        parameterUnit: C
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
+      parameter:
+        parameterName: '23'
         parameterUnit: C
 - locationName: 南投縣
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 多雲時陰
-        parameterValue: '5'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰時多雲短暫陣雨
-        parameterValue: '10'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰時多雲短暫陣雨
-        parameterValue: '10'
+        parameterName: 多雲
+        parameterValue: '4'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '20'
+        parameterName: '10'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '50'
+        parameterName: '0'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '40'
+        parameterName: '10'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '23'
+        parameterName: '20'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '23'
+        parameterName: '20'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '21'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '27'
+        parameterName: '24'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: '28'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '25'
         parameterUnit: C
@@ -1263,83 +1263,83 @@
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰短暫陣雨
-        parameterValue: '11'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰時多雲短暫陣雨
-        parameterValue: '10'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 多雲
+        parameterValue: '4'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 多雲短暫陣雨
-        parameterValue: '8'
+        parameterName: 多雲時晴
+        parameterValue: '3'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '40'
+        parameterName: '10'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '70'
+        parameterName: '20'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '70'
+        parameterName: '10'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '25'
+        parameterName: '23'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '25'
+        parameterName: '23'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '24'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 舒適至悶熱
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 舒適
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '28'
+        parameterName: '26'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: '29'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '27'
         parameterUnit: C
@@ -1347,83 +1347,83 @@
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰時多雲
-        parameterValue: '6'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰時多雲短暫陣雨
-        parameterValue: '10'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 晴時多雲
+        parameterValue: '2'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰短暫陣雨
-        parameterValue: '11'
+        parameterName: 多雲短暫雨
+        parameterValue: '8'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '20'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: '20'
+        parameterUnit: 百分比
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '30'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
-      parameter:
-        parameterName: '60'
-        parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
-      parameter:
-        parameterName: '22'
-        parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: '22'
-        parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '20'
         parameterUnit: C
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: '20'
+        parameterUnit: C
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
+      parameter:
+        parameterName: '21'
+        parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
-      parameter:
-        parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 稍有寒意至舒適
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: 稍有寒意至舒適
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
+      parameter:
+        parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '24'
+        parameterName: '21'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '26'
+        parameterName: '25'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '22'
         parameterUnit: C
@@ -1431,167 +1431,167 @@
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰短暫陣雨
-        parameterValue: '11'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰時多雲短暫陣雨
-        parameterValue: '10'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰時多雲短暫陣雨
-        parameterValue: '10'
+        parameterName: 多雲時晴
+        parameterValue: '3'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '50'
+        parameterName: '10'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '70'
+        parameterName: '20'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '70'
+        parameterName: '10'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '24'
+        parameterName: '22'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '24'
+        parameterName: '22'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '23'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
+      parameter:
+        parameterName: 舒適
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 舒適至悶熱
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: 舒適至悶熱
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
-      parameter:
-        parameterName: '27'
-        parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: '29'
-        parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '26'
+        parameterUnit: C
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: '30'
+        parameterUnit: C
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
+      parameter:
+        parameterName: '27'
         parameterUnit: C
 - locationName: 基隆市
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 陰短暫雨
+        parameterValue: '11'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 陰短暫雨
+        parameterValue: '11'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰陣雨
-        parameterValue: '14'
+        parameterName: 陰短暫雨
+        parameterValue: '11'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '90'
+        parameterName: '80'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '100'
+        parameterName: '60'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '100'
+        parameterName: '50'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '21'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '21'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '21'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
+      parameter:
+        parameterName: '21'
+        parameterUnit: C
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: '23'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: '23'
-        parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '22'
         parameterUnit: C
@@ -1599,83 +1599,83 @@
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 多雲時陰短暫陣雨
-        parameterValue: '9'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰短暫陣雨
-        parameterValue: '11'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 多雲
+        parameterValue: '4'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰短暫陣雨
-        parameterValue: '11'
+        parameterName: 陰時多雲短暫雨
+        parameterValue: '10'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
+      parameter:
+        parameterName: '20'
+        parameterUnit: 百分比
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: '10'
+        parameterUnit: 百分比
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '30'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: '80'
-        parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
-      parameter:
-        parameterName: '70'
-        parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '23'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: '23'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '23'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '24'
+        parameterName: '23'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: '26'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '23'
         parameterUnit: C
@@ -1683,83 +1683,83 @@
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 多雲時陰
-        parameterValue: '5'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+        parameterName: 多雲時晴
+        parameterValue: '3'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: 陰短暫陣雨
-        parameterValue: '11'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+        parameterName: 晴時多雲
+        parameterValue: '2'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: 陰時多雲短暫陣雨
-        parameterValue: '10'
+        parameterName: 陰時多雲
+        parameterValue: '6'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '20'
+        parameterName: '10'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '40'
+        parameterName: '0'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '40'
+        parameterName: '0'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '24'
+        parameterName: '21'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '24'
+        parameterName: '21'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '21'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 舒適
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '26'
+        parameterName: '23'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '26'
+        parameterName: '27'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '24'
         parameterUnit: C
@@ -1767,83 +1767,83 @@
   weatherElement:
   - elementName: Wx
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: 陰短暫陣雨
-        parameterValue: '11'
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: 陰短暫陣雨
-        parameterValue: '11'
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
-      parameter:
-        parameterName: 陰時多雲短暫陣雨
+        parameterName: 陰時多雲短暫雨
         parameterValue: '10'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: 陰時多雲
+        parameterValue: '6'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
+      parameter:
+        parameterName: 陰時多雲
+        parameterValue: '6'
   - elementName: PoP
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
         parameterName: '30'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '50'
+        parameterName: '20'
         parameterUnit: 百分比
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
-        parameterName: '70'
+        parameterName: '20'
         parameterUnit: 百分比
   - elementName: MinT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
+      parameter:
+        parameterName: '17'
+        parameterUnit: C
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
+      parameter:
+        parameterName: '17'
+        parameterUnit: C
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '19'
-        parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: '19'
-        parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
-      parameter:
-        parameterName: '18'
         parameterUnit: C
   - elementName: CI
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
+      parameter:
+        parameterName: 稍有寒意
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
         parameterName: 稍有寒意至舒適
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
-      parameter:
-        parameterName: 稍有寒意至舒適
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: 稍有寒意
   - elementName: MaxT
     time:
-    - startTime: '2022-10-30 18:00:00'
-      endTime: '2022-10-31 06:00:00'
+    - startTime: '2022-11-06 18:00:00'
+      endTime: '2022-11-07 06:00:00'
       parameter:
-        parameterName: '20'
+        parameterName: '18'
         parameterUnit: C
-    - startTime: '2022-10-31 06:00:00'
-      endTime: '2022-10-31 18:00:00'
+    - startTime: '2022-11-07 06:00:00'
+      endTime: '2022-11-07 18:00:00'
       parameter:
-        parameterName: '22'
+        parameterName: '21'
         parameterUnit: C
-    - startTime: '2022-10-31 18:00:00'
-      endTime: '2022-11-01 06:00:00'
+    - startTime: '2022-11-07 18:00:00'
+      endTime: '2022-11-08 06:00:00'
       parameter:
         parameterName: '19'
         parameterUnit: C
