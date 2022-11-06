@@ -6,8 +6,9 @@ Sequel.migration do
   change do
     create_table(:attractions) do
       primary_key :id
-      foreign_key :region_id, :regions
+      foreign_key :in_region_id, :regions
 
+      String :name, null: false
       String :indoor_or_outdoor
       String :main_activity
       Integer :staying_time
