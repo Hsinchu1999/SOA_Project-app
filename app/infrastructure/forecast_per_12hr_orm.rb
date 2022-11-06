@@ -1,18 +1,23 @@
 # frozen_string_literal: true
 
 require 'sequel'
-=begin
+
 module TravellingSuggestions
   module Database
     class Forecastper12hrOrm < Sequel::Model(:forecast_per_12hrs)
-      one_to_one :favorite_attractions,
-                    class: :'TravellingSuggestions::Database::AttractionOrm',
-                    join_table: :users_favorites,
-                    left_key: :user_id, right_key: :favorite_id
-                
+      one_to_one :forecast_first_12hr_in_36hr,
+                  class: :'TravellingSuggestions::Database::Forecast36hrOrm',
+                  key: :region_id
+
+      one_to_one :forecast_second_12hr_in_36hr,
+                  class: :'TravellingSuggestions::Database::Forecast36hrOrm',
+                  key: :region_id
+
+      one_to_one :forecast_last_12hr_in_36hr,
+                  class: :'TravellingSuggestions::Database::Forecast36hrOrm',
+                  key: :region_id
 
       plugin :timestamps, update_on_create: true
     end
   end
 end
-=end
