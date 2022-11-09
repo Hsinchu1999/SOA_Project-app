@@ -8,6 +8,7 @@ module TravellingSuggestions
 
       attribute :country,         Strict::String
       attribute :city,            Strict::String
+      attribute :weather,         Strict::Weather
 
     end
   end
