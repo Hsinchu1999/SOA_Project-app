@@ -17,7 +17,7 @@ module TravellingSuggestions
           Entity::User.new(
             id:       db_record.id,
             nickname:   db_record.nickname,
-            mbit:   db_record.mbti,
+            mbti:   db_record.mbti,
             favorite_attractions: db_record.user_favorite_attractions
           )
         end
