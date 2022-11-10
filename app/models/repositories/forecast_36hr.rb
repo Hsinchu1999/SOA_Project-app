@@ -1,6 +1,6 @@
 module TravellingSuggestions
     module Repository
-      class Forecasts_Per_36Hr
+      class Forecasts_36Hr
         def self.find_id(id)
           rebuild_entity Database::Forecast36hrOrm.first(id: id)
         end
@@ -26,7 +26,7 @@ module TravellingSuggestions
 
         def self.rebuild_many_entities(db_records)
           db_records.map do | db_member |
-            Repository::Forecasts_Per_36Hr.rebuild_entity(db_member)
+            Repository::Forecasts_36Hr.rebuild_entity(db_member)
           end
         end
 
