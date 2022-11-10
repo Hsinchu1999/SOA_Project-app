@@ -1,6 +1,6 @@
 module TravellingSuggestions
     module Repository
-      class Region
+      class Regions
         def self.find_id(id)
           rebuild_entity Database::RegionOrm.first(id: id)
         end
@@ -17,7 +17,7 @@ module TravellingSuggestions
 
         def self.rebuild_many_entities(db_records)
           db_records.map do | db_member |
-            Repository::Region.rebuild_entity(db_member)
+            Repository::Regions.rebuild_entity(db_member)
           end
         end
 
