@@ -2,11 +2,11 @@ module TravellingSuggestions
     module Repository
       class Forecasts_Per_36Hr
         def self.find_id(id)
-          rebuild_entity Database::Forecast_36Hr.first(id: id)
+          rebuild_entity Database::Forecast36hrOrm.first(id: id)
         end
 
         def self.find_region_id(region_id)
-          rebuild_entity Database::Forecast_36Hr.first(region_id: region_id)
+          rebuild_entity Database::Forecast36hrOrm.first(region_id: region_id)
         end
         
         def self.rebuild_entity(db_record)
