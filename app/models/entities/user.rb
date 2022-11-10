@@ -8,7 +8,7 @@ module TravellingSuggestions
 
       attribute :id,                    Strict::Int
       attribute :nickname,              Strict::String
-      attribute :mbti,                  Strict::MBTI
+      attribute :mbti,                  Strict::String
       attribute :favorite_attractions,  Strict::Array.of(Attraction)
 
     end
