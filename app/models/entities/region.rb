@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require 'dry-types'
 require 'dry-struct'
+require_relative 'weather'
 
 module TravellingSuggestions
   module Entity
@@ -8,7 +11,7 @@ module TravellingSuggestions
 
       attribute :country,         Strict::String
       attribute :city,            Strict::String
-      attribute :weather,         Strict::Weather
+      attribute :weather,         Weather
 
     end
   end

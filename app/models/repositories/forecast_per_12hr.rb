@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module TravellingSuggestions
     module Repository
       class Forecasts_Per_12Hr

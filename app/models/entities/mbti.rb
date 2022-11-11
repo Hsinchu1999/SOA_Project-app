@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'dry-types'
 require 'dry-struct'
 
@@ -6,7 +8,7 @@ module TravellingSuggestions
     class MBTI < Dry::Struct
       include Dry.Types
 
-      attribute :id,                    Strict::Int
+      attribute :id,                    Strict::Integer
       attribute :type,                  Strict::String
       attribute :description,           Strict::String
 

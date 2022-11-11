@@ -1,3 +1,12 @@
+# frozen_string_literal: true
+
+require_relative 'attraction'
+require_relative 'forecast_36hr'
+require_relative 'forecast_per_12hr'
+require_relative 'mbti_question'
+require_relative 'region'
+require_relative 'user'
+
 module TravellingSuggestions
   module Repository
     module For

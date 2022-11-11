@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'dry-types'
 require 'dry-struct'
 
@@ -6,9 +8,9 @@ module TravellingSuggestions
     class Forecast_Per_12Hr < Dry::Struct
       include Dry.Types
 
-      attribute :PoP,             Strict::Int
-      attribute :minT,            Strict::Int
-      attribute :maxT,            Strict::Int
+      attribute :PoP,             Strict::Integer
+      attribute :minT,            Strict::Integer
+      attribute :maxT,            Strict::Integer
 
     end
   end
