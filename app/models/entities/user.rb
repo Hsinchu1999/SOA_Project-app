@@ -2,6 +2,7 @@
 
 require 'dry-types'
 require 'dry-struct'
+require_relative 'user_favorite'
 
 module TravellingSuggestions
   module Entity
