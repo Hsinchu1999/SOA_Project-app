@@ -2,6 +2,7 @@
 
 require 'dry-types'
 require 'dry-struct'
+require_relative 'user_favorite'
 
 module TravellingSuggestions
   module Entity
@@ -11,7 +12,7 @@ module TravellingSuggestions
       attribute :id,                    Strict::Integer
       attribute :nickname,              Strict::String
       attribute :mbti,                  Strict::String
-      attribute :favorite_attractions,  Strict::Array.of(Attraction)
+      attribute :favorite_attractions,  User_Favorite
 
     end
   end

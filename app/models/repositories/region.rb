@@ -11,9 +11,9 @@ module TravellingSuggestions
           return nil unless db_record
           
           Entity::Region.new(
-            country:       db_record.country,
-            city:   db_record.city,
-            weather:    nil,        # still needs to decide
+            country:    db_record.country,
+            city:       db_record.city,
+            weather:    Repository::Weathers.find_region_id(db_record.id)
           )
         end
 

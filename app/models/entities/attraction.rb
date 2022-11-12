@@ -12,7 +12,7 @@ module TravellingSuggestions
       attribute :id,                    Strict::Integer
       attribute :added_time,            Strict::String
       attribute :region,                Region
-      attribute :indoor_or_outdoor,     Strict::String
+      attribute :indoor_or_outdoor,     Strict::Symbol
       attribute :main_activity,         Strict::String
       attribute :staying_time,          Strict::String
       attribute :type,                  Strict::String
