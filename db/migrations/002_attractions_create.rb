@@ -11,7 +11,7 @@ Sequel.migration do
       String :name, null: false
       String :indoor_or_outdoor
       String :main_activity
-      Integer :staying_time
+      String :staying_time
       String :type
       Integer :attendants
       String :notes
