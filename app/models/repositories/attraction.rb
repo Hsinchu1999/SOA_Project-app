@@ -16,7 +16,7 @@ module TravellingSuggestions
             id:       db_record.id,
             added_time:   db_record.created_at.to_s,
             region:   region_entity,
-            indoor_or_outdoor:  db_record.indoor_or_outdoor,
+            indoor_or_outdoor:  db_record.indoor_or_outdoor.to_sym,
             main_activity:  db_record.main_activity,
             staying_time: db_record.staying_time,
             type: db_record.type,
