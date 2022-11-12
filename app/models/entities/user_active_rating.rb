@@ -6,7 +6,7 @@ require_relative 'region'
 
 module TravellingSuggestions
   module Entity
-    class User_Active_Ratings < Dry::Struct
+    class User_Active_Rating < Dry::Struct
       include Dry.Types
 
       attribute :user,                  User
