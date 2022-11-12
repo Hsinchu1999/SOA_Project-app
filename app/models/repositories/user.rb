@@ -11,14 +11,13 @@ module TravellingSuggestions
         def self.rebuild_entity(db_record)
           return nil unless db_record
           
-          user_favorite_attractions = Repository::Attractions.rebuild_many_entities(db_record.favorite_attractions)
-          # might be buggy, not sure
+          user_favorite_attractions = Repository::Users_Favorites.rebuild_entity(db_record)
 
           Entity::User.new(
             id:       db_record.id,
             nickname:   db_record.nickname,
             mbti:   db_record.mbti,
-            favorite_attractions: db_record.user_favorite_attractions
+            favorite_attractions: user_favorite_attractions
           )
         end
 
