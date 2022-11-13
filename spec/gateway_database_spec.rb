@@ -20,8 +20,9 @@ describe 'Integration Tests of CWB API and Database' do
       DatabaseHelper.wipe_database
     end
     it 'HAPPY: should be able to save project from CWB to database' do
-      location = TravellingSuggestions::CWB::LocationMapper.new(CWB_TOKEN, TravellingSuggestions::CWB::CWBApi).find(LOCATION)
-      rebuilt = TravellingSuggestions::Repository::For.entity(location).create(location)
+      weather = TravellingSuggestions::CWB::WeatherMapper.new(CWB_TOKEN, TravellingSuggestions::CWB::CWBApi).find(LOCATION)
+      rebuilt = TravellingSuggestions::Repository::For.entity(weather).create(weather)
+      _(rebuilt.)
     end
   end
 end
