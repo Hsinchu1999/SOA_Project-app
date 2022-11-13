@@ -59,7 +59,7 @@ namespace :db do
     require 'sequel'
     require_relative 'config/environment'
     require_relative 'spec/helpers/database_helper'
-    require_app
+    
     def app() = TravellingSuggestions::App
   end
 
@@ -76,7 +76,7 @@ namespace :db do
       puts 'Do not damage production database!'
       return
     end
-
+    require_app
     DatabaseHelper.wipe_database
   end
 
