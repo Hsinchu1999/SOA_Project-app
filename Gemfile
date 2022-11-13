@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
+ruby File.read('.ruby-version').strip
 
 # Web Application
 gem 'figaro', '~> 1.2'
 gem 'puma', '~> 5'
 gem 'roda', '~> 3'
 gem 'slim', '~> 4'
+
+gem 'rake'
 
 # Database
 gem 'hirb', '~> 0'
