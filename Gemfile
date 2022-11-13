@@ -13,6 +13,9 @@ gem 'sequel', '~> 5.49'
 group :development, :test do
   gem 'sqlite3'
 end
+group :production do
+  gem 'pg'
+end
 
 # Networking
 gem 'http', '~> 5'
