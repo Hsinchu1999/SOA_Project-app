@@ -1,25 +1,18 @@
 # frozen_string_literal: true
 
 require_relative 'spec_helper'
-require 'minitest/autorun'
-require 'minitest/rg'
-require 'yaml'
 require_relative '../app/models/gateways/cwb_api.rb'
+require_relative 'helpers/vcr_helper'
 
 describe 'Tests CWB API library' do
-  VCR.configure do |c|
-    c.cassette_library_dir = CASSETTE_FOLDER
-    c.hook_into :webmock
-
-    c.filter_sensitive_data('<CWB_TOKEN>') { CWB_TOKEN }
-  end
-
+  VcrHelper.setup_vcr
+  
   before do
-    VCR.insert_cassette CASSETTE_FILE, record: :new_episodes, match_requests_on: %i[method uri headers]
+    VcrHelper.configure_vcr_for_cwb
   end
 
   after do
-    VCR.eject_cassette
+    VcrHelper.eject_vcr
   end
 
   describe 'Location information' do

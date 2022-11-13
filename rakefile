@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'rake/testtask'
+require_relative 'require_app'
 
 CODE = 'lib/'
 
@@ -11,6 +12,11 @@ end
 desc 'run tests'
 task :spec do
   sh 'ruby spec/gateway_cwb_api_spec.rb'
+end
+
+desc 'run tests'
+task :db_spec do
+  sh 'ruby spec/gateway_database_spec.rb'
 end
 
 task :run do
@@ -53,7 +59,7 @@ namespace :db do
     require 'sequel'
     require_relative 'config/environment'
     require_relative 'spec/helpers/database_helper'
-
+    require_app
     def app() = TravellingSuggestions::App
   end
 
