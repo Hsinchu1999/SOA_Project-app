@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'spec_helper'
-require_relative '../app/models/gateways/cwb_api.rb'
+require_relative '../cwb_api.rb'
 require_relative 'helpers/vcr_helper'
 
 describe 'Tests CWB API library' do
