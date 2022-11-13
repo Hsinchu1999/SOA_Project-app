@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'http'
-require_relative '../location'
 
 module TravellingSuggestions
   # Library for Github Web API
