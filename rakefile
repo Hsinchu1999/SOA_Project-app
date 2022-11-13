@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'rake/testtask'
+require_relative 'require_app'
 
 CODE = 'lib/'
 
@@ -53,7 +54,7 @@ namespace :db do
     require 'sequel'
     require_relative 'config/environment'
     require_relative 'spec/helpers/database_helper'
-
+    require_app
     def app() = TravellingSuggestions::App
   end
 
