@@ -42,11 +42,11 @@ module TravellingSuggestions
           end
 
           def get_start_time
-            @data['weatherElement'].select { |element| element['elementName'] == 'PoP' }[0]['time'][0]['startTime']
+            @location_data['weatherElement'].select { |element| element['elementName'] == 'PoP' }[0]['time'][0]['startTime']
           end
-          
+
           def prob_rain(serial_index)
-            @data['weatherElement'].select { |element| element['elementName'] == 'PoP' }[0]['time'][serial_index]['parameter']['parameterName'].to_i
+            @location_data['weatherElement'].select { |element| element['elementName'] == 'PoP' }[0]['time'][serial_index]['parameter']['parameterName'].to_i
           end
         
           def min_temperature(serial_index)
