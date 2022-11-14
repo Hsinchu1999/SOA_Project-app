@@ -6,22 +6,26 @@ module TravellingSuggestions
       def initialize(cwb_token, gateway_class)
         @token = cwb_token
         @gateway_class = gateway_class
-        @gateway = gateway_class.new(@token)
       end
     
       def find(location)
-        data = @gateway.location_data(location)
-        build_entity(data)
+        build_entity(location)
       end
 
-      def build_entity(data)
+      private
+      def build_entity(location)
         Entity::Weather.new(
-          forecast_36hr: forecast_36hr_report(data)
+          forecast_36hr: build_forecast_36hr_entity(location),
+          forecast_one_week: build_forecast_one_week_entity(location)
         )
       end
 
-      def forecast_36hr_report(data)
-        Mapper::Forecast36hrMapper.new(data[0]).build_entity
+      def build_forecast_36hr_entity(location)
+        Mapper::Forecast36hrMapper.new(@token, @gateway_class).find(location)
+      end
+
+      def build_forecast_one_week_entity(location)
+        Mapper::ForecastOneWeekMapper.new(@token, @gateway_class).find(location)
       end
     end
   end
