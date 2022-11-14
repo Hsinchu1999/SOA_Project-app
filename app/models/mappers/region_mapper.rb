@@ -7,17 +7,21 @@ module TravellingSuggestions
                   :city,
                   :weather
     
-      def initialize(country, city, weather)
+      def initialize(country, city)
         @country = country
         @city = city
-        @weather = weather
       end
 
-      def build_entity
+      def find_weather(token)
+        build_entity(token)
+      end
+      
+      private
+      def build_entity(token)
         Entity::Region.new(
-          country = @country,
-          city = @city,
-          weather = @weather
+          country: @country,
+          city: @city,
+          weather: Mapper::WeatherMapper.new(token, TravellingSuggestions::CWB::CWBApi).find(@city)
         )
       end
     end
