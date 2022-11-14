@@ -6,7 +6,6 @@ module TravellingSuggestions
       def initialize(cwb_token, gateway_class)
         @token = cwb_token
         @gateway_class = gateway_class
-        @gateway = gateway_class.new(@token)
       end
     
       def find(location)
@@ -22,11 +21,11 @@ module TravellingSuggestions
       end
 
       def build_forecast_36hr_entity(location)
-        Mapper::Forecast36hrMapper.new(cwb_token, gateway_class).find(location)
+        Mapper::Forecast36hrMapper.new(@token, @gateway_class).find(location)
       end
 
       def build_forecast_one_week_entity(location)
-        Mapper::ForecastOneWeekMapper.new(cwb_token, gateway_class).find(location)
+        Mapper::ForecastOneWeekMapper.new(@token, @gateway_class).find(location)
       end
     end
   end
