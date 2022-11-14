@@ -10,7 +10,7 @@ module TravellingSuggestions
         @cwb_token = token
       end
 
-      def location_data(location)
+      def forecast_36_hr(location)
         data = call_cwb_url('F-C0032-001').parse['records']['location'].select { |data| data['locationName'] == location }
       end
 
