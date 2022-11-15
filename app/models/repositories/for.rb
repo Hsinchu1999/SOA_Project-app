@@ -18,7 +18,7 @@ module TravellingSuggestions
         Entity::MBTI_Question => MBTI_Questions,
         Entity::Region => Regions,
         Entity::User => Users,
-        #Entity::Weather => Weathers
+        #Entity::Weather => Weather
       }.freeze
 
       def self.klass(entity_klass)

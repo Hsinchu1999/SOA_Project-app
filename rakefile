@@ -11,6 +11,7 @@ end
 
 desc 'run tests'
 task :spec do
+  sh 'ruby weather.rb'
   sh 'ruby spec/gateway_cwb_api_spec.rb'
 end
 
