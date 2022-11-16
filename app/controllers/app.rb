@@ -53,6 +53,18 @@ module TravellingSuggestions
           view 'mbti_test_last'
         end
       end
+
+      routing.on 'user' do
+        routing.is do
+          view 'personal_page'
+        end
+        routing.is 'favorites' do
+          view 'favorites'
+        end
+        routing.is 'viewed-attraction' do
+          view 'viewed_attraction'
+        end
+      end
     end
 
   end
