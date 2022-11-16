@@ -39,10 +39,10 @@ module TravellingSuggestions
         end
 
         def build_per_day_entity(serial_index)
-          PoP = prob_rain(serial_index - 1)
+          pop = prob_rain(serial_index - 1)
           minT = min_temperature(serial_index - 1)
           maxT = max_temperature(serial_index - 1)
-          Mapper::ForecastPerDayMapper.new(PoP, minT, maxT).build_entity
+          Mapper::ForecastPerDayMapper.new(pop, minT, maxT).build_entity
         end
 
         def get_start_time

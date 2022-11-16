@@ -8,7 +8,7 @@ module TravellingSuggestions
     class Forecast_Per_Day < Dry::Struct
       include Dry.Types
 
-      attribute :PoP,             Strict::Integer
+      attribute :pop,             Strict::Integer
       attribute :minT,            Strict::Integer
       attribute :maxT,            Strict::Integer
 
