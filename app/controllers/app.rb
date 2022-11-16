@@ -43,11 +43,14 @@ module TravellingSuggestions
       end
 
       routing.on 'mbti_test' do
-        routing.is do
+        routing.is 'start' do
           view 'mbti_test_first'
         end
         routing.is 'continue' do
           view 'mbti_test_general'
+        end
+        routing.is 'last' do
+          view 'mbti_test_last'
         end
       end
     end
