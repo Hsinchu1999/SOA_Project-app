@@ -8,7 +8,7 @@ Sequel.migration do
       primary_key :id
       
       String :country
-      String :city, unique: true, null: false
+      String :city, null: false
 
       DateTime :created_at
       DateTime :updated_at

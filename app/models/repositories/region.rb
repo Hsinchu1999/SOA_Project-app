@@ -24,7 +24,7 @@ module TravellingSuggestions
         end
 
         def self.db_find_or_create(entity)
-          nil
+          Database::RegionOrm.find_or_create(entity.to_attr_hash)
         end
         # to be completed
 

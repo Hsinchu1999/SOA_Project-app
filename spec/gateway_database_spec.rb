@@ -23,10 +23,10 @@ describe 'Integration Tests of CWB API and Database' do
 
     it 'HAPPY: should be able to save project from CWB to database' do
       
-      weather = TravellingSuggestions::Mapper::WeatherMapper.new(CWB_TOKEN, TravellingSuggestions::CWB::CWBApi).find(LOCATION)
-      rebuilt = TravellingSuggestions::Repository::Weathers.rebuild_entity(weather)
-      rebuilt_forecast_36hr = rebuilt.forecast_36hr
-      _(rebuilt_forecast_36hr).must_equal weather.forecast_36hr
+      region = TravellingSuggestions::Mapper::RegionMapper.new('Taiwan',LOCATION).find_weather(CWB_TOKEN)
+      weather = region.weather
+      rebuilt_region = TravellingSuggestions::Repository::Regions.db_find_or_create(region)
+      _(rebuilt_region.city).must_equal region.city
     end
   end
 end
