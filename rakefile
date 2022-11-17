@@ -8,11 +8,11 @@ CODE = 'lib/'
 task :defult do
   puts `rake -T`
 end
-
-desc 'run tests'
-task :spec do
+desc 'Run tests once'
+Rake::TestTask.new(:spec) do |t|
   sh 'ruby weather.rb'
-  sh 'ruby spec/gateway_cwb_api_spec.rb'
+  t.pattern = 'spec/*_spec.rb'
+  t.warning = false
 end
 
 desc 'run tests'
