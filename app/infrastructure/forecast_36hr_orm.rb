@@ -18,6 +18,10 @@ module TravellingSuggestions
                   class: :'TravellingSuggestions::Database::Forecastper12hrOrm'
                     
       plugin :timestamps, update_on_create: true
+      
+      def self.find_or_create(region_id)
+        first(region_id: region_id) || create(region_id: region_id)
+      end
     end
   end
 end

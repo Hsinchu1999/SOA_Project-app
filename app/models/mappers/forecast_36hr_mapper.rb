@@ -27,7 +27,7 @@ module TravellingSuggestions
 
         def build_entity
           Entity::Forecast_36Hr.new(
-            forecast_report_time: 'get_start_time',
+            forecast_report_time: get_start_time,
             first_12hr: _12hr_report(1),
             second_12hr: _12hr_report(2),
             third_12hr: _12hr_report(3)

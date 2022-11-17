@@ -26,7 +26,9 @@ describe 'Integration Tests of CWB API and Database' do
       region = TravellingSuggestions::Mapper::RegionMapper.new('Taiwan',LOCATION).find_weather(CWB_TOKEN)
       weather = region.weather
       rebuilt_region = TravellingSuggestions::Repository::Regions.db_find_or_create(region)
+      rebuilt_forecast36hr = TravellingSuggestions::Repository::Forecasts_36Hr.db_find_or_create(region)
       _(rebuilt_region.city).must_equal region.city
+      _(rebuilt_forecast36hr.region.city).must_equal region.city
     end
   end
 end
