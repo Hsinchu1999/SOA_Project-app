@@ -29,6 +29,9 @@ describe 'Integration Tests of CWB API and Database' do
       rebuilt_forecast36hr = TravellingSuggestions::Repository::Forecasts_36Hr.db_find_or_create(region)
       _(rebuilt_region.city).must_equal region.city
       _(rebuilt_forecast36hr.region.city).must_equal region.city
+      _(rebuilt_forecast36hr.forecast_first_12hr.pop).must_equal weather.forecast_36hr.first_12hr.pop
+      _(rebuilt_forecast36hr.forecast_second_12hr.pop).must_equal weather.forecast_36hr.second_12hr.pop
+      _(rebuilt_forecast36hr.forecast_last_12hr.pop).must_equal weather.forecast_36hr.third_12hr.pop
     end
   end
 end

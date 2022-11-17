@@ -34,9 +34,30 @@ module TravellingSuggestions
 
       def self.db_find_or_create(region_entity)
         db_region = Database::RegionOrm.find_or_create(region_entity.to_attr_hash)
-        db_forecast_36hr_entity = Database::Forecast36hrOrm.find_or_create(region.id)
-        db_
-
+        db_forecast_36hr = Database::Forecast36hrOrm.find_or_create(db_region.id)
+        db_forecast_36hr.update(forecast_report_time:region_entity.weather.forecast_36hr.forecast_report_time)
+        if  db_forecast_36hr.forecast_first_12hr_id == nil
+          db_first_12hr = Database::Forecastper12hrOrm.create(region_entity.weather.forecast_36hr.first_12hr.to_attr_hash)
+          db_forecast_36hr.update(forecast_first_12hr_id: db_first_12hr.id)
+        else
+          db_first_12hr = db_forecast_36hr.forecast_first_12hr
+          db_first_12hr.update(region_entity.weather.forecast_36hr.first_12hr.to_attr_hash)
+        end
+        if  db_forecast_36hr.forecast_second_12hr_id == nil
+          db_second_12hr = Database::Forecastper12hrOrm.create(region_entity.weather.forecast_36hr.second_12hr.to_attr_hash)
+          db_forecast_36hr.update(forecast_second_12hr_id: db_second_12hr.id)
+        else
+          db_second_12hr = db_forecast_36hr.forecast_second_12hr
+          db_second_12hr.update(region_entity.weather.forecast_36hr.second_12hr.to_attr_hash)
+        end
+        if  db_forecast_36hr.forecast_last_12hr_id == nil
+          db_last_12hr = Database::Forecastper12hrOrm.create(region_entity.weather.forecast_36hr.third_12hr.to_attr_hash)
+          db_forecast_36hr.update(forecast_last_12hr_id: db_last_12hr.id)
+        else
+          db_last_12hr = db_forecast_36hr.forecast_last_12hr
+          db_last_12hr.update(region_entity.weather.forecast_36hr.third_12hr.to_attr_hash) 
+        end
+        db_forecast_36hr
       end
       # to be completed
 
