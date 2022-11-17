@@ -10,9 +10,12 @@ module TravellingSuggestions
     plugin :render, engine: 'slim', views: 'app/views'
     plugin :assets, css: 'style.css', path: 'app/views/assets'
     plugin :common_logger, $Stderr
+    plugin :public, root: 'app/views/public'
+    plugin :flash
     plugin :halt
 
     route do |routing|
+      routing.public
       routing.assets
 
       routing.root do 
