@@ -52,6 +52,12 @@ module TravellingSuggestions
         routing.is 'last' do
           view 'mbti_test_last'
         end
+        routing.is 'result' do
+          view 'mbti_test_result'
+        end
+        routing.is 'recommendation' do
+          view 'recommendation'
+        end
       end
 
       routing.on 'user' do
