@@ -19,6 +19,7 @@ module TravellingSuggestions
       routing.assets
 
       routing.root do 
+        session[:testing] = 'home'
         view 'home'
       end
 
