@@ -10,9 +10,12 @@ module TravellingSuggestions
     plugin :render, engine: 'slim', views: 'app/views'
     plugin :assets, css: 'style.css', path: 'app/views/assets'
     plugin :common_logger, $Stderr
+    plugin :public, root: 'app/views/public'
+    plugin :flash
     plugin :halt
 
     route do |routing|
+      routing.public
       routing.assets
 
       routing.root do 
@@ -51,6 +54,12 @@ module TravellingSuggestions
         end
         routing.is 'last' do
           view 'mbti_test_last'
+        end
+        routing.is 'result' do
+          view 'mbti_test_result'
+        end
+        routing.is 'recommendation' do
+          view 'recommendation'
         end
       end
 
