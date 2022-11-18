@@ -4,12 +4,14 @@ require 'roda'
 require 'yaml'
 require 'sequel'
 require 'figaro'
+require 'rack/session'
 
 module TravellingSuggestions
   class App < Roda
     plugin :environments
       
     configure do
+      use Rack::Session::Cookie, secret: config.SESSION_SECRET
       Figaro.application = Figaro::Application.new(
         environment: environment,
         path: File.expand_path('config/secrets.yml')
