@@ -18,7 +18,7 @@ module TravellingSuggestions
                     join_table: :user_active_ratings,
                     left_key: :attraction_id, right_key: :user_id
 
-      plugin :timestamps,update_on_create: true
+      plugin :timestamps, update_on_create: true
     end
   end
 end

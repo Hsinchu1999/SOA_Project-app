@@ -17,8 +17,7 @@ module TravellingSuggestions
         Entity::Forecast_Per_12Hr => Forecasts_Per_12Hr,
         Entity::MBTI_Question => MBTI_Questions,
         Entity::Region => Regions,
-        Entity::User => Users,
-        #Entity::Weather => Weathers
+        Entity::User => Users
       }.freeze
 
       def self.klass(entity_klass)

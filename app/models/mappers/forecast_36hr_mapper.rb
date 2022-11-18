@@ -22,7 +22,7 @@ module TravellingSuggestions
       class DataMapper
         def initialize(location, data)
           @location = location
-          @location_data = data
+          @location_data = data[0]
         end
 
         def build_entity

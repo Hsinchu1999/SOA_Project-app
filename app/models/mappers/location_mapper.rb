@@ -10,7 +10,7 @@ module TravellingSuggestions
       end
       
       def find(location)
-        data = @gateway.location_data(location)
+        data = @gateway.forecast_36_hr(location)
         build_entity(location, data)
       end
 
