@@ -10,9 +10,13 @@ task :defult do
 end
 desc 'Run tests once'
 Rake::TestTask.new(:spec) do |t|
-  sh 'ruby weather.rb'
   t.pattern = 'spec/*_spec.rb'
   t.warning = false
+end
+
+desc 'update weather'
+task :update_wea do
+  sh 'ruby weather.rb'
 end
 
 desc 'run tests'
