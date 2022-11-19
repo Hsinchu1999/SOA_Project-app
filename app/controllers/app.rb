@@ -125,6 +125,26 @@ module TravellingSuggestions
         routing.is do
           view 'personal_page'
         end
+        routing.is 'login' do
+          if session[:current_user] == 'tom999'
+            routing.redirct '/user'
+          else
+            view 'login'
+          end
+
+        end
+        routing.is 'submit_login' do
+          routing.post do
+            if routing.params['nick_name'] == 'tom999'
+              session[:current_user] = routing.params['nick_name']
+              routing.redirect '/user'
+            else
+              session[:retry_login] = true
+              flash[:error] = 'Invalid Nickname'
+              routing.redirect '/user/login'
+            end
+          end
+        end
         routing.is 'favorites' do
           view 'favorites'
         end
