@@ -47,15 +47,51 @@ module TravellingSuggestions
       end
 
       routing.on 'mbti_test' do
+        routing.is 'submit_answer' do
+          # accepts submitted mbti answers
+          routing.post do
+            answer = routing.params['score']
+            # puts answer
+            puts session[:answered_cnt]
+
+            if session[:answered_cnt] >= 3
+              routing.redirect '/mbti_test/last'
+            else
+              session[:answered_cnt] = session[:answered_cnt] + 1
+              routing.redirect '/mbti_test/continue'
+            end
+          end
+        end
+        routing.is 'show_result' do
+          routing.post do
+            answer = routing.params['score']
+            routing.redirect '/mbti_test/result'
+          end
+        end
         routing.is 'start' do
+          session[:answered_cnt] = 0
           view 'mbti_test_first'
         end
         routing.is 'continue' do
-          view 'mbti_test_general'
+          puts 'in mbti_test/continue'
+          puts session[:answered_cnt]
+          if session[:answered_cnt] == nil
+            routing.redirect '/mbti_test/start'
+          else
+            view 'mbti_test_general'
+          end
         end
+
         routing.is 'last' do
-          view 'mbti_test_last'
+          puts 'in mbti_test/last'
+          puts session[:answered_cnt]
+          if session[:answered_cnt] != 3
+            routing.redirect '/mbti_test/start'
+          else
+            view 'mbti_test_last'
+          end
         end
+
         routing.is 'result' do
           view 'mbti_test_result'
         end
