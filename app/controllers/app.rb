@@ -93,7 +93,7 @@ module TravellingSuggestions
         end
 
         routing.is 'result' do
-          if session[:retry_username] == true:
+          if session[:retry_username] == true
             # incomplete
             puts "give some warning here by flash"
           end
@@ -111,7 +111,7 @@ module TravellingSuggestions
           if user_name == 'peterchen'
             # incomplete
             session[:retry_username] = true
-            routing.redirect '/mbti_result'
+            routing.redirect '/mbti_test/result'
           else
             # incomplete, write user profile into db
             session[:retry_username] = false
