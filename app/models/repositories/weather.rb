@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module TravellingSuggestions
-  module Repository 
+  module Repository
     class Weathers
 
       def self.find_region_id(region_id)

@@ -5,7 +5,7 @@ require_relative '../cwb_api.rb'
 require_relative 'helpers/vcr_helper'
 
 describe 'Tests CWB API library' do
-  VcrHelper.setup_vcr
+  #VcrHelper.setup_vcr
   
   before do
     VcrHelper.configure_vcr_for_cwb
@@ -25,7 +25,7 @@ describe 'Tests CWB API library' do
     end
 
     it 'SAD: should raise exception when unauthorized' do
-      _(proc do TravellingSuggestions::CWB::CWBApi.new('BAD_TOKEN').location_data(LOCATION) end).must_raise UNAUTHORIZED
+      _(proc do TravellingSuggestions::CWB::CWBApi.new('BAD_TOKEN').forecast_36_hr(LOCATION) end).must_raise UNAUTHORIZED
     end
   end
 end

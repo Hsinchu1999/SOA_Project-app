@@ -10,9 +10,12 @@ module TravellingSuggestions
     plugin :render, engine: 'slim', views: 'app/views'
     plugin :assets, css: 'style.css', path: 'app/views/assets'
     plugin :common_logger, $Stderr
+    plugin :public, root: 'app/views/public'
+    plugin :flash
     plugin :halt
 
     route do |routing|
+      routing.public
       routing.assets
 
       routing.root do 
@@ -39,6 +42,36 @@ module TravellingSuggestions
               .find(location)
             view 'weather', locals: { weather: cwb_weather }  
           end
+        end
+      end
+
+      routing.on 'mbti_test' do
+        routing.is 'start' do
+          view 'mbti_test_first'
+        end
+        routing.is 'continue' do
+          view 'mbti_test_general'
+        end
+        routing.is 'last' do
+          view 'mbti_test_last'
+        end
+        routing.is 'result' do
+          view 'mbti_test_result'
+        end
+        routing.is 'recommendation' do
+          view 'recommendation'
+        end
+      end
+
+      routing.on 'user' do
+        routing.is do
+          view 'personal_page'
+        end
+        routing.is 'favorites' do
+          view 'favorites'
+        end
+        routing.is 'viewed-attraction' do
+          view 'viewed_attraction'
         end
       end
     end

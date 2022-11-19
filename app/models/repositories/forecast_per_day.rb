@@ -12,7 +12,7 @@ module TravellingSuggestions
         return nil unless db_record
 
         Entity::Forecast_Per_Day.new(
-          PoP:        pop,
+          pop:        pop,
           minT:       minT,
           maxT:       maxT
         )
