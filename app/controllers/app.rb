@@ -93,6 +93,10 @@ module TravellingSuggestions
         end
 
         routing.is 'result' do
+          if session[:retry_username] == true:
+            # incomplete
+            puts "give some warning here by flash"
+          end
           view 'mbti_test_result'
         end
         routing.is 'recommendation' do
@@ -101,6 +105,20 @@ module TravellingSuggestions
       end
 
       routing.on 'user' do
+        routing.is 'construct_profile' do
+          user_name = routing.params['user_name']
+          puts "new user name is #{user_name}"
+          if user_name == 'peterchen'
+            # incomplete
+            session[:retry_username] = true
+            routing.redirect '/mbti_result'
+          else
+            # incomplete, write user profile into db
+            session[:retry_username] = false
+            session[:current_user] = user_name
+            routing.redirect '/mbti_test/recommendation'
+          end
+        end
         routing.is do
           view 'personal_page'
         end
