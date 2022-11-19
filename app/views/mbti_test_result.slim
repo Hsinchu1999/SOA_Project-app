@@ -17,6 +17,15 @@
         p Outgoing 
     
     .mbti_link 
-      a href="recommendation" Get my recommendations
+      .text_input_container
+        form role="form" action="/"
+          label for='user_name_input' Your Nickname
+          input {
+            type='text' name='user_name'
+            id='user_name_iput'
+            placeholder="e.g. Tom999"
+          }
+          button type='submit' Show Recommendations
+        
         
 
