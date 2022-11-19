@@ -2,6 +2,7 @@
 
 require 'roda'
 require 'slim'
+require 'slim/include'
 
 Slim::Engine.set_options encoding: "utf-8"
 
@@ -111,6 +112,8 @@ module TravellingSuggestions
           if user_name == 'peterchen'
             # incomplete
             session[:retry_username] = true
+            flash[:error] = 'Invalid Nickname'
+            flash[:notice] = 'Nickname already in use'
             routing.redirect '/mbti_test/result'
           else
             # incomplete, write user profile into db
