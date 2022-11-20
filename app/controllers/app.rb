@@ -53,12 +53,13 @@ module TravellingSuggestions
           routing.post do
             answer = routing.params['score']
             # puts answer
+            session[:answered_cnt] = session[:answered_cnt] + 1
             puts session[:answered_cnt]
 
-            if session[:answered_cnt] >= 3
+
+            if session[:answered_cnt] >= 4
               routing.redirect '/mbti_test/last'
             else
-              session[:answered_cnt] = session[:answered_cnt] + 1
               routing.redirect '/mbti_test/continue'
             end
           end
@@ -67,6 +68,16 @@ module TravellingSuggestions
           routing.post do
             answer = routing.params['score']
             routing.redirect '/mbti_test/result'
+          end
+        end
+        routing.is 'previous_page' do
+          routing.post do
+            session[:answered_cnt] = session[:answered_cnt] - 1
+            if session[:answered_cnt] == 0
+              routing.redirect '/mbti_test/start'
+            else
+              routing.redirect '/mbti_test/continue'
+            end
           end
         end
         routing.is 'start' do
@@ -83,14 +94,14 @@ module TravellingSuggestions
           if session[:answered_cnt] == nil
             routing.redirect '/mbti_test/start'
           else
-            view 'mbti_test_general'
+            view 'mbti_test_general', locals: { current_question: session[:answered_cnt] + 1}
           end
         end
 
         routing.is 'last' do
           puts 'in mbti_test/last'
           puts session[:answered_cnt]
-          if session[:answered_cnt] != 3
+          if session[:answered_cnt] != 4
             routing.redirect '/mbti_test/start'
           else
             view 'mbti_test_last'
