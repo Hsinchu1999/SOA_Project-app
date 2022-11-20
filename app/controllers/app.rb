@@ -52,6 +52,7 @@ module TravellingSuggestions
           # accepts submitted mbti answers
           routing.post do
             answer = routing.params['score']
+            session[:mbti_answers].push(answer)
             # puts answer
             session[:answered_cnt] = session[:answered_cnt] + 1
             puts session[:answered_cnt]
@@ -73,6 +74,7 @@ module TravellingSuggestions
         routing.is 'previous_page' do
           routing.post do
             session[:answered_cnt] = session[:answered_cnt] - 1
+            session[:mbti_answers].pop
             if session[:answered_cnt] == 0
               routing.redirect '/mbti_test/start'
             else
@@ -85,6 +87,7 @@ module TravellingSuggestions
             routing.redirect '/user'
           else
             session[:answered_cnt] = 0
+            session[:mbti_answers] = Array.new
             view 'mbti_test_first'
           end
         end
