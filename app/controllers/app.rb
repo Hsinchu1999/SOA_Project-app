@@ -108,15 +108,17 @@ module TravellingSuggestions
       routing.on 'user' do
         routing.is 'construct_profile' do
           user_name = routing.params['user_name']
+          user = Repository::Users.find_name(user_name)
           puts "new user name is #{user_name}"
-          if user_name == 'peterchen'
+          if user
             # incomplete
             session[:retry_username] = true
-            flash[:error] = 'Invalid Nickname'
-            flash[:notice] = 'Nickname already in use'
+            flash[:error] = 'Nickname already in use'
+            flash[:notice] = 'Try another nickname or use personal page to login'
             routing.redirect '/mbti_test/result'
           else
             # incomplete, write user profile into db
+            Repository::Users.db_create(user_name)
             session[:retry_username] = false
             session[:current_user] = user_name
             routing.redirect '/mbti_test/recommendation'
