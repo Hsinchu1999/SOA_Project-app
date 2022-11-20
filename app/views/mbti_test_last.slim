@@ -12,13 +12,15 @@ html
       .mbti_question 
         p Your regularly make new friends 
       .mbti_answer 
-        form role="form" action="/"
-          input type="checkbox" name="1"
-          input type="checkbox" name="2"
-          input type="checkbox" name="3"
-          input type="checkbox" name="4"
-          input type="checkbox" name="5"
-          input type="submit" value="Done"
+        form role="form" action="/mbti_test/show_result" method='POST'
+          select name='score'
+            option value='1' 1
+            option value='2' 2
+            option value='3' 3
+            option value='4' 4
+            option value='5' 5
+          input type='submit' value='Next'
         form role="form" action="/"
           input type="submit" value="Previous"
+
 

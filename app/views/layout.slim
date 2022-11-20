@@ -5,7 +5,7 @@ html lang='zh-tw'
     title TravellingSuggestions - Your Best Travelling Suggestions
 
     link{
-      href="https://stackpath.bootstrapcdn.com/.../bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       crossorigin="anonymous"
     }
@@ -20,7 +20,7 @@ html lang='zh-tw'
     }
 
     script{
-      src="https://stackpath.bootstrapcdn.com/.../bootstrap.min.js"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
       crossorigin="anonymous"
     }
 
@@ -30,8 +30,9 @@ html lang='zh-tw'
           .col-12 
             h1 
               a href="/" TravellingSuggestions
-      
+
       section
+        include :flash_bar
         == yield 
       
       footer

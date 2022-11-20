@@ -2,6 +2,7 @@
 
 require 'roda'
 require 'slim'
+require 'slim/include'
 
 Slim::Engine.set_options encoding: "utf-8"
 
@@ -19,6 +20,7 @@ module TravellingSuggestions
       routing.assets
 
       routing.root do 
+        session[:testing] = 'home'
         view 'home'
       end
 
@@ -46,16 +48,56 @@ module TravellingSuggestions
       end
 
       routing.on 'mbti_test' do
+        routing.is 'submit_answer' do
+          # accepts submitted mbti answers
+          routing.post do
+            answer = routing.params['score']
+            # puts answer
+            puts session[:answered_cnt]
+
+            if session[:answered_cnt] >= 3
+              routing.redirect '/mbti_test/last'
+            else
+              session[:answered_cnt] = session[:answered_cnt] + 1
+              routing.redirect '/mbti_test/continue'
+            end
+          end
+        end
+        routing.is 'show_result' do
+          routing.post do
+            answer = routing.params['score']
+            routing.redirect '/mbti_test/result'
+          end
+        end
         routing.is 'start' do
+          session[:answered_cnt] = 0
           view 'mbti_test_first'
         end
         routing.is 'continue' do
-          view 'mbti_test_general'
+          puts 'in mbti_test/continue'
+          puts session[:answered_cnt]
+          if session[:answered_cnt] == nil
+            routing.redirect '/mbti_test/start'
+          else
+            view 'mbti_test_general'
+          end
         end
+
         routing.is 'last' do
-          view 'mbti_test_last'
+          puts 'in mbti_test/last'
+          puts session[:answered_cnt]
+          if session[:answered_cnt] != 3
+            routing.redirect '/mbti_test/start'
+          else
+            view 'mbti_test_last'
+          end
         end
+
         routing.is 'result' do
+          if session[:retry_username] == true
+            # incomplete
+            puts "give some warning here by flash"
+          end
           view 'mbti_test_result'
         end
         routing.is 'recommendation' do
@@ -64,8 +106,44 @@ module TravellingSuggestions
       end
 
       routing.on 'user' do
+        routing.is 'construct_profile' do
+          user_name = routing.params['user_name']
+          puts "new user name is #{user_name}"
+          if user_name == 'peterchen'
+            # incomplete
+            session[:retry_username] = true
+            flash[:error] = 'Invalid Nickname'
+            flash[:notice] = 'Nickname already in use'
+            routing.redirect '/mbti_test/result'
+          else
+            # incomplete, write user profile into db
+            session[:retry_username] = false
+            session[:current_user] = user_name
+            routing.redirect '/mbti_test/recommendation'
+          end
+        end
         routing.is do
           view 'personal_page'
+        end
+        routing.is 'login' do
+          if session[:current_user] == 'tom999'
+            routing.redirct '/user'
+          else
+            view 'login'
+          end
+
+        end
+        routing.is 'submit_login' do
+          routing.post do
+            if routing.params['nick_name'] == 'tom999'
+              session[:current_user] = routing.params['nick_name']
+              routing.redirect '/user'
+            else
+              session[:retry_login] = true
+              flash[:error] = 'Invalid Nickname'
+              routing.redirect '/user/login'
+            end
+          end
         end
         routing.is 'favorites' do
           view 'favorites'
