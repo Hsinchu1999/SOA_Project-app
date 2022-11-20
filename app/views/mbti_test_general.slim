@@ -7,6 +7,8 @@ html
   body
     .title_container 
       h3 The MBTI Test
+      h3 Question number 
+      h3 =current_question
     
     .mbti_question_box 
       .mbti_question 
@@ -20,6 +22,6 @@ html
             option value='4' 4
             option value='5' 5
           input type='submit' value='Next'
-        form role="form" action="/"
+        form role="form" action="/mbti_test/previous_page" method='Post'
           input type="submit" value="Previous"
 
