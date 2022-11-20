@@ -114,10 +114,10 @@ module TravellingSuggestions
             # incomplete
             session[:retry_username] = true
             flash[:error] = 'Nickname already in use'
-            flash[:notice] = 'Try another nickname or use personal page to login'
+            flash[:notice] = 'Try another nickname or click personal page to login'
             routing.redirect '/mbti_test/result'
           else
-            # incomplete, write user profile into db
+            # incomplete, write user mbti into db
             Repository::Users.db_create(user_name)
             session[:retry_username] = false
             session[:current_user] = user_name
@@ -128,8 +128,10 @@ module TravellingSuggestions
           view 'personal_page'
         end
         routing.is 'login' do
-          if session[:current_user] == 'tom999'
-            routing.redirct '/user'
+          user_name = session[:current_user]
+          user = Repository::Users.find_name(user_name)
+          if user
+            routing.redirect '/user'
           else
             view 'login'
           end
@@ -137,12 +139,15 @@ module TravellingSuggestions
         end
         routing.is 'submit_login' do
           routing.post do
-            if routing.params['nick_name'] == 'tom999'
-              session[:current_user] = routing.params['nick_name']
+            nick_name = routing.params['nick_name']
+            user = Repository::Users.find_name(nick_name)
+            if user
+              session[:current_user] = user.nickname
               routing.redirect '/user'
             else
               session[:retry_login] = true
               flash[:error] = 'Invalid Nickname'
+              flash[:notice] = 'Type correct nickname or start journey to get recommendation'
               routing.redirect '/user/login'
             end
           end
