@@ -70,8 +70,12 @@ module TravellingSuggestions
           end
         end
         routing.is 'start' do
-          session[:answered_cnt] = 0
-          view 'mbti_test_first'
+          if session[:current_user]
+            routing.redirect '/user'
+          else
+            session[:answered_cnt] = 0
+            view 'mbti_test_first'
+          end
         end
         routing.is 'continue' do
           puts 'in mbti_test/continue'
