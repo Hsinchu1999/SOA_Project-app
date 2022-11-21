@@ -143,7 +143,13 @@ module TravellingSuggestions
           end
         end
         routing.is do
-          view 'personal_page'
+          user_name = session[:current_user]
+          user = Repository::Users.find_name(user_name)
+          if user
+            view 'personal_page'
+          else
+            redirect '/user/login'
+          end
         end
         routing.is 'login' do
           user_name = session[:current_user]
