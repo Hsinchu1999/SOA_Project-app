@@ -10,7 +10,8 @@ Sequel.migration do
       String :text
       String :section
       String :direction
-      Integer :tier
+      Integer :score_forward
+      Integer :score_reverse
 
       DateTime :created_at
       DateTime :updated_at
