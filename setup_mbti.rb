@@ -41,26 +41,33 @@ mbti_orm.create(question: 'DO YOU TEND TO HAVE',
                 answerA: 'BROAD FRIENDSHIPS WITH MANY DIFFERENT PEOPLE',
                 answerB: 'DEEP FRIENDSHIP WITH VERY FEW PEOPLE',
                 section: 'EI', directionA: 'E', scoreA: 2, scoreB: 1)
-
+mbti_orm.create(question: 'DO YOU ADMIRE MORE THE PEOPLE WHO ARE',
+                answerA: 'NORMAL-ACTING TO NEVER MAKE THEMSELVES THE CENTER OF ATTENTION',
+                answerB: 'TOO ORIGINAL AND INDIVIDUAL TO CARE WHETHER THEY ARE THE CENTER OF ATTENTION',
+                section: 'SN', directionA: 'S', scoreA: 1, scoreB: 2)
+# Question 11
+mbti_orm.create(question: 'DO YOU PREFER TO',
+                answerA: 'ARRANGE PICNICS, PARTIES ETC, WELL IN ADVANCE',
+                answerB: 'BE FREE TO DO WHATEVER TO LOOKS LIKE FUN WHEN THE TIME COMES',
+                section: 'JP', directionA: 'J', scoreA: 2, scoreB: 1)
+mbti_orm.create(question: 'DO YOU USUALLY GET ALONG BETTER WITH',
+                answerA: 'REALISTIC PEOPLE',
+                answerB: 'IMAGINATIVE PEOPLE',
+                section: 'SN', directionA: 'S', scoreA: 1, scoreB: 2)
+mbti_orm.create(question: 'WHEN YOU ARE WITH THE GROUP OF PEOPLE, WOULD YOU USUALLY RATHER',
+                answerA: 'JOIN IN THE TALK OF THE GROUP',
+                answerB: 'STAND BACK AND LISTEN FIRST',
+                section: 'EI', directionA: 'E', scoreA: 1, scoreB: 2)
+mbti_orm.create(question: 'IS IT A HIGHER COMPLIMENT TO BE CALLED',
+                answerA: 'A PERSON OF REAL FEELING',
+                answerB: 'A CONSISTENTLY REASONABLE PERSON',
+                section: 'TF', directionA: 'F', scoreA: 1, scoreB: 2)
+mbti_orm.create(question: 'IN READING FOR PLEASURE, DO YOU',
+                answerA: 'ENJOY ODD OR ORIGINAL WAYS OF SAYING THINGS',
+                answerB: 'LIKE WRITERS TO SAY EXACTLY WHAT THEY MEAN',
+                section: 'SN', directionA: 'N', scoreA: 0, scoreB: 1)
+# question 16
                 mbti_orm.create(question: 'ARE YOU USUALLY',
-                answerA: 'A "GOOD MIXER" WITH GROUPS OF PEOPLE',
-                answerB: 'ATHER QUIET AND RESERVED',
-                section: 'EI', directionA: 'E', scoreA: 2, scoreB: 2)mbti_orm.create(question: 'ARE YOU USUALLY',
-                answerA: 'A "GOOD MIXER" WITH GROUPS OF PEOPLE',
-                answerB: 'ATHER QUIET AND RESERVED',
-                section: 'EI', directionA: 'E', scoreA: 2, scoreB: 2)mbti_orm.create(question: 'ARE YOU USUALLY',
-                answerA: 'A "GOOD MIXER" WITH GROUPS OF PEOPLE',
-                answerB: 'ATHER QUIET AND RESERVED',
-                section: 'EI', directionA: 'E', scoreA: 2, scoreB: 2)mbti_orm.create(question: 'ARE YOU USUALLY',
-                answerA: 'A "GOOD MIXER" WITH GROUPS OF PEOPLE',
-                answerB: 'ATHER QUIET AND RESERVED',
-                section: 'EI', directionA: 'E', scoreA: 2, scoreB: 2)mbti_orm.create(question: 'ARE YOU USUALLY',
-                answerA: 'A "GOOD MIXER" WITH GROUPS OF PEOPLE',
-                answerB: 'ATHER QUIET AND RESERVED',
-                section: 'EI', directionA: 'E', scoreA: 2, scoreB: 2)mbti_orm.create(question: 'ARE YOU USUALLY',
-                answerA: 'A "GOOD MIXER" WITH GROUPS OF PEOPLE',
-                answerB: 'ATHER QUIET AND RESERVED',
-                section: 'EI', directionA: 'E', scoreA: 2, scoreB: 2)mbti_orm.create(question: 'ARE YOU USUALLY',
                 answerA: 'A "GOOD MIXER" WITH GROUPS OF PEOPLE',
                 answerB: 'ATHER QUIET AND RESERVED',
                 section: 'EI', directionA: 'E', scoreA: 2, scoreB: 2)mbti_orm.create(question: 'ARE YOU USUALLY',
