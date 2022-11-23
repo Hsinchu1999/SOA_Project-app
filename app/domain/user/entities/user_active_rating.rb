@@ -2,7 +2,7 @@
 
 require 'dry-types'
 require 'dry-struct'
-require_relative 'region'
+#require_relative 'region'
 
 module TravellingSuggestions
   module Entity

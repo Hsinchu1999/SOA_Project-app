@@ -1,23 +1,17 @@
 # frozen_string_literal: true
 
-require_relative 'attraction'
-require_relative 'forecast_36hr'
-require_relative 'forecast_per_12hr'
-require_relative 'mbti_question'
-require_relative 'region'
 require_relative 'user'
+require_relative 'user_active_rating'
+require_relative 'user_favorite'
 
 module TravellingSuggestions
   module Repository
-    module For
+    module ForUser
 
       ENTITY_REPOSITORY = {
-        Entity::Attraction => Attractions,
-        Entity::Forecast_36Hr => Forecasts_36Hr,
-        Entity::Forecast_Per_12Hr => Forecasts_Per_12Hr,
-        Entity::MBTI_Question => MBTI_Questions,
-        Entity::Region => Regions,
-        Entity::User => Users
+        Entity::User => Users,
+        Entity::User_Active_Rating => User_Active_Ratings,
+        Entity::User_Favorite => Users
       }.freeze
 
       def self.klass(entity_klass)
