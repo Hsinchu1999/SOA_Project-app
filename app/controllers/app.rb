@@ -8,7 +8,7 @@ Slim::Engine.set_options encoding: "utf-8"
 
 module TravellingSuggestions
   class App < Roda
-    plugin :render, engine: 'slim', views: 'app/views'
+    plugin :render, engine: 'slim', views: 'app/views/views_html'
     plugin :assets, css: 'style.css', path: 'app/views/assets'
     plugin :common_logger, $Stderr
     plugin :public, root: 'app/views/public'
