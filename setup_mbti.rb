@@ -3,7 +3,7 @@
 require_relative 'require_app'
 require_app
 
-def mbti_orm = TravellingSuggestions::Database::MBTIOrm
+def mbti_orm = TravellingSuggestions::Database::MBTIQuestionOrm
 
 mbti_orm.create(question: 'WHEN YOU GO SOMEWHERE FOR THE DAY, WOULD YOU RATHER',
                 answerA: 'PLAN WHAT YOU WILL DO AND WHEN',

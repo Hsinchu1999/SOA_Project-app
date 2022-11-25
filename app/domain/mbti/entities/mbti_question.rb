@@ -9,10 +9,13 @@ module TravellingSuggestions
       include Dry.Types
 
       attribute :id,                    Strict::Integer
-      attribute :text,                  Strict::String
+      attribute :question,              Strict::String
+      attribute :answerA,               Strict::String
+      attribute :answerB,               Strict::String
       attribute :section,               Strict::String
-      attribute :direction,             Strict::String
-      attribute :tier,                  Strict::Integer
+      attribute :directionA,            Strict::String
+      attribute :scoreA,                Strict::Integer
+      attribute :scoreB,                Strict::Integer
 
     end
   end
