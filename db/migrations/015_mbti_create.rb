@@ -4,12 +4,11 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_table(:mbti_stayingtime_ratings) do
+    create_table(:mbtis) do
       primary_key :id
 
-      String :mbti
-      String :staying_time
-      Real :score
+      String :mbti_type
+      String :description
 
       DateTime :created_at
       DateTime :updated_at
