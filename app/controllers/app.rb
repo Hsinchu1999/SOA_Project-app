@@ -130,6 +130,8 @@ module TravellingSuggestions
           puts "new user name is #{user_name}"
           if user
             # incomplete
+            puts user.id
+            puts user.nickname
             session[:retry_username] = true
             flash[:error] = 'Nickname already in use'
             flash[:notice] = 'Try another nickname or click personal page to login'
@@ -143,11 +145,26 @@ module TravellingSuggestions
           end
         end
         routing.is do
-          view 'personal_page'
+          nick_name = session[:current_user]
+          puts 'currently at /user'
+          puts nick_name
+          user = Repository::Users.find_name(nick_name)
+          puts 'user = '
+          puts user
+          if user
+            viewable_user = Views::User.new(user)
+            view 'personal_page', locals: { user: viewable_user }
+          else
+            routing.redirect '/user/login' unless user
+          end
+          
         end
         routing.is 'login' do
           user_name = session[:current_user]
           user = Repository::Users.find_name(user_name)
+          puts 'currently at user/login'
+          puts 'user_name = '
+          puts user_name
           if user
             routing.redirect '/user'
           else
