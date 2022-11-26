@@ -19,6 +19,11 @@ task :update_wea do
   sh 'ruby weather.rb'
 end
 
+desc 'setup mbti questions'
+task :setup_mbti do
+  sh 'ruby setup_mbti.rb'
+end
+
 desc 'run tests'
 task :db_spec do
   sh 'ruby spec/gateway_database_spec.rb'

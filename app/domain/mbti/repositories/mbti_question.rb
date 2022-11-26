@@ -4,11 +4,11 @@ module TravellingSuggestions
     module Repository
       class MBTI_Questions
         def self.find_id(id)
-          rebuild_entity Database::MBTIOrm.first(id: id)
+          rebuild_entity Database::MBTIQuestionOrm.first(id: id)
         end
 
         def self.find_tier(tier)
-          rebuild_many_entities Database::MBTIOrm.where(tier: tier).all
+          rebuild_many_entities Database::MBTIQuestionOrm.where(tier: tier).all
         end
 
         def self.rebuild_entity(db_record)

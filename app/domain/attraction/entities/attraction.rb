@@ -9,6 +9,7 @@ module TravellingSuggestions
     class Attraction < Dry::Struct
       include Dry.Types
 
+      attribute :name,                  Strict::String 
       attribute :id,                    Strict::Integer
       attribute :added_time,            Strict::String
       attribute :region,                Region
