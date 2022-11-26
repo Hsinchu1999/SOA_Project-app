@@ -12,6 +12,7 @@ module DatabaseHelper
     TravellingSuggestions::Database::MBTIInOutdoorRatingOrm.map(&:destroy)
     TravellingSuggestions::Database::MBTIMainActivityRatingOrm.map(&:destroy)
     TravellingSuggestions::Database::MBTIOrm.map(&:destroy)
+    TravellingSuggestions::Database::MBTIQuestionOrm.map(&:destroy)
     TravellingSuggestions::Database::MBTIStayingtimeRatingOrm.map(&:destroy)
     TravellingSuggestions::Database::MBTITypeRatingOrm.map(&:destroy)
     TravellingSuggestions::Database::UserOrm.map(&:destroy)

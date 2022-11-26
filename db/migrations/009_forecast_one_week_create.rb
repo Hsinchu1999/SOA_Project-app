@@ -14,7 +14,7 @@ Sequel.migration do
       foreign_key :fifth_day_id, :forecast_per_days, unique: true
       foreign_key :sixth_day_id, :forecast_per_days, unique: true
       foreign_key :seventh_day_id, :forecast_per_days, unique: true
-      
+
       String :forecast_report_time
 
       DateTime :created_at
