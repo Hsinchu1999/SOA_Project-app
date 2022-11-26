@@ -188,7 +188,14 @@ module TravellingSuggestions
           end
         end
         routing.is 'favorites' do
-          view 'favorites'
+          nick_name = session[:current_user]
+          user = Repository::Users.find_name(nick_name)
+          if user
+            viewable_user = Views::User.new(user)
+            view 'favorites', locals: { favorite_attractions: viewable_user.favorite_attractions }
+          else
+            routing.redirect '/user/login'
+          end
         end
         routing.is 'viewed-attraction' do
           view 'viewed_attraction'
