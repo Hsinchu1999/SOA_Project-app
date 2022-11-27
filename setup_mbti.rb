@@ -75,7 +75,8 @@ mbti_orm.create(question: 'DOES FOLLOWING A SCHEDULE',
                 answerA: 'APPEAL TO YOU',
                 answerB: 'CRAMP YOU',
                 section: 'JP', directionA: 'J', scoreA: 2, scoreB: 2)
-mbti_orm.create(question: 'WHEN IT IS SETTLED WELL IN ADVANCE THAT YOU WILL DO A CERTAIN THING AT A CERTAIN TIME,DO YOU FIND IT',
+mbti_orm.create(question: 'WHEN IT IS SETTLED WELL IN ADVANCE THAT YOU WILL DO A \
+                          CERTAIN THING AT A CERTAIN TIME,DO YOU FIND IT',
                 answerA: 'NICE TO BE ABLE TO PLAN ACCORDINGLY',
                 answerB: 'A LITTLE UNPLEASANT TO BE TIED DOWN',
                 section: 'JP', directionA: 'J', scoreA: 1, scoreB: 1)
