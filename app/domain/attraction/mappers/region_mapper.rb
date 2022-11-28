@@ -2,11 +2,12 @@
 
 module TravellingSuggestions
   module Mapper
+    # Mapper for Region
     class RegionMapper
       attr_reader :country,
                   :city,
                   :weather
-    
+
       def initialize(country, city)
         @country = country
         @city = city
@@ -15,8 +16,9 @@ module TravellingSuggestions
       def find_weather(token)
         build_entity(token)
       end
-      
+
       private
+
       def build_entity(token)
         Entity::Region.new(
           country: @country,
@@ -27,4 +29,3 @@ module TravellingSuggestions
     end
   end
 end
-    
