@@ -4,9 +4,10 @@ require 'roda'
 require 'slim'
 require 'slim/include'
 
-Slim::Engine.set_options encoding: "utf-8"
+Slim::Engine.set_options encoding: 'utf-8'
 
 module TravellingSuggestions
+  # Web App
   class App < Roda
     plugin :render, engine: 'slim', views: 'app/views/views_html'
     plugin :assets, css: 'style.css', path: 'app/views/assets'
@@ -19,14 +20,14 @@ module TravellingSuggestions
       routing.public
       routing.assets
 
-      routing.root do 
+      routing.root do
         session[:testing] = 'home'
         view 'home'
       end
 
       routing.on 'weather' do
         routing.is do
-        # POST /weather/
+          # POST /weather/
           routing.post do
             location = routing.params['location']
             routing.redirect "weather/#{location}"
@@ -34,15 +35,16 @@ module TravellingSuggestions
         end
         routing.on String do |location|
           routing.get do
-            if location == 'hsinchu'
+            case location
+            when 'hsinchu'
               location = '新竹縣'
-            elsif location == 'taipei'
+            when 'taipei'
               location = '臺北市'
             end
             cwb_weather = TravellingSuggestions::CWB::LocationMapper
-              .new(CWB_TOKEN, TravellingSuggestions::CWB::CWBApi)
-              .find(location)
-            view 'weather', locals: { weather: cwb_weather }  
+                          .new(CWB_TOKEN, TravellingSuggestions::CWB::CWBApi)
+                          .find(location)
+            view 'weather', locals: { weather: cwb_weather }
           end
         end
       end
@@ -57,7 +59,6 @@ module TravellingSuggestions
             session[:answered_cnt] = session[:answered_cnt] + 1
             puts session[:answered_cnt]
 
-
             if session[:answered_cnt] >= 4
               routing.redirect '/mbti_test/last'
             else
@@ -67,7 +68,7 @@ module TravellingSuggestions
         end
         routing.is 'show_result' do
           routing.post do
-            answer = routing.params['score']
+            # answer = routing.params['score']
             routing.redirect '/mbti_test/result'
           end
         end
@@ -75,7 +76,7 @@ module TravellingSuggestions
           routing.post do
             session[:answered_cnt] = session[:answered_cnt] - 1
             session[:mbti_answers].pop
-            if session[:answered_cnt] == 0
+            if session[:answered_cnt].zero?
               routing.redirect '/mbti_test/start'
             else
               routing.redirect '/mbti_test/continue'
@@ -87,17 +88,17 @@ module TravellingSuggestions
             routing.redirect '/user'
           else
             session[:answered_cnt] = 0
-            session[:mbti_answers] = Array.new
+            session[:mbti_answers] = []
             view 'mbti_test_first'
           end
         end
         routing.is 'continue' do
           puts 'in mbti_test/continue'
           puts session[:answered_cnt]
-          if session[:answered_cnt] == nil
+          if session[:answered_cnt].nil?
             routing.redirect '/mbti_test/start'
           else
-            view 'mbti_test_general', locals: { current_question: session[:answered_cnt] + 1}
+            view 'mbti_test_general', locals: { current_question: session[:answered_cnt] + 1 }
           end
         end
 
@@ -114,7 +115,7 @@ module TravellingSuggestions
         routing.is 'result' do
           if session[:retry_username] == true
             # incomplete
-            puts "give some warning here by flash"
+            puts 'give some warning here by flash'
           end
           view 'mbti_test_result'
         end
@@ -157,7 +158,6 @@ module TravellingSuggestions
           else
             routing.redirect '/user/login' unless user
           end
-          
         end
         routing.is 'login' do
           user_name = session[:current_user]
@@ -170,7 +170,6 @@ module TravellingSuggestions
           else
             view 'login'
           end
-
         end
         routing.is 'submit_login' do
           routing.post do
@@ -202,6 +201,5 @@ module TravellingSuggestions
         end
       end
     end
-
   end
 end

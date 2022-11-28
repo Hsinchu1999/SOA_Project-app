@@ -37,7 +37,11 @@ gem 'reek'
 # Entities
 gem 'dry-types', '~> 1'
 gem 'dry-struct', '~> 1'
-gem 'dry-validation'
+
+# Controllers and services
+gem 'dry-validation', '~> 1.7'
+gem 'dry-transaction', '~> 0.13'
+gem 'dry-monads', '~> 1.4'
 
 # Debugging
 gem 'pry'
