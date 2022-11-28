@@ -12,7 +12,7 @@ module TravellingSuggestions
 
       private
 
-      def check_no_use_username(nick_name)
+      def check_no_use_username(input)
         if (user = Repository::ForUser.klass(Entity::User).find_name(input['user_name']))
             Failure('Nickname already in use')
         else
