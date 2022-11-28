@@ -4,10 +4,11 @@ require 'sequel'
 
 module TravellingSuggestions
   module Database
+    # forecast of next ine week
     class ForecastOneWeekOrm < Sequel::Model(:forecast_one_weeks)
       many_to_one :region,
                   class: :'TravellingSuggestions::Database::RegionOrm'
-      
+
       many_to_one :first_day,
                   class: :'TravellingSuggestions::Database::ForecastperDayOrm'
 
@@ -31,7 +32,7 @@ module TravellingSuggestions
 
       plugin :timestamps, update_on_create: true
       def self.find_or_create(region_id)
-        first(region_id: region_id) || create(region_id: region_id)
+        first(region_id:) || create(region_id:)
       end
     end
   end
