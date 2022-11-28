@@ -21,9 +21,8 @@ describe 'Integration Tests of CWB API and Database' do
       DatabaseHelper.wipe_database
     end
 
-    it 'HAPPY: should be able to save project from CWB to database' do
-      
-      region = TravellingSuggestions::Mapper::RegionMapper.new('Taiwan',LOCATION).find_weather(CWB_TOKEN)
+    it 'HAPPY: should be able to save forecast from CWB to database' do
+      region = TravellingSuggestions::Mapper::RegionMapper.new('Taiwan', LOCATION).find_weather(CWB_TOKEN)
       weather = region.weather
       rebuilt_region = TravellingSuggestions::Repository::Regions.db_find_or_create(region)
       rebuilt_forecast36hr = TravellingSuggestions::Repository::Forecasts_36Hr.db_find_or_create(region)
