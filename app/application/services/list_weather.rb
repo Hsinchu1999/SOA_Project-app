@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 require 'dry/monads'
 
 module TravellingSuggestions
   module Service
+    # A Service object to validate Entity::Weather object from db
     class ListWeather
       include Dry::Monads::Result::Mixin
 
