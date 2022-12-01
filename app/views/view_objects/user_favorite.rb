@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 require_relative 'attraction'
 
 module Views
-  class User_Favorite
+  # A Views object for Entity::UserFavorite
+  class UserFavorite
     def initialize(user_favorite)
       @user_favorite = user_favorite
     end

@@ -5,7 +5,8 @@ require 'dry-struct'
 
 module TravellingSuggestions
   module Entity
-    class MBTI_Question < Dry::Struct
+    # An Entity object for MBTI questions
+    class MBTIQuestion < Dry::Struct
       include Dry.Types
 
       attribute :id,                    Strict::Integer
@@ -16,7 +17,6 @@ module TravellingSuggestions
       attribute :directionA,            Strict::String
       attribute :scoreA,                Strict::Integer
       attribute :scoreB,                Strict::Integer
-
     end
   end
 end

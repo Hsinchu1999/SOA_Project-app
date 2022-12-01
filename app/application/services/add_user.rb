@@ -4,6 +4,7 @@ require 'dry/transaction'
 
 module TravellingSuggestions
   module Service
+    # A Service object to validate result from db
     class AddUser
       include Dry::Transaction
 
@@ -13,10 +14,10 @@ module TravellingSuggestions
       private
 
       def check_no_use_username(input)
-        if (user = Repository::ForUser.klass(Entity::User).find_name(input['user_name']))
-            Failure('Nickname already in use')
+        if Repository::ForUser.klass(Entity::User).find_name(input['user_name'])
+          Failure('Nickname already in use')
         else
-            Success(input)
+          Success(input)
         end
       end
 
@@ -24,7 +25,7 @@ module TravellingSuggestions
         user_name = input['user_name']
         user = Repository::ForUser.klass(Entity::User).db_create(user_name)
         Success(user)
-      rescue StandardError => error
+      rescue StandardError
         Failure('Having trouble accessing database')
       end
     end

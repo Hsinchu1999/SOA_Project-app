@@ -6,12 +6,12 @@ require_relative 'user_favorite'
 
 module TravellingSuggestions
   module Repository
+    # A For class for aggregate root Entity::User
     module ForUser
-
       ENTITY_REPOSITORY = {
         Entity::User => Users,
-        Entity::User_Active_Rating => User_Active_Ratings,
-        Entity::User_Favorite => Users
+        Entity::UserActiveRating => UserActiveRatings,
+        Entity::UserFavorite => Users
       }.freeze
 
       def self.klass(entity_klass)
@@ -21,7 +21,6 @@ module TravellingSuggestions
       def self.entity(entity_object)
         ENTITY_REPOSITORY[entity_object.class]
       end
-
     end
   end
 end
