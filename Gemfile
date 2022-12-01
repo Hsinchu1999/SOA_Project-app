@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 ruby File.read('.ruby-version').strip
 
@@ -35,13 +37,13 @@ gem 'webmock', '~> 3'
 gem 'reek'
 
 # Entities
-gem 'dry-types', '~> 1'
 gem 'dry-struct', '~> 1'
+gem 'dry-types', '~> 1'
 
 # Controllers and services
-gem 'dry-validation', '~> 1.7'
-gem 'dry-transaction', '~> 0.13'
 gem 'dry-monads', '~> 1.4'
+gem 'dry-transaction', '~> 0.13'
+gem 'dry-validation', '~> 1.7'
 
 # Debugging
 gem 'pry'
