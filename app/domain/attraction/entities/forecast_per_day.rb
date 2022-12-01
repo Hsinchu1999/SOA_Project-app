@@ -5,12 +5,13 @@ require 'dry-struct'
 
 module TravellingSuggestions
   module Entity
-    class Forecast_Per_Day < Dry::Struct
+    # An Entity object for future day
+    class ForecastPerDay < Dry::Struct
       include Dry.Types
 
-      attribute :pop,             Strict::Integer
-      attribute :minT,            Strict::Integer
-      attribute :maxT,            Strict::Integer
+      attribute :pop, Strict::Integer
+      attribute :min_temp,            Strict::Integer
+      attribute :max_temp,            Strict::Integer
       def to_attr_hash
         to_hash
       end

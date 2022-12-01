@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 require_relative 'region'
 
 module Views
+  # A View object for Entity::Attraction
   class Attraction
     def initialize(attraction)
       @attraction = attraction
@@ -46,6 +49,5 @@ module Views
     def best_time_to_visit
       @attraction.best_time_to_visit
     end
-
   end
 end

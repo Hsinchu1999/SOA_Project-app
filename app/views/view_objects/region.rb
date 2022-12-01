@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 require_relative 'weather'
 
 module Views
+  # A Views object for Entity::Region
   class Region
     def initialize(region)
       @region = region

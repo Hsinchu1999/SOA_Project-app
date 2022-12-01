@@ -2,25 +2,25 @@
 
 module TravellingSuggestions
   module Mapper
+    # Mapper for 12 hr forecast
     class ForecastPer12hrMapper
       attr_reader :pop,
-                  :minT,
-                  :maxT
+                  :min_temp,
+                  :max_temp
 
-      def initialize(pop, minT, maxT)
+      def initialize(pop, min_temp, max_temp)
         @pop = pop
-        @minT = minT
-        @maxT = maxT
+        @min_temp = min_temp
+        @max_temp = max_temp
       end
 
       def build_entity
-        Entity::Forecast_Per_12Hr.new(
-        pop: @pop,
-        minT: @minT,
-        maxT: @maxT
+        Entity::ForecastPer12Hr.new(
+          pop: @pop,
+          minT: @min_temp,
+          maxT: @max_temp
         )
       end
     end
   end
 end
-  
