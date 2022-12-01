@@ -6,6 +6,7 @@ require_relative 'user_favorite'
 
 module TravellingSuggestions
   module Entity
+    # An Entity object for a user object
     class User < Dry::Struct
       include Dry.Types
 
@@ -13,7 +14,6 @@ module TravellingSuggestions
       attribute :nickname,              Strict::String
       attribute :mbti,                  Strict::String
       attribute :favorite_attractions,  UserFavorite
-
     end
   end
 end

@@ -2,11 +2,12 @@
 
 require 'dry-types'
 require 'dry-struct'
-#require_relative 'region'
+# require_relative 'region'
 
 module TravellingSuggestions
   module Entity
-    class User_Active_Rating < Dry::Struct
+    # An Entity object for user's active rating
+    class UserActiveRating < Dry::Struct
       include Dry.Types
 
       attribute :user,                  User
