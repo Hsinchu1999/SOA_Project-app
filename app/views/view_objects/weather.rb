@@ -14,11 +14,11 @@ module Views
       # index: which 12 hrs (1 or 2 or 3)
       case index
       when 1
-        Views::Forecast_36Hr.new(@weather.forecast_36hr).first_12hr
+        Views::Forecast36Hr.new(@weather.forecast_36hr).first_12hr
       when 2
-        Views::Forecast_36Hr.new(@weather.forecast_36hr).second_12hr
+        Views::Forecast36Hr.new(@weather.forecast_36hr).second_12hr
       else
-        Views::Forecast_36Hr.new(@weather.forecast_36hr).third_12hr
+        Views::Forecast36Hr.new(@weather.forecast_36hr).third_12hr
       end
     end
 
@@ -26,19 +26,19 @@ module Views
       # index: which day (1, 2, 3, 4, 5, 6, 7)
       case index
       when 1
-        Views::Forecast_One_Week.new(@weather.forecast_one_week).day1
+        Views::ForecastOneWeek.new(@weather.forecast_one_week).day1
       when 2
-        Views::Forecast_One_Week.new(@weather.forecast_one_week).day2
+        Views::ForecastOneWeek.new(@weather.forecast_one_week).day2
       when 3
-        Views::Forecast_One_Week.new(@weather.forecast_one_week).day3
+        Views::ForecastOneWeek.new(@weather.forecast_one_week).day3
       when 4
-        Views::Forecast_One_Week.new(@weather.forecast_one_week).day4
+        Views::ForecastOneWeek.new(@weather.forecast_one_week).day4
       when 5
-        Views::Forecast_One_Week.new(@weather.forecast_one_week).day5
+        Views::ForecastOneWeek.new(@weather.forecast_one_week).day5
       when 6
-        Views::Forecast_One_Week.new(@weather.forecast_one_week).day6
+        Views::ForecastOneWeek.new(@weather.forecast_one_week).day6
       else
-        Views::Forecast_One_Week.new(@weather.forecast_one_week).day7
+        Views::ForecastOneWeek.new(@weather.forecast_one_week).day7
       end
     end
   end

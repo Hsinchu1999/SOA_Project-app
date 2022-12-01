@@ -10,7 +10,7 @@ module TravellingSuggestions
     module ForUser
       ENTITY_REPOSITORY = {
         Entity::User => Users,
-        Entity::User_Active_Rating => User_Active_Ratings,
+        Entity::UserActiveRating => UserActiveRatings,
         Entity::UserFavorite => Users
       }.freeze
 

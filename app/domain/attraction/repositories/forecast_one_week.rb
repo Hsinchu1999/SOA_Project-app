@@ -11,7 +11,7 @@ module TravellingSuggestions
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
-        Entity::Forecast_One_Week.new(
+        Entity::ForecastOneWeek.new(
           forecast_report_time: db_record.forecast_report_time,
           day1: Repository::ForecastsPerDay.find_id(db_record.first_day_id),
           day2: Repository::ForecastsPerDay.find_id(db_record.second_day_id),
@@ -25,7 +25,7 @@ module TravellingSuggestions
 
       def self.rebuild_many_entities(db_records)
         db_records.map do |db_member|
-          Repository::Forecasts_One_Week.rebuild_entity(db_member)
+          Repository::ForecastsOneWeek.rebuild_entity(db_member)
         end
       end
 

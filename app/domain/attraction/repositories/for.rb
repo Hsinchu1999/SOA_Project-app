@@ -14,9 +14,9 @@ module TravellingSuggestions
     module ForAttraction
       ENTITY_REPOSITORY = {
         Entity::Attraction => Attractions,
-        Entity::Forecast_36Hr => Forecasts_36Hr,
+        Entity::Forecast36Hr => Forecasts36Hr,
         Entity::ForecastPer12Hr => ForecastsPer12Hr,
-        Entity::Forecast_One_Week => Forecasts_One_Week,
+        Entity::ForecastOneWeek => ForecastsOneWeek,
         Entity::ForecastPerDay => ForecastsPerDay,
         Entity::Region => Regions,
         Entity::Weather => Weathers

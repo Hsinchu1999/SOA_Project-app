@@ -27,7 +27,7 @@ module TravellingSuggestions
         end
 
         def build_entity
-          Entity::Forecast_One_Week.new(
+          Entity::ForecastOneWeek.new(
             forecast_report_time: start_time,
             day1: build_per_day_entity(1),
             day2: build_per_day_entity(2),

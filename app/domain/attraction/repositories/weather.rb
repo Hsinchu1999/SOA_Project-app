@@ -15,8 +15,8 @@ module TravellingSuggestions
       end
 
       def self.rebuild_entity(region_id)
-        forecast_36hr_entity = Repository::Forecasts_36Hr.find_region_id(region_id)
-        forecast_one_week_entity = Repository::Forecasts_One_Week.find_region_id(region_id)
+        forecast_36hr_entity = Repository::Forecasts36Hr.find_region_id(region_id)
+        forecast_one_week_entity = Repository::ForecastsOneWeek.find_region_id(region_id)
 
         Entity::Weather.new(
           forecast_36hr: forecast_36hr_entity,

@@ -24,7 +24,7 @@ module TravellingSuggestions
 
       def self.rebuild_many_entities(db_records)
         db_records.map do |db_member|
-          Users_Favorites.rebuild_entity(db_member)
+          UsersFavorites.rebuild_entity(db_member)
         end
       end
 

@@ -14,7 +14,7 @@ module TravellingSuggestions
         user_entity = Repository::Users.find_id(db_record.user_id)
         attraction_entity = Repository::Attractions.find_id(db_record.attraction_id)
 
-        Entity::User_Active_Rating.new(
+        Entity::UserActiveRating.new(
           user: user_entity,
           attraction: attraction_entity,
           score: db_record.score
@@ -23,7 +23,7 @@ module TravellingSuggestions
 
       def self.rebuild_many_entities(db_records)
         db_records.map do |db_member|
-          User_Active_Ratings.rebuild_entity(db_member)
+          UserActiveRatings.rebuild_entity(db_member)
         end
       end
 

@@ -10,8 +10,8 @@ module TravellingSuggestions
     class Weather < Dry::Struct
       include Dry.Types
 
-      attribute :forecast_36hr,             Forecast_36Hr
-      attribute :forecast_one_week,         Forecast_One_Week
+      attribute :forecast_36hr,             Forecast36Hr
+      attribute :forecast_one_week,         ForecastOneWeek
     end
   end
 end
