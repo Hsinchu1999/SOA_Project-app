@@ -7,7 +7,7 @@ module TravellingSuggestions
     # A For module for MBTI
     module ForMBTI
       ENTITY_REPOSITORY = {
-        Entity::MBTI_Question => MBTI_Questions
+        Entity::MBTIQuestion => MBTIQuestions
       }.freeze
 
       def self.klass(entity_klass)
