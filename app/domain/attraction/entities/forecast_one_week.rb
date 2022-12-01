@@ -11,13 +11,13 @@ module TravellingSuggestions
       include Dry.Types
 
       attribute :forecast_report_time,  Strict::String
-      attribute :day1,                  Forecast_Per_Day
-      attribute :day2,                  Forecast_Per_Day
-      attribute :day3,                  Forecast_Per_Day
-      attribute :day4,                  Forecast_Per_Day
-      attribute :day5,                  Forecast_Per_Day
-      attribute :day6,                  Forecast_Per_Day
-      attribute :day7,                  Forecast_Per_Day
+      attribute :day1,                  ForecastPerDay
+      attribute :day2,                  ForecastPerDay
+      attribute :day3,                  ForecastPerDay
+      attribute :day4,                  ForecastPerDay
+      attribute :day5,                  ForecastPerDay
+      attribute :day6,                  ForecastPerDay
+      attribute :day7,                  ForecastPerDay
     end
   end
 end

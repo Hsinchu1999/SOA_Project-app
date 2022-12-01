@@ -11,7 +11,7 @@ module TravellingSuggestions
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
-        Entity::Forecast_Per_Day.new(
+        Entity::ForecastPerDay.new(
           pop:,
           minT:,
           maxT:
@@ -20,7 +20,7 @@ module TravellingSuggestions
 
       def self.rebuild_many_entities(db_records)
         db_records.map do |db_member|
-          Repository::Forecast_Per_Day.rebuild_entity(db_member)
+          Repository::ForecastPerDay.rebuild_entity(db_member)
         end
       end
 
