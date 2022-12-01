@@ -4,8 +4,8 @@ require_relative 'mbti_question'
 
 module TravellingSuggestions
   module Repository
+    # A For module for MBTI
     module ForMBTI
-
       ENTITY_REPOSITORY = {
         Entity::MBTI_Question => MBTI_Questions
       }.freeze
@@ -17,7 +17,6 @@ module TravellingSuggestions
       def self.entity(entity_object)
         ENTITY_REPOSITORY[entity_object.class]
       end
-
     end
   end
 end
