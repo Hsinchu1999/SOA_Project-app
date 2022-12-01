@@ -6,7 +6,8 @@ require_relative 'forecast_per_day'
 
 module TravellingSuggestions
   module Entity
-    class Forecast_One_Week < Dry::Struct
+    # An Entity object for future 1 week forecast
+    class ForecastOneWeek < Dry::Struct
       include Dry.Types
 
       attribute :forecast_report_time,  Strict::String
@@ -17,7 +18,6 @@ module TravellingSuggestions
       attribute :day5,                  Forecast_Per_Day
       attribute :day6,                  Forecast_Per_Day
       attribute :day7,                  Forecast_Per_Day
-
     end
   end
 end

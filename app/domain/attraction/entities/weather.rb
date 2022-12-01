@@ -12,7 +12,6 @@ module TravellingSuggestions
 
       attribute :forecast_36hr,             Forecast_36Hr
       attribute :forecast_one_week,         Forecast_One_Week
-
     end
   end
 end

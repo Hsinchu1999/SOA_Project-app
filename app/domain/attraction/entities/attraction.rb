@@ -6,10 +6,11 @@ require_relative 'region'
 
 module TravellingSuggestions
   module Entity
+    # An Entity object for attraction sites
     class Attraction < Dry::Struct
       include Dry.Types
 
-      attribute :name,                  Strict::String 
+      attribute :name,                  Strict::String
       attribute :id,                    Strict::Integer
       attribute :added_time,            Strict::String
       attribute :region,                Region

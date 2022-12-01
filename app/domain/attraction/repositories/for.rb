@@ -10,8 +10,8 @@ require_relative 'weather'
 
 module TravellingSuggestions
   module Repository
+    # A For object for Attraction root aggregate
     module ForAttraction
-
       ENTITY_REPOSITORY = {
         Entity::Attraction => Attractions,
         Entity::Forecast_36Hr => Forecasts_36Hr,
@@ -29,7 +29,6 @@ module TravellingSuggestions
       def self.entity(entity_object)
         ENTITY_REPOSITORY[entity_object.class]
       end
-
     end
   end
 end
