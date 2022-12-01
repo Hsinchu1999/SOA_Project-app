@@ -11,7 +11,7 @@ module TravellingSuggestions
       ENTITY_REPOSITORY = {
         Entity::User => Users,
         Entity::User_Active_Rating => User_Active_Ratings,
-        Entity::User_Favorite => Users
+        Entity::UserFavorite => Users
       }.freeze
 
       def self.klass(entity_klass)

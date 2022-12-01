@@ -5,7 +5,7 @@ require 'dry-struct'
 
 module TravellingSuggestions
   module Entity
-    class User_Favorite < Dry::Struct
+    class UserFavorite < Dry::Struct
       include Dry.Types
 
       attribute :favorites_list,        Strict::Array.of(Attraction)

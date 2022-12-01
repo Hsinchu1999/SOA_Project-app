@@ -12,7 +12,7 @@ module TravellingSuggestions
       attribute :id,                    Strict::Integer
       attribute :nickname,              Strict::String
       attribute :mbti,                  Strict::String
-      attribute :favorite_attractions,  User_Favorite
+      attribute :favorite_attractions,  UserFavorite
 
     end
   end

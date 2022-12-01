@@ -13,7 +13,7 @@ module TravellingSuggestions
           
           user_favorite_attractions = Repository::Attractions.rebuild_many_entities(db_record.favorite_attractions)
 
-          Entity::User_Favorite.new(
+          Entity::UserFavorite.new(
             favorites_list:       user_favorite_attractions,
           )
         end
