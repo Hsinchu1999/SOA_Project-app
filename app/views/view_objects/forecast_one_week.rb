@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 require_relative 'forecast_per_day'
 
 module Views
-  class Forecast_One_Week
+  # A Views object for Entity::ForecastOneWeek
+  class ForecastOneWeek
     def initialize(forecast_one_week)
       @forecast_one_week = forecast_one_week
     end
@@ -37,6 +40,5 @@ module Views
     def day7
       Views::Forecast_Per_Day.new(@forecast_one_week.day7).view_all
     end
-
   end
 end

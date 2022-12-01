@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 require_relative 'forecast_per_12hr'
 
 module Views
-  class Forecast_36Hr
+  # A Views object for Entity::Forecast36Hr
+  class Forecast36Hr
     def initialize(forecast_36hr)
       @forecast_36hr = forecast_36hr
     end
@@ -21,6 +24,5 @@ module Views
     def third_12hr
       Views::Forecast_Per_12Hr.new(@forecast_36hr.third_12hr).view_all
     end
-
   end
 end
