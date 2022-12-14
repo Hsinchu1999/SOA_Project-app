@@ -6,14 +6,14 @@ module TravellingSuggestions
   module Forms
     # A Form object to validate user's nickname input
     class NewUserNickname < Dry::Validation::Contract
-      NICKNAME_REGEX = %r{/^\w+$/}
 
       params do
         required(:nickname).filled(:string)
       end
 
       rule(:nickname) do
-        key.failure('is an invalid user name') unless NICKNAME_REGEX.match?(value)
+        key.failure('is an invalid user name') unless value.count('^a-zA-Z0-9_').zero?
+        key.failure('is an invalid user name') unless value.length > 0
       end
     end
   end

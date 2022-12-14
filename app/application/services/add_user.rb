@@ -8,45 +8,37 @@ module TravellingSuggestions
     class AddUser
       include Dry::Transaction
 
+      step :check_valid_username
       step :check_no_use_username
-      step :store_user
+      step :reify_user
 
       private
 
-      def check_no_use_username(input)
-        if Repository::ForUser.klass(Entity::User).find_name(input[:nickname])
-          Failure(
-            Response::ApiResult.new(
-              status: :conflict,
-              message: 'Nickname already in use'
-            )
-          )
+      def check_valid_username(input)
+        res = TravellingSuggestions::Forms::NewUserNickname.new.call(input)
+        if res.failure?
+          Failure('Invalid username')
         else
-          Success(
-            Response::ApiResult.new(
-              status: :ok,
-              message: input
-            )
-          )
+          Success(input)
         end
       end
 
-      def store_user(input)
+      def check_no_use_username(input)
         nickname = input.message[:nickname]
-        mbti = input.message[:mbti]
-
-        user = Repository::ForUser.klass(Entity::User).db_create(nickname, mbti)
-        Success(
-          Response::ApiResult.new(
-            status: :ok,
-            message: user
-          )
-        )
+        
+        result = Gateway::Api.new(TravellingSuggestions::App.config).add_user(nickname)
+        
+        result.success? ? Success(result.payload) : Failure(result.message)
       rescue StandardError
-        Failure(Response::ApiResult.new(
-                  status: :not_found,
-                  message: 'Having trouble accessing database'
-                ))
+        Failure('Cannot construct user profile right now; please try again later')
+      end
+
+      def reify_user(input)
+        TravellingSuggestions::Representer::User.new(OpenStruct.new)
+          .from_json(input)
+          .then{ |user| Success(user) }
+      rescue StandardError
+        Failure('Error in constructing user profile, please try again')
       end
     end
   end
