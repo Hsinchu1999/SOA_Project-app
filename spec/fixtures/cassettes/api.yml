@@ -1,0 +1,32 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://127.0.0.1:9292/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '81'
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message":"TravellingSuggestions API v1 at /api/v1/
+        in test mode"}'
+  recorded_at: Wed, 14 Dec 2022 09:20:33 GMT
+recorded_with: VCR 6.1.0
