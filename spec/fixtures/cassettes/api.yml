@@ -28,7 +28,337 @@ http_interactions:
       encoding: UTF-8
       string: '{"status":"ok","message":"TravellingSuggestions API v1 at /api/v1/
         in test mode"}'
-  recorded_at: Wed, 14 Dec 2022 09:20:33 GMT
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=peter
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '57'
+    body:
+      encoding: UTF-8
+      string: '{"status":"conflict","message":"Nickname already in use"}'
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=Peter
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '57'
+    body:
+      encoding: UTF-8
+      string: '{"status":"conflict","message":"Nickname already in use"}'
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=Peter_
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '57'
+    body:
+      encoding: UTF-8
+      string: '{"status":"conflict","message":"Nickname already in use"}'
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=_PETER
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '57'
+    body:
+      encoding: UTF-8
+      string: '{"status":"conflict","message":"Nickname already in use"}'
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=_
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '57'
+    body:
+      encoding: UTF-8
+      string: '{"status":"conflict","message":"Nickname already in use"}'
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=PETERCHEN
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '57'
+    body:
+      encoding: UTF-8
+      string: '{"status":"conflict","message":"Nickname already in use"}'
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=peter_chen
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '57'
+    body:
+      encoding: UTF-8
+      string: '{"status":"conflict","message":"Nickname already in use"}'
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=peterchen999
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '57'
+    body:
+      encoding: UTF-8
+      string: '{"status":"conflict","message":"Nickname already in use"}'
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=%20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers: {}
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=.
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '51'
+    body:
+      encoding: UTF-8
+      string: '{"status":"forbidden","message":"Invalid nickname"}'
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '51'
+    body:
+      encoding: UTF-8
+      string: '{"status":"forbidden","message":"Invalid nickname"}'
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=./
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '51'
+    body:
+      encoding: UTF-8
+      string: '{"status":"forbidden","message":"Invalid nickname"}'
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
 - request:
     method: get
     uri: http://127.0.0.1:9292/api/v1/mbti_test/question?question_id=1
@@ -57,7 +387,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":1,"question":"WHEN YOU GO SOMEWHERE FOR THE DAY, WOULD YOU RATHER","answerA":"PLAN
         WHAT YOU WILL DO AND WHEN","answerB":"JUST GO!!","section":"JP","directionA":"J","scoreA":2,"scoreB":2}'
-  recorded_at: Wed, 14 Dec 2022 09:38:41 GMT
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
 - request:
     method: get
     uri: http://127.0.0.1:9292/api/v1/mbti_test/question?question_id=2
@@ -86,7 +416,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":2,"question":"IF YOU WERE A TEACHER, WOULD YOU RATHER TEACH","answerA":"FACTS-BASED
         COURSES","answerB":"COURSES INVOLVING OPINION OR THEORY","section":"SN","directionA":"S","scoreA":2,"scoreB":2}'
-  recorded_at: Wed, 14 Dec 2022 09:39:38 GMT
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
 - request:
     method: get
     uri: http://127.0.0.1:9292/api/v1/mbti_test/question?question_id=3
@@ -115,7 +445,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":3,"question":"ARE YOU USUALLY","answerA":"A \"GOOD MIXER\" WITH
         GROUPS OF PEOPLE","answerB":"ATHER QUIET AND RESERVED","section":"EI","directionA":"E","scoreA":2,"scoreB":2}'
-  recorded_at: Wed, 14 Dec 2022 09:39:38 GMT
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
 - request:
     method: get
     uri: http://127.0.0.1:9292/api/v1/mbti_test/question?question_id=4
@@ -144,7 +474,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":4,"question":"DO YOU MORE OFTEN LET","answerA":"YOUR HEART RULE
         YOUR HEAD","answerB":"YOUR HEAD RULE YOUR HEART","section":"TF","directionA":"F","scoreA":1,"scoreB":2}'
-  recorded_at: Wed, 14 Dec 2022 09:39:38 GMT
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
 - request:
     method: get
     uri: http://127.0.0.1:9292/api/v1/mbti_test/question?question_id=5
@@ -174,7 +504,7 @@ http_interactions:
       string: '{"id":5,"question":"IN DOING SOMETHING THAT MANY OTHER PEOPLE DO, WOULD
         YOU RATHER","answerA":"INVENT A WAY OF YOUR OWN","answerB":"DO IT IN THE ACCEPTED
         WAY","section":"SN","directionA":"N","scoreA":1,"scoreB":1}'
-  recorded_at: Wed, 14 Dec 2022 09:39:38 GMT
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
 - request:
     method: get
     uri: http://127.0.0.1:9292/api/v1/mbti_test/question?question_id=6
@@ -203,7 +533,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":6,"question":"AMONG YOUR FRIENDS ARE YOU","answerA":"FULL OF
         NEWS ABOUT EVERYBODY","answerB":"ONE OF THE LAST TO HEAR WHAT IS GOING ON","section":"EI","directionA":"E","scoreA":2,"scoreB":1}'
-  recorded_at: Wed, 14 Dec 2022 09:39:38 GMT
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
 - request:
     method: get
     uri: http://127.0.0.1:9292/api/v1/mbti_test/question?question_id=7
@@ -233,7 +563,7 @@ http_interactions:
       string: '{"id":7,"question":"DOES THE IDEA OF MAKING A LIST OF WHAT YOU SHOULD
         GET DONE OVER A WEEKEND","answerA":"HELP YOU","answerB":"STRESS YOU, OR POSITIVELY
         DEPRESS YOU","section":"JP","directionA":"J","scoreA":1,"scoreB":1}'
-  recorded_at: Wed, 14 Dec 2022 09:39:38 GMT
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
 - request:
     method: get
     uri: http://127.0.0.1:9292/api/v1/mbti_test/question?question_id=8
@@ -263,7 +593,7 @@ http_interactions:
       string: '{"id":8,"question":"WHEN YOU HAVE A SPECIAL JOB TO DO, DO YOU LIKE
         TO","answerA":"ORGANIZE IT CAREFULLY BEFORE YOU START","answerB":"FIND OUT
         WHAT IS NECESSARY AS YOU GO ALONG","section":"JP","directionA":"J","scoreA":1,"scoreB":2}'
-  recorded_at: Wed, 14 Dec 2022 09:39:38 GMT
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
 - request:
     method: get
     uri: http://127.0.0.1:9292/api/v1/mbti_test/question?question_id=9
@@ -292,7 +622,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"id":9,"question":"DO YOU TEND TO HAVE","answerA":"BROAD FRIENDSHIPS
         WITH MANY DIFFERENT PEOPLE","answerB":"DEEP FRIENDSHIP WITH VERY FEW PEOPLE","section":"EI","directionA":"E","scoreA":2,"scoreB":1}'
-  recorded_at: Wed, 14 Dec 2022 09:39:38 GMT
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
 - request:
     method: get
     uri: http://127.0.0.1:9292/api/v1/mbti_test/question?question_id=10
@@ -322,10 +652,10 @@ http_interactions:
       string: '{"id":10,"question":"DO YOU ADMIRE MORE THE PEOPLE WHO ARE","answerA":"NORMAL-ACTING
         TO NEVER MAKE THEMSELVES THE CENTER OF ATTENTION","answerB":"TOO ORIGINAL
         AND INDIVIDUAL TO CARE WHETHER THEY ARE THE CENTER OF ATTENTION","section":"SN","directionA":"S","scoreA":1,"scoreB":2}'
-  recorded_at: Wed, 14 Dec 2022 09:39:38 GMT
+  recorded_at: Wed, 14 Dec 2022 09:57:51 GMT
 - request:
-    method: post
-    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=peter
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/user?nickname=peter
     body:
       encoding: UTF-8
       string: ''
@@ -338,22 +668,22 @@ http_interactions:
       - http.rb/5.1.0
   response:
     status:
-      code: 409
-      message: Conflict
+      code: 200
+      message: OK
     headers:
       Content-Type:
       - application/json
       Connection:
       - close
       Content-Length:
-      - '57'
+      - '41'
     body:
       encoding: UTF-8
-      string: '{"status":"conflict","message":"Nickname already in use"}'
-  recorded_at: Wed, 14 Dec 2022 09:47:45 GMT
+      string: '{"id":1,"nickname":"peter","mbti":"ENFJ"}'
+  recorded_at: Wed, 14 Dec 2022 10:09:26 GMT
 - request:
-    method: post
-    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=Peter
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/user?nickname=Peter
     body:
       encoding: UTF-8
       string: ''
@@ -366,22 +696,22 @@ http_interactions:
       - http.rb/5.1.0
   response:
     status:
-      code: 409
-      message: Conflict
+      code: 200
+      message: OK
     headers:
       Content-Type:
       - application/json
       Connection:
       - close
       Content-Length:
-      - '57'
+      - '41'
     body:
       encoding: UTF-8
-      string: '{"status":"conflict","message":"Nickname already in use"}'
-  recorded_at: Wed, 14 Dec 2022 09:47:45 GMT
+      string: '{"id":2,"nickname":"Peter","mbti":"ENFJ"}'
+  recorded_at: Wed, 14 Dec 2022 10:09:26 GMT
 - request:
-    method: post
-    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=Peter_
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/user?nickname=Peter_
     body:
       encoding: UTF-8
       string: ''
@@ -394,22 +724,22 @@ http_interactions:
       - http.rb/5.1.0
   response:
     status:
-      code: 409
-      message: Conflict
+      code: 200
+      message: OK
     headers:
       Content-Type:
       - application/json
       Connection:
       - close
       Content-Length:
-      - '57'
+      - '42'
     body:
       encoding: UTF-8
-      string: '{"status":"conflict","message":"Nickname already in use"}'
-  recorded_at: Wed, 14 Dec 2022 09:47:45 GMT
+      string: '{"id":3,"nickname":"Peter_","mbti":"ENFJ"}'
+  recorded_at: Wed, 14 Dec 2022 10:09:26 GMT
 - request:
-    method: post
-    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=_PETER
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/user?nickname=_PETER
     body:
       encoding: UTF-8
       string: ''
@@ -422,22 +752,22 @@ http_interactions:
       - http.rb/5.1.0
   response:
     status:
-      code: 409
-      message: Conflict
+      code: 200
+      message: OK
     headers:
       Content-Type:
       - application/json
       Connection:
       - close
       Content-Length:
-      - '57'
+      - '42'
     body:
       encoding: UTF-8
-      string: '{"status":"conflict","message":"Nickname already in use"}'
-  recorded_at: Wed, 14 Dec 2022 09:47:45 GMT
+      string: '{"id":4,"nickname":"_PETER","mbti":"ENFJ"}'
+  recorded_at: Wed, 14 Dec 2022 10:09:26 GMT
 - request:
-    method: post
-    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=_
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/user?nickname=_
     body:
       encoding: UTF-8
       string: ''
@@ -450,22 +780,22 @@ http_interactions:
       - http.rb/5.1.0
   response:
     status:
-      code: 409
-      message: Conflict
+      code: 200
+      message: OK
     headers:
       Content-Type:
       - application/json
       Connection:
       - close
       Content-Length:
-      - '57'
+      - '37'
     body:
       encoding: UTF-8
-      string: '{"status":"conflict","message":"Nickname already in use"}'
-  recorded_at: Wed, 14 Dec 2022 09:47:45 GMT
+      string: '{"id":5,"nickname":"_","mbti":"ENFJ"}'
+  recorded_at: Wed, 14 Dec 2022 10:09:26 GMT
 - request:
-    method: post
-    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=PETERCHEN
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/user?nickname=PETERCHEN
     body:
       encoding: UTF-8
       string: ''
@@ -478,22 +808,22 @@ http_interactions:
       - http.rb/5.1.0
   response:
     status:
-      code: 409
-      message: Conflict
+      code: 200
+      message: OK
     headers:
       Content-Type:
       - application/json
       Connection:
       - close
       Content-Length:
-      - '57'
+      - '45'
     body:
       encoding: UTF-8
-      string: '{"status":"conflict","message":"Nickname already in use"}'
-  recorded_at: Wed, 14 Dec 2022 09:47:45 GMT
+      string: '{"id":6,"nickname":"PETERCHEN","mbti":"ENFJ"}'
+  recorded_at: Wed, 14 Dec 2022 10:09:26 GMT
 - request:
-    method: post
-    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=peter_chen
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/user?nickname=peter_chen
     body:
       encoding: UTF-8
       string: ''
@@ -506,22 +836,22 @@ http_interactions:
       - http.rb/5.1.0
   response:
     status:
-      code: 409
-      message: Conflict
+      code: 200
+      message: OK
     headers:
       Content-Type:
       - application/json
       Connection:
       - close
       Content-Length:
-      - '57'
+      - '46'
     body:
       encoding: UTF-8
-      string: '{"status":"conflict","message":"Nickname already in use"}'
-  recorded_at: Wed, 14 Dec 2022 09:47:45 GMT
+      string: '{"id":7,"nickname":"peter_chen","mbti":"ENFJ"}'
+  recorded_at: Wed, 14 Dec 2022 10:09:26 GMT
 - request:
-    method: post
-    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=peterchen999
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/user?nickname=peterchen999
     body:
       encoding: UTF-8
       string: ''
@@ -534,123 +864,17 @@ http_interactions:
       - http.rb/5.1.0
   response:
     status:
-      code: 409
-      message: Conflict
+      code: 200
+      message: OK
     headers:
       Content-Type:
       - application/json
       Connection:
       - close
       Content-Length:
-      - '57'
+      - '48'
     body:
       encoding: UTF-8
-      string: '{"status":"conflict","message":"Nickname already in use"}'
-  recorded_at: Wed, 14 Dec 2022 09:47:45 GMT
-- request:
-    method: post
-    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=%20
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - 127.0.0.1:9292
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers: {}
-    body:
-      encoding: ASCII-8BIT
-      string: ''
-  recorded_at: Wed, 14 Dec 2022 09:48:43 GMT
-- request:
-    method: post
-    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=.
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - 127.0.0.1:9292
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 403
-      message: Forbidden
-    headers:
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-      Content-Length:
-      - '51'
-    body:
-      encoding: UTF-8
-      string: '{"status":"forbidden","message":"Invalid nickname"}'
-  recorded_at: Wed, 14 Dec 2022 09:48:43 GMT
-- request:
-    method: post
-    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - 127.0.0.1:9292
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 403
-      message: Forbidden
-    headers:
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-      Content-Length:
-      - '51'
-    body:
-      encoding: UTF-8
-      string: '{"status":"forbidden","message":"Invalid nickname"}'
-  recorded_at: Wed, 14 Dec 2022 09:48:43 GMT
-- request:
-    method: post
-    uri: http://127.0.0.1:9292/api/v1/user/construct_profile?mbti=ENFJ&nickname=./
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - 127.0.0.1:9292
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 403
-      message: Forbidden
-    headers:
-      Content-Type:
-      - application/json
-      Connection:
-      - close
-      Content-Length:
-      - '51'
-    body:
-      encoding: UTF-8
-      string: '{"status":"forbidden","message":"Invalid nickname"}'
-  recorded_at: Wed, 14 Dec 2022 09:48:43 GMT
+      string: '{"id":8,"nickname":"peterchen999","mbti":"ENFJ"}'
+  recorded_at: Wed, 14 Dec 2022 10:09:26 GMT
 recorded_with: VCR 6.1.0

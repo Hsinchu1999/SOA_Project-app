@@ -21,7 +21,6 @@ describe 'Tests CWB API library' do
     end
   end
 
-  # end
   describe 'mbti tests' do
     it 'should return mbti questions' do
       MBTI_QUESTION_ID.each do |question_id|
@@ -50,4 +49,25 @@ describe 'Tests CWB API library' do
       end
     end
   end
+
+  describe 'List user' do
+    it 'should allow creating valid user nicknames' do
+      VALID_NICKNAMES.each do |nickname|
+        result = TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config).add_user(nickname, 'ENFJ')
+
+        unless result.success?
+          _(result.conflict?).must_equal true
+        end
+      end
+    end
+
+    it 'should list created users' do
+      VALID_NICKNAMES.each do |nickname|
+        result = TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config).list_user(nickname)
+
+        _(result.success?).must_equal true
+      end
+    end
+  end
+
 end
