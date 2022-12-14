@@ -24,6 +24,11 @@ task :setup_mbti do
   sh 'ruby setup_mbti.rb'
 end
 
+desc 'run api tests'
+task :api_spec do
+  sh 'ruby spec/gateway_api_spec.rb'
+end
+
 desc 'run tests'
 task :db_spec do
   sh 'ruby spec/gateway_database_spec.rb'
