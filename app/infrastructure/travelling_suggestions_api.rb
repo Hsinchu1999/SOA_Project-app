@@ -35,7 +35,7 @@ module TravellingSuggestions
         end
 
         def get_root
-          call_api('get')
+          call_api_get()
         end
 
         def add_user(nickname, mbti_type)
@@ -56,9 +56,30 @@ module TravellingSuggestions
           call_api('post', ['user', 'submit_login'], params)
         end
         private
-        def call_api(method, resources = [], params = {})
+        # def call_api(method, resources = [], params = {})
+        #   api_path = resources.empty? ? @api_host : @api_root
+        #   url = [api_path, resources].flatten.join('/')
+        #   # puts url
+        #   unless params.empty?
+        #     url += '?'
+        #     params.each do |key, value|
+        #       url += key + '=' + value + '&'
+        #     end
+        #     url = url[0..-1]
+        #   end
+        #   puts 'before HTTP call'
+        #   puts url
+        #   HTTP.header('Accept' => 'application/json').send(method, url)
+        #     .then { |http_response| Response.new(http_response) }
+        # rescue StandardError
+        #   raise "Invalid URL request: #{url}"
+        # end
+
+        def call_api_get(resources = [], params = {})
+          puts 'in call_api_get'
           api_path = resources.empty? ? @api_host : @api_root
           url = [api_path, resources].flatten.join('/')
+          # puts url
           unless params.empty?
             url += '?'
             params.each do |key, value|
@@ -66,20 +87,20 @@ module TravellingSuggestions
             end
             url = url[0..-1]
           end
-          HTTP.header('Accept' => 'application/json').send(method, url)
-            .then { |http_response| Response.new(http_response) }
-        rescue StandardError
-          raise "Invalid URL request: #{url}"
+          puts url
+          HTTP.get(url).then { |http_response| Response.new(http_response) }
+        rescue
+          puts 'something went wrong'
         end
 
         # Decorates HTTP responses with success/error
-        class Response
+        class Response < SimpleDelegator
           NotFound = Class.new(StandardError)
 
           SUCCESS_CODES = (200..299).freeze
 
           def success?
-            code.betwwen?(SUCCESS_CODES.first, SUCCESS_CODES.last)
+            code.between?(SUCCESS_CODES.first, SUCCESS_CODES.last)
           end
 
           def message
