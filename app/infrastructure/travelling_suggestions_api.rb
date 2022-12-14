@@ -45,7 +45,7 @@ module TravellingSuggestions
 
         def list_user(nickname)
           params = {'nickname'=> nickname}
-          call_api('get', ['user'], params)
+          call_api_get(['user'], params)
         end
 
         def list_mbti_question(question_id)
