@@ -40,17 +40,19 @@ module TravellingSuggestions
 
         def add_user(nickname, mbti_type)
           params = {'nickname'=> nickname, 'mbti'=> mbti_type}
-          call_api('post', ['user', 'construct_profile'], params)
+          call_api_post(['user', 'construct_profile'], params)
         end
 
         def list_user(nickname)
           params = {'nickname'=> nickname}
           call_api('get', ['user'], params)
         end
+
         def list_mbti_question(question_id)
           params = {'question_id'=> question_id.to_s}
-          call_api('get', ['mbti_test', 'question'], params)
+          call_api_get(['mbti_test', 'question'], params)
         end
+
         def submit_login(nickname)
           params = {'nickname'=> nickname}
           call_api('post', ['user', 'submit_login'], params)
@@ -76,21 +78,33 @@ module TravellingSuggestions
         # end
 
         def call_api_get(resources = [], params = {})
-          puts 'in call_api_get'
           api_path = resources.empty? ? @api_host : @api_root
           url = [api_path, resources].flatten.join('/')
-          # puts url
           unless params.empty?
             url += '?'
             params.each do |key, value|
               url += key + '=' + value + '&'
             end
-            url = url[0..-1]
           end
-          puts url
+          url = url.delete_suffix('&')
           HTTP.get(url).then { |http_response| Response.new(http_response) }
         rescue
-          puts 'something went wrong'
+          puts "HTTP request failed, url = #{url}"
+        end
+
+        def call_api_post(resources = [], params = {})
+          api_path = resources.empty? ? @api_host : @api_root
+          url = [api_path, resources].flatten.join('/')
+          unless params.empty?
+            url += '?'
+            params.each do |key, value|
+              url += key + '=' + value + '&'
+            end
+          end
+          url = url.delete_suffix('&')
+          HTTP.post(url).then { |http_response| Response.new(http_response) }
+        rescue
+          puts "HTTP request failed, url = #{url}"
         end
 
         # Decorates HTTP responses with success/error
@@ -98,9 +112,14 @@ module TravellingSuggestions
           NotFound = Class.new(StandardError)
 
           SUCCESS_CODES = (200..299).freeze
+          CONFLICT_CODE = 409
 
           def success?
             code.between?(SUCCESS_CODES.first, SUCCESS_CODES.last)
+          end
+
+          def conflict?
+            code == CONFLICT_CODE
           end
 
           def message
