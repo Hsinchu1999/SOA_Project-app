@@ -33,7 +33,7 @@ require_app
 
 MBTI_QUESTION_ID = Array(1..10)
 VALID_NICKNAMES = ['peter', 'Peter', 'Peter_', '_PETER', '_', 'PETERCHEN', 'peter_chen', 'peterchen999']
-INVALID_NICKNAMES = [' ', '.', '', './']
+INVALID_NICKNAMES = ['.', '', './']
 
 CASSETTE_FOLDER = 'spec/fixtures/cassettes'
 CASSETTE_FILE = 'cwb_api'

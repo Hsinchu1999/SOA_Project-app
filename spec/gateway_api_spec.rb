@@ -70,4 +70,31 @@ describe 'Tests CWB API library' do
     end
   end
 
+  describe 'Submit login' do
+    it 'should allow creating valid user nicknames' do
+      VALID_NICKNAMES.each do |nickname|
+        result = TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config).add_user(nickname, 'ENFJ')
+
+        unless result.success?
+          _(result.conflict?).must_equal true
+        end
+      end
+    end
+
+    it 'should allow eligible users login' do
+      VALID_NICKNAMES.each do |nickname|
+        result = TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config).submit_login(nickname)
+
+        _(result.success?).must_equal true
+      end
+    end
+
+    it 'should deny ineligible users login' do
+      INVALID_NICKNAMES.each do |nickname|
+        result = TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config).submit_login(nickname)
+
+        _(result.not_found?).must_equal true
+      end
+    end
+  end
 end
