@@ -7,7 +7,7 @@ describe 'Tests CWB API library' do
   VcrHelper.setup_vcr
 
   before do
-    VcrHelper.configure_vcr_for_cwb
+    VcrHelper.configure_vcr_for_api
   end
 
   after do

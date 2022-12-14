@@ -15,7 +15,7 @@ module VcrHelper
     end
   end
 
-  def self.configure_vcr_for_cwb
+  def self.configure_vcr_for_api
     VCR.insert_cassette(CASSETTE_FILE, record: :new_episodes, match_requests_on: %i[method uri headers])
   end
 
