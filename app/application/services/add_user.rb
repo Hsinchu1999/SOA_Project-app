@@ -8,25 +8,37 @@ module TravellingSuggestions
     class AddUser
       include Dry::Transaction
 
+      step :check_valid_username
       step :check_no_use_username
-      step :store_user
+      step :reify_user
 
       private
 
-      def check_no_use_username(input)
-        if Repository::ForUser.klass(Entity::User).find_name(input['user_name'])
-          Failure('Nickname already in use')
+      def check_valid_username(input)
+        res = TravellingSuggestions::Forms::NewUserNickname.new.call(input)
+        if res.failure?
+          Failure('Invalid username')
         else
           Success(input)
         end
       end
 
-      def store_user(input)
-        user_name = input['user_name']
-        user = Repository::ForUser.klass(Entity::User).db_create(user_name)
-        Success(user)
+      def check_no_use_username(input)
+        nickname = input.message[:nickname]
+        
+        result = Gateway::Api.new(TravellingSuggestions::App.config).add_user(nickname)
+        
+        result.success? ? Success(result.payload) : Failure(result.message)
       rescue StandardError
-        Failure('Having trouble accessing database')
+        Failure('Cannot construct user profile right now; please try again later')
+      end
+
+      def reify_user(input)
+        TravellingSuggestions::Representer::User.new(OpenStruct.new)
+          .from_json(input)
+          .then{ |user| Success(user) }
+      rescue StandardError
+        Failure('Error in constructing user profile, please try again')
       end
     end
   end
