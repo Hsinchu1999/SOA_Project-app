@@ -12,7 +12,7 @@ module TravellingSuggestions
       step :reify_user_favorites
 
       def call(input)
-        if (user = Repository::ForUser.klass(Entity::User).find_name(input[:nickname]))
+        if (user = TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config).list_user(input[:nickname]))
           puts 'success'
           Success(
             Response::ApiResult.new(
