@@ -3,6 +3,7 @@
 require 'roda'
 require 'slim'
 require 'slim/include'
+require 'json'
 
 Slim::Engine.set_options encoding: 'utf-8'
 
@@ -125,67 +126,87 @@ module TravellingSuggestions
       end
 
       routing.on 'user' do
-        routing.is 'construct_profile' do
-          user_name = routing.params['user_name']
-          user = Repository::Users.find_name(user_name)
-          puts "new user name is #{user_name}"
-          if user
-            # incomplete
-            puts user.id
-            puts user.nickname
-            session[:retry_username] = true
-            flash[:error] = 'Nickname already in use'
-            flash[:notice] = 'Try another nickname or click personal page to login'
-            routing.redirect '/mbti_test/result'
-          else
-            # incomplete, write user mbti into db
-            Repository::Users.db_create(user_name)
-            session[:retry_username] = false
-            session[:current_user] = user_name
-            routing.redirect '/mbti_test/recommendation'
-          end
-        end
         routing.is do
-          nick_name = session[:current_user]
+          nickname = session[:current_user]
           puts 'currently at /user'
-          puts nick_name
-          user = Repository::Users.find_name(nick_name)
-          puts 'user = '
-          puts user
-          if user
-            viewable_user = Views::User.new(user)
-            view 'personal_page', locals: { user: viewable_user }
+          puts ":current_user = #{nickname}"
+          result = Service::ListUser.new.call(
+            nickname: nickname
+          )
+          puts 'got result from Service::ListUser'
+          puts "result = #{result}"
+          puts "result value = #{result.value!}"
+
+          if result.failure?
+            routing.redirect '/user/login'
           else
-            routing.redirect '/user/login' unless user
+            viewable_user = Views::User.new(JSON.parse(result.value!))
+            view 'personal_page', locals: { user: viewable_user }
           end
         end
+
+        routing.is 'construct_profile' do
+          nickname = routing.params['nickname']
+          mbti = routing.params['mbti']
+          result = Service::AddUser.new.call(
+            nickname: nickname,
+            mbti:
+          )
+          if result.failure?
+            failed = Representer::HTTPResponse.new(result.failure)
+            routing.halt failed.http_status_code, failed.to_json
+          end
+
+          http_response = Representer::HTTPResponse.new(result.value!)
+          response.status = http_response.http_status_code
+          Representer::User.new(result.value!.message).to_json
+        end
+
         routing.is 'login' do
-          user_name = session[:current_user]
-          user = Repository::Users.find_name(user_name)
+          nickname = session[:current_user]
+          result = Service::ListUser.new.call(
+            nickname: nickname
+          )
+
           puts 'currently at user/login'
           puts 'user_name = '
-          puts user_name
-          if user
-            routing.redirect '/user'
-          else
+          puts nickname
+          if result.failure?
+            puts 'not logged in'
             view 'login'
+          else
+            routing.redirect '/user'
           end
         end
+
         routing.is 'submit_login' do
           routing.post do
-            nick_name = routing.params['nick_name']
-            user = Repository::Users.find_name(nick_name)
-            if user
-              session[:current_user] = user.nickname
-              routing.redirect '/user'
-            else
+            nickname = routing.params['nickname']
+            result = Service::ListUser.new.call(
+              nickname: nickname
+            )
+
+            if result.failure?
               session[:retry_login] = true
               flash[:error] = 'Invalid Nickname'
               flash[:notice] = 'Type correct nickname or start journey to get recommendation'
               routing.redirect '/user/login'
+            else
+              puts 'in submit_login success-else'
+              puts result.value!
+              puts result.value!.class
+              result_hash = JSON.parse(result.value!)
+              puts result_hash['nickname']
+              puts result_hash['id']
+              puts result_hash['mbti']
+              # puts user
+
+              session[:current_user] = result_hash['nickname']
+              routing.redirect '/user'
             end
           end
         end
+
         routing.is 'favorites' do
           nick_name = session[:current_user]
           user = Repository::Users.find_name(nick_name)
