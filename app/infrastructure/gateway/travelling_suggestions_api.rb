@@ -31,6 +31,10 @@ module TravellingSuggestions
         @request.list_mbti_question_set(set_size)
       end
 
+      def calculate_mbti_score(question_ids, answers)
+        @request.calculate_mbti_score(question_ids, answers)
+      end
+
       def submit_login(nickname)
         @request.submit_login(nickname)
       end
@@ -64,6 +68,14 @@ module TravellingSuggestions
         def list_mbti_question_set(set_size)
           params = {'set_size' => set_size.to_s}
           call_api_get(['mbti_test', 'question_set'], params)
+        end
+
+        def calculate_mbti_score(question_ids, answers)
+          params = {}
+          question_ids.each_with_index do |question_id, index|
+            params[question_id] = answers[index]
+          end
+          call_api_get(['mbti_test', 'result'], params)
         end
 
         def submit_login(nickname)
