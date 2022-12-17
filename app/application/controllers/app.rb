@@ -69,16 +69,30 @@ module TravellingSuggestions
             puts "session[:answered_cnt] = #{session[:answered_cnt]}"
             puts "session[:mbti_answers] = #{session[:mbti_answers]}"
 
-            if session[:answered_cnt] >= 3
-              routing.redirect '/mbti_test/last'
+            if session[:answered_cnt] == 4
+              routing.redirect '/mbti_test/show_result'
             else
               routing.redirect '/mbti_test/continue'
             end
           end
         end
         routing.is 'show_result' do
-          routing.post do
+          routing.get do
             # answer = routing.params['score']
+            question_ids = session[:mbti_question_set]
+            answers = session[:mbti_answers]
+            result = Service::CalculateMBTIScore.new.call(
+              question_ids: question_ids,
+              answers: answers
+            )
+
+            if result.failure?
+              puts "failed in show_result"
+              routing.redirect '/'
+            end
+
+            session[:mbti_type] = result.value!.personalities
+
             routing.redirect '/mbti_test/result'
           end
         end
@@ -120,6 +134,7 @@ module TravellingSuggestions
             
           end
         end
+
         routing.is 'continue' do
           puts 'in mbti_test/continue'
           puts session[:answered_cnt]
@@ -131,6 +146,7 @@ module TravellingSuggestions
 
           if result.failure?
             puts 'failed in continue'
+            routing.redirect '/'
           else
             # puts 'success'
             # puts "result.value! = #{result.value!}"
@@ -168,8 +184,9 @@ module TravellingSuggestions
             # incomplete
             puts 'give some warning here by flash'
           end
-          view 'mbti_test_result'
+          view 'mbti_test_result', locals: { mbti_type: session[:mbti_type] }
         end
+
         routing.is 'recommendation' do
           view 'recommendation'
         end
