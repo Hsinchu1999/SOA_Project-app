@@ -32,7 +32,10 @@ module TravellingSuggestions
       end
 
       def calculate_mbti_score(question_ids, answers)
-        @request.calculate_mbti_score(question_ids, answers)
+        question_ids_str = question_ids.map do |question_id|
+          question_id.to_s
+        end
+        @request.calculate_mbti_score(question_ids_str, answers)
       end
 
       def submit_login(nickname)
