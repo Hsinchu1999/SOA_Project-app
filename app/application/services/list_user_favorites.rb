@@ -32,8 +32,8 @@ module TravellingSuggestions
 
       def reify_user_favorites(input)
         TravellingSuggestions::Representer::UserFavorite.new(OpenStruct.new)
-        .from_json(input)
-        .then{ |user_favorites| Success(user_favorites) }
+                                                        .from_json(input)
+                                                        .then { |user_favorites| Success(user_favorites) }
       rescue StandardError
         Failure('Error in listing listing user\'s favorites, please try again')
       end

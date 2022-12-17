@@ -13,11 +13,11 @@ module TravellingSuggestions
       step :reify_mbti_question_set
 
       def call_api(set_size)
-        mbti_question_set = Gateway::Api.new(TravellingSuggestions::App.config).
-          list_mbti_question_set(set_size)
-          .then do |result|
-            result.success? ? Success(result.payload) : Failure(result.message)
-          end
+        Gateway::Api.new(TravellingSuggestions::App.config)
+                    .list_mbti_question_set(set_size)
+                    .then do |result|
+          result.success? ? Success(result.payload) : Failure(result.message)
+        end
       rescue StandardError
         Failure('Could not access our API')
       end
@@ -27,8 +27,8 @@ module TravellingSuggestions
         puts input
         puts input.class
         TravellingSuggestions::Representer::MBTIQuestionSet.new(OpenStruct.new)
-          .from_json(input)
-          .then { |question_set| Success(question_set)}
+                                                           .from_json(input)
+                                                           .then { |question_set| Success(question_set) }
       rescue StandardError
         Failure('Error in generating mbti question set, please try again')
       end

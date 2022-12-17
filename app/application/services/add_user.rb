@@ -26,9 +26,9 @@ module TravellingSuggestions
       def check_no_use_username(input)
         nickname = input[:nickname]
         mbti_type = input[:mbti_type]
-        
+
         result = Gateway::Api.new(TravellingSuggestions::App.config).add_user(nickname, mbti_type)
-        
+
         result.success? ? Success(result.payload) : Failure(result.message)
       rescue StandardError
         Failure('Cannot construct user profile right now; please try again later')
@@ -36,8 +36,8 @@ module TravellingSuggestions
 
       def reify_user(input)
         TravellingSuggestions::Representer::User.new(OpenStruct.new)
-          .from_json(input)
-          .then{ |user| Success(user) }
+                                                .from_json(input)
+                                                .then { |user| Success(user) }
       rescue StandardError
         Failure('Error in constructing user profile, please try again')
       end
