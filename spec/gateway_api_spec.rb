@@ -26,7 +26,9 @@ describe 'Tests CWB API library' do
   describe 'Get single mbti question by id' do
     it 'should return mbti questions' do
       MBTI_QUESTION_ID.each do |question_id|
-        question = TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config).list_mbti_question(question_id)
+        question = TravellingSuggestions::Gateway::Api
+                   .new(TravellingSuggestions::App.config)
+                   .list_mbti_question(question_id)
 
         _(question.success?).must_equal true
       end
@@ -65,9 +67,7 @@ describe 'Tests CWB API library' do
       VALID_NICKNAMES.each do |nickname|
         result = TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config).add_user(nickname, 'ENFJ')
 
-        unless result.success?
-          _(result.conflict?).must_equal true
-        end
+        _(result.conflict?).must_equal true unless result.success?
       end
     end
     it 'should deny creating invalid user nicknames' do
@@ -84,9 +84,7 @@ describe 'Tests CWB API library' do
       VALID_NICKNAMES.each do |nickname|
         result = TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config).add_user(nickname, 'ENFJ')
 
-        unless result.success?
-          _(result.conflict?).must_equal true
-        end
+        _(result.conflict?).must_equal true unless result.success?
       end
     end
 
@@ -104,9 +102,7 @@ describe 'Tests CWB API library' do
       VALID_NICKNAMES.each do |nickname|
         result = TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config).add_user(nickname, 'ENFJ')
 
-        unless result.success?
-          _(result.conflict?).must_equal true
-        end
+        _(result.conflict?).must_equal true unless result.success?
       end
     end
 
