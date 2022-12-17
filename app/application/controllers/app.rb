@@ -63,7 +63,6 @@ module TravellingSuggestions
 
             answer = routing.params.keys()[0]
             puts "answer=#{answer}"
-            # puts "answer type=#{answer.class}"
             session[:mbti_answers][session[:answered_cnt]] = answer
             session[:answered_cnt] = session[:answered_cnt] + 1
             puts "session[:answered_cnt] = #{session[:answered_cnt]}"
@@ -78,7 +77,6 @@ module TravellingSuggestions
         end
         routing.is 'show_result' do
           routing.get do
-            # answer = routing.params['score']
             question_ids = session[:mbti_question_set]
             answers = session[:mbti_answers]
             result = Service::CalculateMBTIScore.new.call(
@@ -99,7 +97,6 @@ module TravellingSuggestions
         routing.is 'previous_page' do
           routing.post do
             session[:answered_cnt] = session[:answered_cnt] - 1
-            # session[:mbti_answers].pop
             if session[:answered_cnt] < 1
               routing.redirect '/mbti_test/start'
             else
@@ -115,18 +112,10 @@ module TravellingSuggestions
             session[:mbti_answers] = Array.new(4, '')
 
             result = Service::ListMBTIQuestionSet.new.call(1)
-            # puts 'got result from Service::ListMBTIQuestionSet'
-            # puts "result = #{result}"
-            # puts "result value = #{result.value!}"
-            # puts "result value type = #{result.value!.class}"
-            # puts session[:mbti_question_set]
 
             if result.failure?
-              # puts 'failed getting mbti question set, in /mbti_test/start'
               routing.redirect '/'
             else
-              # puts 'success getting mbti question set, redirect to /mbti_test/continue'
-              # puts "session[:mbti_question_set] = #{result.value!}"
               session[:mbti_question_set] = result.value!.question_set
               routing.redirect '/mbti_test/continue'
             end
@@ -134,42 +123,23 @@ module TravellingSuggestions
         end
 
         routing.is 'continue' do
-          puts 'in mbti_test/continue'
-          puts session[:answered_cnt]
           current_question_id = session[:mbti_question_set][session[:answered_cnt]]
-          # puts "current_question_id = #{current_question_id}"
-          # puts "current_question_id type = #{current_question_id.class}"
-          # view 'mbti_test_general', locals: {current_question: session[:answered_cnt] + 1}
           result = Service::ListMBTIQuestion.new.call(current_question_id)
 
           if result.failure?
-            puts 'failed in continue'
             routing.redirect '/'
           else
-            # puts 'success'
-            # puts "result.value! = #{result.value!}"
-            # puts "result.value! type = #{result.value!.class}"
-            puts result.value!.question
-            puts result.value!.answerA
 
             viewable_mbti_question = Views::MBTIQuestion.new(result.value!)
-            # puts "viewable_mbti_question = #{viewable_mbti_question}"
 
             view 'mbti_test_general', locals: {
               current_question: session[:answered_cnt] + 1,
               question: viewable_mbti_question }
 
           end
-          # if session[:answered_cnt].nil?
-          #   routing.redirect '/mbti_test/start'
-          # else
-          #   view 'mbti_test_general', locals: { current_question: session[:answered_cnt] + 1 }
-          # end
         end
 
         routing.is 'last' do
-          puts 'in mbti_test/last'
-          puts session[:answered_cnt]
           if session[:answered_cnt] != 3
             routing.redirect '/mbti_test/start'
           else
@@ -193,14 +163,9 @@ module TravellingSuggestions
       routing.on 'user' do
         routing.is do
           nickname = session[:current_user]
-          puts 'currently at /user'
-          puts ":current_user = #{nickname}"
           result = Service::ListUser.new.call(
             nickname: nickname
           )
-          puts 'got result from Service::ListUser'
-          puts "result = #{result}"
-          puts "result value = #{result.value!}"
 
           if result.failure?
             routing.redirect '/user/login'
@@ -211,11 +176,8 @@ module TravellingSuggestions
         end
 
         routing.is 'construct_profile' do
-          puts 'in construct_profile'
           nickname = routing.params['nickname']
           mbti_type = session[:mbti_type]
-          puts "nickname = #{nickname}"
-          puts "mbti_type = #{mbti_type}"
           result = Service::AddUser.new.call(
             nickname: nickname,
             mbti_type:
@@ -237,11 +199,7 @@ module TravellingSuggestions
             nickname: nickname
           )
 
-          puts 'currently at user/login'
-          puts 'user_name = '
-          puts nickname
           if result.failure?
-            puts 'not logged in'
             view 'login'
           else
             routing.redirect '/user'
@@ -261,15 +219,7 @@ module TravellingSuggestions
               flash[:notice] = 'Type correct nickname or start journey to get recommendation'
               routing.redirect '/user/login'
             else
-              # puts 'in submit_login success-else'
-              # puts result.value!
-              # puts result.value!.class
               result_hash = JSON.parse(result.value!)
-              # puts result_hash['nickname']
-              # puts result_hash['id']
-              # puts result_hash['mbti']
-              # puts user
-
               session[:current_user] = result_hash['nickname']
               routing.redirect '/user'
             end
