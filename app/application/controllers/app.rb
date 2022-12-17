@@ -54,19 +54,14 @@ module TravellingSuggestions
         routing.is 'submit_answer' do
           # accepts submitted mbti answers
           routing.post do
-            puts "in mbti_test/submit_answer"
-            puts "received routing params = #{routing.params}"
             unless routing.params.length == 1
               flash[:error] = 'Choose one discription that matches you'
               routing.redirect '/mbti_test/continue'
             end
 
-            answer = routing.params.keys()[0]
-            puts "answer=#{answer}"
+            answer = routing.params.keys[0]
             session[:mbti_answers][session[:answered_cnt]] = answer
             session[:answered_cnt] = session[:answered_cnt] + 1
-            puts "session[:answered_cnt] = #{session[:answered_cnt]}"
-            puts "session[:mbti_answers] = #{session[:mbti_answers]}"
 
             if session[:answered_cnt] == 4
               routing.redirect '/mbti_test/show_result'
@@ -80,14 +75,11 @@ module TravellingSuggestions
             question_ids = session[:mbti_question_set]
             answers = session[:mbti_answers]
             result = Service::CalculateMBTIScore.new.call(
-              question_ids: question_ids,
-              answers: answers
+              question_ids:,
+              answers:
             )
 
-            if result.failure?
-              puts "failed in show_result"
-              routing.redirect '/'
-            end
+            routing.redirect '/' if result.failure?
 
             session[:mbti_type] = result.value!.personalities
 
@@ -134,7 +126,8 @@ module TravellingSuggestions
 
             view 'mbti_test_general', locals: {
               current_question: session[:answered_cnt] + 1,
-              question: viewable_mbti_question }
+              question: viewable_mbti_question
+            }
 
           end
         end
@@ -164,7 +157,7 @@ module TravellingSuggestions
         routing.is do
           nickname = session[:current_user]
           result = Service::ListUser.new.call(
-            nickname: nickname
+            nickname:
           )
 
           if result.failure?
@@ -179,14 +172,14 @@ module TravellingSuggestions
           nickname = routing.params['nickname']
           mbti_type = session[:mbti_type]
           result = Service::AddUser.new.call(
-            nickname: nickname,
+            nickname:,
             mbti_type:
           )
 
           if result.failure?
             session[:retry_username] = true
             routing.redirect '/mbti_test/result'
-            
+
           else
             session[:current_user] = nickname
             routing.redirect '/user'
@@ -196,7 +189,7 @@ module TravellingSuggestions
         routing.is 'login' do
           nickname = session[:current_user]
           result = Service::ListUser.new.call(
-            nickname: nickname
+            nickname:
           )
 
           if result.failure?
@@ -210,7 +203,7 @@ module TravellingSuggestions
           routing.post do
             nickname = routing.params['nickname']
             result = Service::ListUser.new.call(
-              nickname: nickname
+              nickname:
             )
 
             if result.failure?
