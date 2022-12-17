@@ -1163,4 +1163,312 @@ http_interactions:
       string: '{"status":"ok","message":"TravellingSuggestions API v1 at /api/v1/
         in test mode"}'
   recorded_at: Wed, 14 Dec 2022 10:25:24 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/mbti_test/question_set?set_size=1
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '30'
+    body:
+      encoding: UTF-8
+      string: '{"question_set":[13,17,20,32]}'
+  recorded_at: Sat, 17 Dec 2022 08:37:04 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/mbti_test/question_set?set_size=2
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '39'
+    body:
+      encoding: UTF-8
+      string: '{"question_set":[3,36,34,1,2,38,33,37]}'
+  recorded_at: Sat, 17 Dec 2022 08:37:04 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/mbti_test/question_set?set_size=3
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '52'
+    body:
+      encoding: UTF-8
+      string: '{"question_set":[29,24,43,7,1,18,38,15,48,40,50,37]}'
+  recorded_at: Sat, 17 Dec 2022 08:37:04 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/mbti_test/question_set?set_size=4
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '61'
+    body:
+      encoding: UTF-8
+      string: '{"question_set":[16,36,3,6,19,41,7,27,28,5,42,2,50,32,30,49]}'
+  recorded_at: Sat, 17 Dec 2022 08:37:04 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/mbti_test/question_set?set_size=5
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '75'
+    body:
+      encoding: UTF-8
+      string: '{"question_set":[26,21,9,16,36,11,7,17,18,25,45,28,5,10,35,47,46,50,30,39]}'
+  recorded_at: Sat, 17 Dec 2022 08:37:04 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/mbti_test/question_set?set_size=6
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '86'
+    body:
+      encoding: UTF-8
+      string: '{"question_set":[9,21,26,29,13,24,27,8,11,34,25,18,2,38,23,28,31,20,30,33,44,46,22,4]}'
+  recorded_at: Sat, 17 Dec 2022 08:37:04 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/mbti_test/question_set?set_size=7
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '98'
+    body:
+      encoding: UTF-8
+      string: '{"question_set":[3,13,21,16,36,29,24,27,25,41,19,7,17,8,12,28,20,31,15,5,23,22,30,47,14,33,50,40]}'
+  recorded_at: Sat, 17 Dec 2022 08:37:04 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/mbti_test/question_set?set_size=8
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '106'
+    body:
+      encoding: UTF-8
+      string: '{"question_set":[26,13,16,24,6,36,3,29,11,18,8,19,7,1,25,27,5,2,38,15,23,28,45,42,33,37,4,47,39,50,32,46]}'
+  recorded_at: Sat, 17 Dec 2022 08:37:04 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/mbti_test/question_set?set_size=9
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '118'
+    body:
+      encoding: UTF-8
+      string: '{"question_set":[13,36,21,3,9,16,26,6,29,41,34,1,25,27,11,19,7,8,12,23,45,28,2,15,42,20,31,14,32,37,49,22,44,47,33,4]}'
+  recorded_at: Sat, 17 Dec 2022 08:37:04 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/mbti_test/question_set?set_size=10
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '131'
+    body:
+      encoding: UTF-8
+      string: '{"question_set":[29,3,6,43,36,13,16,24,9,21,18,25,41,7,8,34,27,17,11,19,23,2,35,31,15,28,5,12,10,38,33,50,22,32,14,37,47,39,30,49]}'
+  recorded_at: Sat, 17 Dec 2022 08:37:04 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9292/api/v1/mbti_test/question_set?set_size=11
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 127.0.0.1:9292
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '142'
+    body:
+      encoding: UTF-8
+      string: '{"question_set":[26,24,6,9,21,3,16,36,29,13,43,8,27,19,1,34,11,25,7,41,18,17,42,48,23,28,35,15,20,5,31,38,10,4,14,49,22,50,32,44,33,46,30,40]}'
+  recorded_at: Sat, 17 Dec 2022 08:37:04 GMT
 recorded_with: VCR 6.1.0

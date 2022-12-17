@@ -16,6 +16,7 @@ require_relative '../../require_app'
 require_app
 
 MBTI_QUESTION_ID = Array(1..10)
+MBTI_QUESTION_SET_SIZE = Array(1..11)
 VALID_NICKNAMES = ['peter', 'Peter', 'Peter_', '_PETER', '_', 'PETERCHEN', 'peter_chen', 'peterchen999']
 INVALID_NICKNAMES = ['.', '', './']
 

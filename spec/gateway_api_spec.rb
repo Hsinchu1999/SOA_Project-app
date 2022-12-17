@@ -21,12 +21,24 @@ describe 'Tests CWB API library' do
     end
   end
 
-  describe 'mbti tests' do
+  describe 'Get single mbti question by id' do
     it 'should return mbti questions' do
       MBTI_QUESTION_ID.each do |question_id|
         question = TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config).list_mbti_question(question_id)
 
         _(question.success?).must_equal true
+      end
+    end
+  end
+
+  describe 'Get mbti question id set' do
+    it 'should return a set of mbti question ids' do
+      MBTI_QUESTION_SET_SIZE.each do |set_size|
+        question_set = TravellingSuggestions::Gateway::Api.new(
+          TravellingSuggestions::App.config
+        ).list_mbti_question_set(set_size)
+
+        _(question_set.success?).must_equal true
       end
     end
   end
