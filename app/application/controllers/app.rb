@@ -100,7 +100,7 @@ module TravellingSuggestions
           routing.post do
             session[:answered_cnt] = session[:answered_cnt] - 1
             # session[:mbti_answers].pop
-            if session[:answered_cnt].zero?
+            if session[:answered_cnt] < 1
               routing.redirect '/mbti_test/start'
             else
               routing.redirect '/mbti_test/continue'
