@@ -15,10 +15,10 @@ html
         p =question.question
       .mbti_answer 
         form role="form" action='/mbti_test/submit_answer' method='POST'
-          input type='checkbox' id='A' value='A'
+          input type='checkbox' id='A' name='A' value='A'
           label for='A' #{question.answerA}
           br
-          input type='checkbox' id='B' value='B'
+          input type='checkbox' id='B' name='B' value='B'
           label for='B' #{question.answerB}
           br
           input type='submit' value='Next'
