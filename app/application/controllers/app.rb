@@ -54,13 +54,22 @@ module TravellingSuggestions
         routing.is 'submit_answer' do
           # accepts submitted mbti answers
           routing.post do
-            answer = routing.params['score']
-            session[:mbti_answers].push(answer)
-            # puts answer
-            session[:answered_cnt] = session[:answered_cnt] + 1
-            puts session[:answered_cnt]
+            puts "in mbti_test/submit_answer"
+            puts "received routing params = #{routing.params}"
+            unless routing.params.length == 1
+              flash[:error] = 'Choose one discription that matches you'
+              routing.redirect '/mbti_test/continue'
+            end
 
-            if session[:answered_cnt] >= 4
+            answer = routing.params.keys()[0]
+            puts "answer=#{answer}"
+            # puts "answer type=#{answer.class}"
+            session[:mbti_answers][session[:answered_cnt]] = answer
+            session[:answered_cnt] = session[:answered_cnt] + 1
+            puts "session[:answered_cnt] = #{session[:answered_cnt]}"
+            puts "session[:mbti_answers] = #{session[:mbti_answers]}"
+
+            if session[:answered_cnt] >= 3
               routing.redirect '/mbti_test/last'
             else
               routing.redirect '/mbti_test/continue'
@@ -76,7 +85,7 @@ module TravellingSuggestions
         routing.is 'previous_page' do
           routing.post do
             session[:answered_cnt] = session[:answered_cnt] - 1
-            session[:mbti_answers].pop
+            # session[:mbti_answers].pop
             if session[:answered_cnt].zero?
               routing.redirect '/mbti_test/start'
             else
@@ -89,24 +98,65 @@ module TravellingSuggestions
             routing.redirect '/user'
           else
             session[:answered_cnt] = 0
-            session[:mbti_answers] = []
-            view 'mbti_test_first'
+            session[:mbti_answers] = Array.new(4, '')
+
+            result = Service::ListMBTIQuestionSet.new.call(1)
+            # puts 'got result from Service::ListMBTIQuestionSet'
+            # puts "result = #{result}"
+            # puts "result value = #{result.value!}"
+            # puts "result value type = #{result.value!.class}"
+            session[:mbti_question_set] = result.value!['question_set']
+            # puts session[:mbti_question_set]
+
+            if result.failure?
+              # puts 'failed getting mbti question set, in /mbti_test/start'
+              routing.redirect '/'
+            else
+              # puts 'success getting mbti question set, redirect to /mbti_test/continue'
+              routing.redirect '/mbti_test/continue'
+            end
+
+
+            
           end
         end
         routing.is 'continue' do
           puts 'in mbti_test/continue'
           puts session[:answered_cnt]
-          if session[:answered_cnt].nil?
-            routing.redirect '/mbti_test/start'
+          current_question_id = session[:mbti_question_set][session[:answered_cnt]]
+          # puts "current_question_id = #{current_question_id}"
+          # puts "current_question_id type = #{current_question_id.class}"
+          # view 'mbti_test_general', locals: {current_question: session[:answered_cnt] + 1}
+          result = Service::ListMBTIQuestion.new.call(current_question_id)
+
+          if result.failure?
+            puts 'failed in continue'
           else
-            view 'mbti_test_general', locals: { current_question: session[:answered_cnt] + 1 }
+            # puts 'success'
+            # puts "result.value! = #{result.value!}"
+            # puts "result.value! type = #{result.value!.class}"
+            puts result.value!.question
+            puts result.value!.answerA
+
+            viewable_mbti_question = Views::MBTIQuestion.new(result.value!)
+            # puts "viewable_mbti_question = #{viewable_mbti_question}"
+
+            view 'mbti_test_general', locals: {
+              current_question: session[:answered_cnt] + 1,
+              question: viewable_mbti_question }
+
           end
+          # if session[:answered_cnt].nil?
+          #   routing.redirect '/mbti_test/start'
+          # else
+          #   view 'mbti_test_general', locals: { current_question: session[:answered_cnt] + 1 }
+          # end
         end
 
         routing.is 'last' do
           puts 'in mbti_test/last'
           puts session[:answered_cnt]
-          if session[:answered_cnt] != 4
+          if session[:answered_cnt] != 3
             routing.redirect '/mbti_test/start'
           else
             view 'mbti_test_last'
@@ -152,14 +202,14 @@ module TravellingSuggestions
             nickname: nickname,
             mbti:
           )
-          if result.failure?
-            failed = Representer::HTTPResponse.new(result.failure)
-            routing.halt failed.http_status_code, failed.to_json
-          end
 
-          http_response = Representer::HTTPResponse.new(result.value!)
-          response.status = http_response.http_status_code
-          Representer::User.new(result.value!.message).to_json
+          if result.failure?
+            puts 'in if'
+            
+            
+          else
+            puts 'in else'
+          end
         end
 
         routing.is 'login' do
