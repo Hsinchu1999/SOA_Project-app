@@ -27,6 +27,10 @@ module TravellingSuggestions
         @request.list_mbti_question(question_id)
       end
 
+      def list_mbti_question_set(set_size)
+        @request.list_mbti_question_set(set_size)
+      end
+
       def submit_login(nickname)
         @request.submit_login(nickname)
       end
@@ -55,6 +59,11 @@ module TravellingSuggestions
         def list_mbti_question(question_id)
           params = {'question_id'=> question_id.to_s}
           call_api_get(['mbti_test', 'question'], params)
+        end
+
+        def list_mbti_question_set(set_size)
+          params = {'set_size' => set_size.to_s}
+          call_api_get(['mbti_test', 'question_set'], params)
         end
 
         def submit_login(nickname)
