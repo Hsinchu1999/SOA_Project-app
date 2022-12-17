@@ -119,7 +119,6 @@ module TravellingSuggestions
             # puts "result = #{result}"
             # puts "result value = #{result.value!}"
             # puts "result value type = #{result.value!.class}"
-            session[:mbti_question_set] = result.value!['question_set']
             # puts session[:mbti_question_set]
 
             if result.failure?
@@ -127,6 +126,8 @@ module TravellingSuggestions
               routing.redirect '/'
             else
               # puts 'success getting mbti question set, redirect to /mbti_test/continue'
+              # puts "session[:mbti_question_set] = #{result.value!}"
+              session[:mbti_question_set] = result.value!.question_set
               routing.redirect '/mbti_test/continue'
             end
 

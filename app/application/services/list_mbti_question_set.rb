@@ -26,7 +26,9 @@ module TravellingSuggestions
         puts 'in reify_mbti_question_set'
         puts input
         puts input.class
-        Success(JSON.parse(input))
+        TravellingSuggestions::Representer::MBTIQuestionSet.new(OpenStruct.new)
+          .from_json(input)
+          .then { |question_set| Success(question_set)}
       rescue StandardError
         Failure('Error in generating mbti question set, please try again')
       end
