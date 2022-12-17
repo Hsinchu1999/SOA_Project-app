@@ -130,9 +130,6 @@ module TravellingSuggestions
               session[:mbti_question_set] = result.value!.question_set
               routing.redirect '/mbti_test/continue'
             end
-
-
-            
           end
         end
 
@@ -182,8 +179,8 @@ module TravellingSuggestions
 
         routing.is 'result' do
           if session[:retry_username] == true
-            # incomplete
-            puts 'give some warning here by flash'
+            flash.now[:error] = 'Please choose another username'
+            flash.now[:notice] = "User name has to be unique, and consists of a-Z + '_'"
           end
           view 'mbti_test_result', locals: { mbti_type: session[:mbti_type] }
         end
@@ -214,19 +211,23 @@ module TravellingSuggestions
         end
 
         routing.is 'construct_profile' do
+          puts 'in construct_profile'
           nickname = routing.params['nickname']
-          mbti = routing.params['mbti']
+          mbti_type = session[:mbti_type]
+          puts "nickname = #{nickname}"
+          puts "mbti_type = #{mbti_type}"
           result = Service::AddUser.new.call(
             nickname: nickname,
-            mbti:
+            mbti_type:
           )
 
           if result.failure?
-            puts 'in if'
-            
+            session[:retry_username] = true
+            routing.redirect '/mbti_test/result'
             
           else
-            puts 'in else'
+            session[:current_user] = nickname
+            routing.redirect '/user'
           end
         end
 
@@ -260,13 +261,13 @@ module TravellingSuggestions
               flash[:notice] = 'Type correct nickname or start journey to get recommendation'
               routing.redirect '/user/login'
             else
-              puts 'in submit_login success-else'
-              puts result.value!
-              puts result.value!.class
+              # puts 'in submit_login success-else'
+              # puts result.value!
+              # puts result.value!.class
               result_hash = JSON.parse(result.value!)
-              puts result_hash['nickname']
-              puts result_hash['id']
-              puts result_hash['mbti']
+              # puts result_hash['nickname']
+              # puts result_hash['id']
+              # puts result_hash['mbti']
               # puts user
 
               session[:current_user] = result_hash['nickname']
