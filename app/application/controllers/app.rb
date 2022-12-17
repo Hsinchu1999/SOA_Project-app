@@ -3,6 +3,7 @@
 require 'roda'
 require 'slim'
 require 'slim/include'
+require 'json'
 
 Slim::Engine.set_options encoding: 'utf-8'
 
@@ -53,30 +54,42 @@ module TravellingSuggestions
         routing.is 'submit_answer' do
           # accepts submitted mbti answers
           routing.post do
-            answer = routing.params['score']
-            session[:mbti_answers].push(answer)
-            # puts answer
-            session[:answered_cnt] = session[:answered_cnt] + 1
-            puts session[:answered_cnt]
+            unless routing.params.length == 1
+              flash[:error] = 'Choose one discription that matches you'
+              routing.redirect '/mbti_test/continue'
+            end
 
-            if session[:answered_cnt] >= 4
-              routing.redirect '/mbti_test/last'
+            answer = routing.params.keys[0]
+            session[:mbti_answers][session[:answered_cnt]] = answer
+            session[:answered_cnt] = session[:answered_cnt] + 1
+
+            if session[:answered_cnt] == 4
+              routing.redirect '/mbti_test/show_result'
             else
               routing.redirect '/mbti_test/continue'
             end
           end
         end
         routing.is 'show_result' do
-          routing.post do
-            # answer = routing.params['score']
+          routing.get do
+            question_ids = session[:mbti_question_set]
+            answers = session[:mbti_answers]
+            result = Service::CalculateMBTIScore.new.call(
+              question_ids:,
+              answers:
+            )
+
+            routing.redirect '/' if result.failure?
+
+            session[:mbti_type] = result.value!.personalities
+
             routing.redirect '/mbti_test/result'
           end
         end
         routing.is 'previous_page' do
           routing.post do
             session[:answered_cnt] = session[:answered_cnt] - 1
-            session[:mbti_answers].pop
-            if session[:answered_cnt].zero?
+            if session[:answered_cnt] < 1
               routing.redirect '/mbti_test/start'
             else
               routing.redirect '/mbti_test/continue'
@@ -88,24 +101,39 @@ module TravellingSuggestions
             routing.redirect '/user'
           else
             session[:answered_cnt] = 0
-            session[:mbti_answers] = []
-            view 'mbti_test_first'
+            session[:mbti_answers] = Array.new(4, '')
+
+            result = Service::ListMBTIQuestionSet.new.call(1)
+
+            if result.failure?
+              routing.redirect '/'
+            else
+              session[:mbti_question_set] = result.value!.question_set
+              routing.redirect '/mbti_test/continue'
+            end
           end
         end
+
         routing.is 'continue' do
-          puts 'in mbti_test/continue'
-          puts session[:answered_cnt]
-          if session[:answered_cnt].nil?
-            routing.redirect '/mbti_test/start'
+          current_question_id = session[:mbti_question_set][session[:answered_cnt]]
+          result = Service::ListMBTIQuestion.new.call(current_question_id)
+
+          if result.failure?
+            routing.redirect '/'
           else
-            view 'mbti_test_general', locals: { current_question: session[:answered_cnt] + 1 }
+
+            viewable_mbti_question = Views::MBTIQuestion.new(result.value!)
+
+            view 'mbti_test_general', locals: {
+              current_question: session[:answered_cnt] + 1,
+              question: viewable_mbti_question
+            }
+
           end
         end
 
         routing.is 'last' do
-          puts 'in mbti_test/last'
-          puts session[:answered_cnt]
-          if session[:answered_cnt] != 4
+          if session[:answered_cnt] != 3
             routing.redirect '/mbti_test/start'
           else
             view 'mbti_test_last'
@@ -114,78 +142,83 @@ module TravellingSuggestions
 
         routing.is 'result' do
           if session[:retry_username] == true
-            # incomplete
-            puts 'give some warning here by flash'
+            flash.now[:error] = 'Please choose another username'
+            flash.now[:notice] = "User name has to be unique, and consists of a-Z + '_'"
           end
-          view 'mbti_test_result'
+          view 'mbti_test_result', locals: { mbti_type: session[:mbti_type] }
         end
+
         routing.is 'recommendation' do
           view 'recommendation'
         end
       end
 
       routing.on 'user' do
-        routing.is 'construct_profile' do
-          user_name = routing.params['user_name']
-          user = Repository::Users.find_name(user_name)
-          puts "new user name is #{user_name}"
-          if user
-            # incomplete
-            puts user.id
-            puts user.nickname
-            session[:retry_username] = true
-            flash[:error] = 'Nickname already in use'
-            flash[:notice] = 'Try another nickname or click personal page to login'
-            routing.redirect '/mbti_test/result'
-          else
-            # incomplete, write user mbti into db
-            Repository::Users.db_create(user_name)
-            session[:retry_username] = false
-            session[:current_user] = user_name
-            routing.redirect '/mbti_test/recommendation'
-          end
-        end
         routing.is do
-          nick_name = session[:current_user]
-          puts 'currently at /user'
-          puts nick_name
-          user = Repository::Users.find_name(nick_name)
-          puts 'user = '
-          puts user
-          if user
-            viewable_user = Views::User.new(user)
+          nickname = session[:current_user]
+          result = Service::ListUser.new.call(
+            nickname:
+          )
+
+          if result.failure?
+            routing.redirect '/user/login'
+          else
+            viewable_user = Views::User.new(JSON.parse(result.value!))
             view 'personal_page', locals: { user: viewable_user }
-          else
-            routing.redirect '/user/login' unless user
           end
         end
-        routing.is 'login' do
-          user_name = session[:current_user]
-          user = Repository::Users.find_name(user_name)
-          puts 'currently at user/login'
-          puts 'user_name = '
-          puts user_name
-          if user
+
+        routing.is 'construct_profile' do
+          nickname = routing.params['nickname']
+          mbti_type = session[:mbti_type]
+          result = Service::AddUser.new.call(
+            nickname:,
+            mbti_type:
+          )
+
+          if result.failure?
+            session[:retry_username] = true
+            routing.redirect '/mbti_test/result'
+
+          else
+            session[:current_user] = nickname
             routing.redirect '/user'
-          else
-            view 'login'
           end
         end
+
+        routing.is 'login' do
+          nickname = session[:current_user]
+          result = Service::ListUser.new.call(
+            nickname:
+          )
+
+          if result.failure?
+            view 'login'
+          else
+            routing.redirect '/user'
+          end
+        end
+
         routing.is 'submit_login' do
           routing.post do
-            nick_name = routing.params['nick_name']
-            user = Repository::Users.find_name(nick_name)
-            if user
-              session[:current_user] = user.nickname
-              routing.redirect '/user'
-            else
+            nickname = routing.params['nickname']
+            result = Service::ListUser.new.call(
+              nickname:
+            )
+
+            if result.failure?
               session[:retry_login] = true
               flash[:error] = 'Invalid Nickname'
               flash[:notice] = 'Type correct nickname or start journey to get recommendation'
               routing.redirect '/user/login'
+            else
+              result_hash = JSON.parse(result.value!)
+              session[:current_user] = result_hash['nickname']
+              routing.redirect '/user'
             end
           end
         end
+
         routing.is 'favorites' do
           nick_name = session[:current_user]
           user = Repository::Users.find_name(nick_name)

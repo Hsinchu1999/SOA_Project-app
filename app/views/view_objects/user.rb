@@ -10,20 +10,20 @@ module Views
     end
 
     def id
-      @user.id.to_s
+      @user['id'].to_s
     end
 
     def nickname
-      @user.nickname
+      @user['nickname']
     end
 
     def mbti
-      @user.mbti
+      @user['mbti']
     end
 
     def favorite_attractions
       # returns a UserFavorite Views object
-      Views::UserFavorite.new(@user.favorite_attractions)
+      # Views::UserFavorite.new(@user.favorite_attractions)
     end
   end
 end

@@ -12,27 +12,20 @@ module TravellingSuggestions
       step :reify_user
 
       def call(input)
-        if (user = TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config).list_user(input[:nickname]))
-          Success(
-            Response::ApiResult.new(
-              status: :ok,
-              message: user
-            )
-          )
-        else
-          Failure(
-            Response::ApiResult.new(
-              status: :not_found,
-              message: 'User nickname does not exist'
-            )
-          )
+        TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config)
+                                           .list_user(input[:nickname])
+                                           .then do |result|
+          result.success? ? Success(result.payload) : Failure(result.message)
         end
+      rescue StandardError
+        Failure('Could not access our API')
       end
 
       def reify_user(input)
+        puts 'in reify_user'
         TravellingSuggestions::Representer::User.new(OpenStruct.new)
-        .from_json(input)
-        .then{ |user| Success(user) }
+                                                .from_json(input)
+                                                .then { |user| Success(user) }
       rescue StandardError
         Failure('Error in listing user, please try again')
       end

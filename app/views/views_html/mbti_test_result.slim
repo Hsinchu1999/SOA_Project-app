@@ -4,7 +4,7 @@
       img src="/fox_icon.png" alt="fox"
 
     .mbti_type_container 
-      h3 ENTJ / Commander
+      h3 =mbti_type
     
     .mbti_discription_container 
       .mbti_question 
@@ -21,7 +21,7 @@
         form role="form" action="/user/construct_profile" method='POST'
           label for='user_name_input' Your Nickname
           input {
-            type='text' name='user_name'
+            type='text' name='nickname'
             id='user_name_iput'
             placeholder="e.g. Tom999"
           }
