@@ -24,9 +24,10 @@ module TravellingSuggestions
       end
 
       def check_no_use_username(input)
-        nickname = input.message[:nickname]
+        nickname = input[:nickname]
+        mbti_type = input[:mbti_type]
         
-        result = Gateway::Api.new(TravellingSuggestions::App.config).add_user(nickname)
+        result = Gateway::Api.new(TravellingSuggestions::App.config).add_user(nickname, mbti_type)
         
         result.success? ? Success(result.payload) : Failure(result.message)
       rescue StandardError
