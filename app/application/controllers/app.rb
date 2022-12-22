@@ -16,6 +16,7 @@ module TravellingSuggestions
     plugin :public, root: 'app/views/public'
     plugin :flash
     plugin :halt
+    plugin :caching
 
     route do |routing|
       routing.public
@@ -23,6 +24,7 @@ module TravellingSuggestions
 
       routing.root do
         session[:testing] = 'home'
+        response.expires 60, public: true
         view 'home'
       end
 
@@ -164,6 +166,7 @@ module TravellingSuggestions
             routing.redirect '/user/login'
           else
             viewable_user = Views::User.new(JSON.parse(result.value!))
+            response.expires 60, public: true
             view 'personal_page', locals: { user: viewable_user }
           end
         end
