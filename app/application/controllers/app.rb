@@ -16,13 +16,14 @@ module TravellingSuggestions
     plugin :public, root: 'app/views/public'
     plugin :flash
     plugin :halt
+    plugin :caching
 
     route do |routing|
       routing.public
       routing.assets
 
       routing.root do
-        session[:testing] = 'home'
+        response.expires 60, public: true
         view 'home'
       end
 
@@ -164,6 +165,7 @@ module TravellingSuggestions
             routing.redirect '/user/login'
           else
             viewable_user = Views::User.new(JSON.parse(result.value!))
+            response.expires 60, public: true
             view 'personal_page', locals: { user: viewable_user }
           end
         end
@@ -220,14 +222,7 @@ module TravellingSuggestions
         end
 
         routing.is 'favorites' do
-          nick_name = session[:current_user]
-          user = Repository::Users.find_name(nick_name)
-          if user
-            viewable_user = Views::User.new(user)
-            view 'favorites', locals: { favorite_attractions: viewable_user.favorite_attractions }
-          else
-            routing.redirect '/user/login'
-          end
+          routing.redirect '/'
         end
         routing.is 'viewed-attraction' do
           view 'viewed_attraction'
