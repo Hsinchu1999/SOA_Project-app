@@ -23,7 +23,6 @@ module TravellingSuggestions
       routing.assets
 
       routing.root do
-        session[:testing] = 'home'
         response.expires 60, public: true
         view 'home'
       end
@@ -223,14 +222,7 @@ module TravellingSuggestions
         end
 
         routing.is 'favorites' do
-          nick_name = session[:current_user]
-          user = Repository::Users.find_name(nick_name)
-          if user
-            viewable_user = Views::User.new(user)
-            view 'favorites', locals: { favorite_attractions: viewable_user.favorite_attractions }
-          else
-            routing.redirect '/user/login'
-          end
+          routing.redirect '/'
         end
         routing.is 'viewed-attraction' do
           view 'viewed_attraction'
