@@ -148,10 +148,6 @@ module TravellingSuggestions
           end
           view 'mbti_test_result', locals: { mbti_type: session[:mbti_type] }
         end
-
-        routing.is 'recommendation' do
-          view 'recommendation'
-        end
       end
 
       routing.on 'user' do
@@ -224,6 +220,42 @@ module TravellingSuggestions
         routing.is 'favorites' do
           routing.redirect '/'
         end
+
+        routing.on 'recommendation' do
+
+          routing.is 'start' do
+            session[:rc_answered_cnt] = 0
+            session[:rc_answers] = Array.new(5, '')
+            session[:rc_qeustion_set] = Array.new(5)
+            routing.redirect '/user/recommendation/continue'
+          end
+
+          routing.is 'continue' do
+            view 'recommendation'
+          end
+
+          routing.is 'submit' do
+            routing.post do
+              puts 'in /user/recommendation/submit'
+              puts routing.params
+              answer = routing.params['preference']
+              session[:rc_answers][session[:rc_answered_cnt]] = answer
+              session[:rc_answered_cnt] = session[:rc_answered_cnt] + 1
+              if session[:rc_answered_cnt] == 5
+                routing.redirect '/user/recommendation/result'
+              else
+                routing.redirect '/user/recommendation/continue'
+              end
+            end
+          end
+
+          routing.is 'result' do
+            puts 'in /user/recommendation/result'
+            puts session[:rc_answers]
+            routing.redirect '/'
+          end
+        end
+
         routing.is 'viewed-attraction' do
           view 'viewed_attraction'
         end
