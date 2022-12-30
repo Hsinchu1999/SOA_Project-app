@@ -31,6 +31,14 @@ module TravellingSuggestions
         @request.list_mbti_question_set(set_size)
       end
 
+      def list_attraction(attraction_id)
+        @request.list_attraction(attraction_id)
+      end
+
+      def list_attraction_set(set_size)
+        @request.list_attraction_set(set_size)
+      end
+
       def calculate_mbti_score(question_ids, answers)
         question_ids_str = question_ids.map(&:to_s)
         @request.calculate_mbti_score(question_ids_str, answers)
@@ -69,6 +77,16 @@ module TravellingSuggestions
         def list_mbti_question_set(set_size)
           params = { 'set_size' => set_size.to_s }
           call_api_get(%w[mbti_test question_set], params)
+        end
+
+        def list_attraction(question_id)
+          params = { 'id' => question_id.to_s }
+          call_api_get(%w[recommendation attraction], params)
+        end
+
+        def list_attraction_set(set_size)
+          params = { 'set_size' => set_size.to_s }
+          call_api_get(%w[recommendation attraction_set], params)
         end
 
         def calculate_mbti_score(question_ids, answers)
