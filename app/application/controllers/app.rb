@@ -241,6 +241,7 @@ module TravellingSuggestions
               answer = routing.params['preference']
               session[:rc_answers][session[:rc_answered_cnt]] = answer
               session[:rc_answered_cnt] = session[:rc_answered_cnt] + 1
+
               if session[:rc_answered_cnt] == 5
                 routing.redirect '/user/recommendation/result'
               else
@@ -252,7 +253,15 @@ module TravellingSuggestions
           routing.is 'result' do
             puts 'in /user/recommendation/result'
             puts session[:rc_answers]
-            routing.redirect '/'
+            nickname = session[:current_user]
+            attraction_ids = session[:rc_qeustion_set]
+            answers = session[:rc_answers]
+            result = Service::UpdateUserFavorite.new.call(
+              nickname, attraction_ids, answers
+            )
+
+            routing.redirect '/' if result.failure?
+            routing.redirect '/user'
           end
         end
 
