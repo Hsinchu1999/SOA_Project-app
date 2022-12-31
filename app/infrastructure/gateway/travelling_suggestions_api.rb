@@ -39,6 +39,11 @@ module TravellingSuggestions
         @request.list_attraction_set(set_size)
       end
 
+      def update_user_favorite(nickname, attraction_ids, answers)
+        attraction_ids_str = attraction_ids.map(&:to_s)
+        @request.update_user_favorite(nickname, attraction_ids_str, answers)
+      end
+
       def calculate_mbti_score(question_ids, answers)
         question_ids_str = question_ids.map(&:to_s)
         @request.calculate_mbti_score(question_ids_str, answers)
@@ -87,6 +92,15 @@ module TravellingSuggestions
         def list_attraction_set(set_size)
           params = { 'set_size' => set_size.to_s }
           call_api_get(%w[recommendation attraction_set], params)
+        end
+
+        def update_user_favorite(nickname, attraction_ids, answers)
+          params = {}
+          params['nickname'] = nickname
+          attraction_ids.each_with_index do |attraction_id, index|
+            params[attraction_id] = answers[index]
+          end
+          call_api_get(%w[recommendation result], params)
         end
 
         def calculate_mbti_score(question_ids, answers)
