@@ -8,10 +8,10 @@ module TravellingSuggestions
     class ListUser
       include Dry::Transaction
 
-      step :call
+      step :call_api
       step :reify_user
 
-      def call(input)
+      def call_api(input)
         TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config)
                                            .list_user(input[:nickname])
                                            .then do |result|
