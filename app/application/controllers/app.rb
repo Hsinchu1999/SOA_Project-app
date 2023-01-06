@@ -250,7 +250,22 @@ module TravellingSuggestions
           end
 
           routing.is 'continue' do
-            view 'recommendation'
+            puts session[:rc_qeustion_set]
+
+
+            current_question_id = session[:rc_qeustion_set][session[:rc_answered_cnt]]
+            result = Service::ListAttraction.new.call(current_question_id)
+
+            if result.failure?
+              routing.redirect '/'
+            else
+
+              viewable_attraction = Views::Attraction.new(result.value!)
+
+              puts "viewable_attraction=#{viewable_attraction}"
+              view 'recommendation', locals: { attraction: viewable_attraction }
+            end
+
           end
 
           routing.is 'submit' do
