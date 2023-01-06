@@ -10,7 +10,7 @@ module TravellingSuggestions
 
       def call(nickname, attraction_ids, answers)
         Gateway::Api.new(TravellingSuggestions::App.config)
-                    .update_user_favorite(attraction_id)
+                    .update_user_favorite(nickname, attraction_ids, answers)
                     .then do |result|
           result.success? ? Success(result.payload) : Failure(result.message)
         end
