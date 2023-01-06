@@ -23,6 +23,10 @@ module TravellingSuggestions
         @request.list_user(nickname)
       end
 
+      def list_user_favorites(nickname)
+        @request.list_user_favorites(nickname)
+      end
+
       def list_mbti_question(question_id)
         @request.list_mbti_question(question_id)
       end
@@ -72,6 +76,11 @@ module TravellingSuggestions
         def list_user(nickname)
           params = { 'nickname' => nickname }
           call_api_get(['user'], params)
+        end
+
+        def list_user_favorites(nickname)
+          params = { 'nickname' => nickname }
+          call_api_get(['user', 'favorites'], params)
         end
 
         def list_mbti_question(question_id)
