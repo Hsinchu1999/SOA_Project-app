@@ -160,7 +160,7 @@ module TravellingSuggestions
           if result.failure?
             routing.redirect '/user/login'
           else
-            viewable_user = Views::User.new(JSON.parse(result.value!))
+            viewable_user = Views::User.new(result.value!)
             response.expires 60, public: true
             view 'personal_page', locals: { user: viewable_user }
           end
