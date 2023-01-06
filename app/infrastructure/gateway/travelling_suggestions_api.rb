@@ -85,7 +85,7 @@ module TravellingSuggestions
         end
 
         def list_attraction(question_id)
-          params = { 'id' => question_id.to_s }
+          params = { 'attraction_id' => question_id.to_s }
           call_api_get(%w[recommendation attraction], params)
         end
 
