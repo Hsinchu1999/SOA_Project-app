@@ -10,15 +10,15 @@ module Views
     end
 
     def id
-      @user['id'].to_s
+      @user.id.to_s
     end
 
     def nickname
-      @user['nickname']
+      @user.nickname
     end
 
     def mbti
-      @user['mbti']
+      @user.mbti
     end
 
     def favorite_attractions
