@@ -6,9 +6,11 @@
     .card_container
       .attraction_card
         .attraction_card.attraction_name
-          p Attraction A
+          p =attraction.name
+        .attraction_card.attraction_type
+          p =attraction.type
         .attraction_card.attraction_discription
-          p Attraction Discription
+          p =attraction.notes
         .attraction_weather
           p Attraction Weather
         form role="form" action="/user/recommendation/submit" method='Post'
