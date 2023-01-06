@@ -35,8 +35,8 @@ module TravellingSuggestions
         @request.list_attraction(attraction_id)
       end
 
-      def list_attraction_set(set_size)
-        @request.list_attraction_set(set_size)
+      def list_attraction_set(set_size, mbti)
+        @request.list_attraction_set(set_size, mbti)
       end
 
       def update_user_favorite(nickname, attraction_ids, answers)
@@ -89,17 +89,19 @@ module TravellingSuggestions
           call_api_get(%w[recommendation attraction], params)
         end
 
-        def list_attraction_set(set_size)
-          params = { 'set_size' => set_size.to_s }
+        def list_attraction_set(set_size, mbti)
+          params = { 'set_size' => set_size.to_s, 'mbti' => mbti}
           call_api_get(%w[recommendation attraction_set], params)
         end
 
         def update_user_favorite(nickname, attraction_ids, answers)
+          puts "in Request.update_user_favorite"
           params = {}
           params['nickname'] = nickname
           attraction_ids.each_with_index do |attraction_id, index|
             params[attraction_id] = answers[index]
           end
+          puts params
           call_api_get(%w[recommendation result], params)
         end
 
