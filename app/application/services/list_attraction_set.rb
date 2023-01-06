@@ -12,9 +12,11 @@ module TravellingSuggestions
       step :call_api
       step :reify_attraction_set
 
-      def call_api(set_size)
+      def call_api(input)
+        set_size = input[:set_size]
+        mbti = input[:mbti]
         Gateway::Api.new(TravellingSuggestions::App.config)
-                    .list_attraction_set(set_size)
+                    .list_attraction_set(set_size, mbti)
                     .then do |result|
           result.success? ? Success(result.payload) : Failure(result.message)
         end
