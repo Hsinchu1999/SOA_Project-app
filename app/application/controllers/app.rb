@@ -226,7 +226,26 @@ module TravellingSuggestions
           routing.is 'start' do
             session[:rc_answered_cnt] = 0
             session[:rc_answers] = Array.new(5, '')
-            session[:rc_qeustion_set] = Array.new(5)
+
+            nickname = session[:current_user]
+            result = Service::ListUser.new.call(
+              nickname:
+            )
+
+            if result.failure?
+              routing.redirect '/'
+            end
+
+            mbti = result.value!.mbti
+            result = Service::ListAttractionSet.new.call(
+              mbti: mbti, set_size: 5
+            )
+
+            if result.failure?
+              routing.redirect '/'
+            end
+
+            session[:rc_qeustion_set] = result.value!.attraction_set
             routing.redirect '/user/recommendation/continue'
           end
 
