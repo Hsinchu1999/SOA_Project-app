@@ -210,15 +210,23 @@ module TravellingSuggestions
               flash[:notice] = 'Type correct nickname or start journey to get recommendation'
               routing.redirect '/user/login'
             else
-              result_hash = JSON.parse(result.value!)
-              session[:current_user] = result_hash['nickname']
+              session[:current_user] = result.value!.nickname
               routing.redirect '/user'
             end
           end
         end
 
         routing.is 'favorites' do
-          routing.redirect '/'
+          nickname = session[:current_user]
+          result = Service::ListUserFavorites.new.call(
+            nickname:
+          )
+
+          if result.failure?
+            routing.redirect '/'
+          end
+          favorites_list = result.value!.favorites_list
+          view 'favorites', locals: { favorite_attractions: favorites_list }
         end
 
         routing.on 'recommendation' do
