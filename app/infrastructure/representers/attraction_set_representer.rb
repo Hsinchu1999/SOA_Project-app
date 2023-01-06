@@ -1,16 +1,15 @@
 # frozen_string_literal: true
 
+require 'roar/decorator'
+require 'roar/json'
+
 module TravellingSuggestions
   module Representer
     # Representer for a set of Attractions
-    class AttractionSet
-      def initialize(attraction_ids)
-        @attraction_ids = attraction_ids
-      end
+    class AttractionSet < Roar::Decorator
+      include Roar::JSON
 
-      def to_json(*_args)
-        { attraction_set: @attraction_ids }.to_json
-      end
+      property :attraction_set
     end
   end
 end
