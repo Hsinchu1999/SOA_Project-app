@@ -8,26 +8,18 @@ module TravellingSuggestions
     class ListUserFavorites
       include Dry::Transaction
 
-      step :call
+      step :call_api
       step :reify_user_favorites
 
-      def call(input)
-        if (user = TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config).list_user(input[:nickname]))
-          puts 'success'
-          Success(
-            Response::ApiResult.new(
-              status: :ok,
-              message: user.favorite_attractions
-            )
-          )
-        else
-          Failure(
-            Response::ApiResult.new(
-              status: :not_found,
-              message: 'User nickname does not exist'
-            )
-          )
+      def call_api(input)
+        nickname = input[:nickname]
+        TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config)
+          .list_user_favorites(nickname)
+          .then do |result|
+            result.success? ? Success(result.payload) : Failure(result.message)
         end
+      rescue
+        Failure('Could not access our Api for user favorites')
       end
 
       def reify_user_favorites(input)
