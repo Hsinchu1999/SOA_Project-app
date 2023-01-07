@@ -23,12 +23,29 @@ module TravellingSuggestions
         @request.list_user(nickname)
       end
 
+      def list_user_favorites(nickname)
+        @request.list_user_favorites(nickname)
+      end
+
       def list_mbti_question(question_id)
         @request.list_mbti_question(question_id)
       end
 
       def list_mbti_question_set(set_size)
         @request.list_mbti_question_set(set_size)
+      end
+
+      def list_attraction(attraction_id)
+        @request.list_attraction(attraction_id)
+      end
+
+      def list_attraction_set(set_size, mbti)
+        @request.list_attraction_set(set_size, mbti)
+      end
+
+      def update_user_favorite(nickname, attraction_ids, answers)
+        attraction_ids_str = attraction_ids.map(&:to_s)
+        @request.update_user_favorite(nickname, attraction_ids_str, answers)
       end
 
       def calculate_mbti_score(question_ids, answers)
@@ -61,6 +78,11 @@ module TravellingSuggestions
           call_api_get(['user'], params)
         end
 
+        def list_user_favorites(nickname)
+          params = { 'nickname' => nickname }
+          call_api_get(['user', 'favorites'], params)
+        end
+
         def list_mbti_question(question_id)
           params = { 'question_id' => question_id.to_s }
           call_api_get(%w[mbti_test question], params)
@@ -69,6 +91,27 @@ module TravellingSuggestions
         def list_mbti_question_set(set_size)
           params = { 'set_size' => set_size.to_s }
           call_api_get(%w[mbti_test question_set], params)
+        end
+
+        def list_attraction(question_id)
+          params = { 'attraction_id' => question_id.to_s }
+          call_api_get(%w[recommendation attraction], params)
+        end
+
+        def list_attraction_set(set_size, mbti)
+          params = { 'set_size' => set_size.to_s, 'mbti' => mbti}
+          call_api_get(%w[recommendation attraction_set], params)
+        end
+
+        def update_user_favorite(nickname, attraction_ids, answers)
+          puts "in Request.update_user_favorite"
+          params = {}
+          params['nickname'] = nickname
+          attraction_ids.each_with_index do |attraction_id, index|
+            params[attraction_id] = answers[index]
+          end
+          puts params
+          call_api_get(%w[recommendation result], params)
         end
 
         def calculate_mbti_score(question_ids, answers)

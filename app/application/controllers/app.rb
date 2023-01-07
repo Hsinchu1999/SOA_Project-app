@@ -148,10 +148,6 @@ module TravellingSuggestions
           end
           view 'mbti_test_result', locals: { mbti_type: session[:mbti_type] }
         end
-
-        routing.is 'recommendation' do
-          view 'recommendation'
-        end
       end
 
       routing.on 'user' do
@@ -164,7 +160,7 @@ module TravellingSuggestions
           if result.failure?
             routing.redirect '/user/login'
           else
-            viewable_user = Views::User.new(JSON.parse(result.value!))
+            viewable_user = Views::User.new(result.value!)
             response.expires 60, public: true
             view 'personal_page', locals: { user: viewable_user }
           end
@@ -214,16 +210,103 @@ module TravellingSuggestions
               flash[:notice] = 'Type correct nickname or start journey to get recommendation'
               routing.redirect '/user/login'
             else
-              result_hash = JSON.parse(result.value!)
-              session[:current_user] = result_hash['nickname']
+              session[:current_user] = result.value!.nickname
               routing.redirect '/user'
             end
           end
         end
 
         routing.is 'favorites' do
-          routing.redirect '/'
+          nickname = session[:current_user]
+          result = Service::ListUserFavorites.new.call(
+            nickname:
+          )
+
+          if result.failure?
+            routing.redirect '/'
+          end
+          favorites_list = result.value!.favorites_list
+          view 'favorites', locals: { favorite_attractions: favorites_list }
         end
+
+        routing.on 'recommendation' do
+
+          routing.is 'start' do
+            session[:rc_answered_cnt] = 0
+            session[:rc_answers] = Array.new(5, '')
+
+            nickname = session[:current_user]
+            result = Service::ListUser.new.call(
+              nickname:
+            )
+
+            if result.failure?
+              routing.redirect '/'
+            end
+
+            mbti = result.value!.mbti
+            result = Service::ListAttractionSet.new.call(
+              mbti: mbti, set_size: 5
+            )
+
+            if result.failure?
+              routing.redirect '/'
+            end
+
+            session[:rc_qeustion_set] = result.value!.attraction_set
+            routing.redirect '/user/recommendation/continue'
+          end
+
+          routing.is 'continue' do
+            puts session[:rc_qeustion_set]
+
+
+            current_question_id = session[:rc_qeustion_set][session[:rc_answered_cnt]]
+            result = Service::ListAttraction.new.call(current_question_id)
+
+            if result.failure?
+              routing.redirect '/'
+            else
+
+              viewable_attraction = Views::Attraction.new(result.value!)
+
+              puts "viewable_attraction=#{viewable_attraction}"
+              view 'recommendation', locals: { attraction: viewable_attraction }
+            end
+
+          end
+
+          routing.is 'submit' do
+            routing.post do
+              puts 'in /user/recommendation/submit'
+              puts routing.params
+              answer = routing.params['preference']
+              session[:rc_answers][session[:rc_answered_cnt]] = answer
+              session[:rc_answered_cnt] = session[:rc_answered_cnt] + 1
+
+              if session[:rc_answered_cnt] == 5
+                routing.redirect '/user/recommendation/result'
+              else
+                routing.redirect '/user/recommendation/continue'
+              end
+            end
+          end
+
+          routing.is 'result' do
+            puts 'in /user/recommendation/result'
+            puts session[:rc_answers]
+            nickname = session[:current_user]
+            attraction_ids = session[:rc_qeustion_set]
+            answers = session[:rc_answers]
+            result = Service::UpdateUserFavorite.new.call(
+              nickname, attraction_ids, answers
+            )
+
+            routing.redirect '/' if result.failure?
+            routing.redirect '/user'
+          end
+        end
+
         routing.is 'viewed-attraction' do
           view 'viewed_attraction'
         end
