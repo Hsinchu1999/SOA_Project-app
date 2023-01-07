@@ -9,6 +9,10 @@ module Views
       @attraction = attraction
     end
 
+    def name
+      @attraction.name
+    end
+
     def added_time
       @attraction.added_time
     end

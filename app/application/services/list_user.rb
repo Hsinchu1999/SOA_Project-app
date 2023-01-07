@@ -6,14 +6,28 @@ module TravellingSuggestions
   module Service
     # A Service object for validating Entity::User object from db
     class ListUser
-      include Dry::Monads::Result::Mixin
+      include Dry::Transaction
 
-      def call(_input)
-        if (user = Repository::ForUser.klass(Entity::User).find_name(nick_name))
-          Success(user)
-        else
-          Failure('Could not access database')
+      step :call_api
+      step :reify_user
+
+      def call_api(input)
+        TravellingSuggestions::Gateway::Api.new(TravellingSuggestions::App.config)
+                                           .list_user(input[:nickname])
+                                           .then do |result|
+          result.success? ? Success(result.payload) : Failure(result.message)
         end
+      rescue StandardError
+        Failure('Could not access our API')
+      end
+
+      def reify_user(input)
+        puts 'in reify_user'
+        TravellingSuggestions::Representer::User.new(OpenStruct.new)
+                                                .from_json(input)
+                                                .then { |user| Success(user) }
+      rescue StandardError
+        Failure('Error in listing user, please try again')
       end
     end
   end

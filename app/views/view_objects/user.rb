@@ -23,7 +23,7 @@ module Views
 
     def favorite_attractions
       # returns a UserFavorite Views object
-      Views::UserFavorite.new(@user.favorite_attractions)
+      # Views::UserFavorite.new(@user.favorite_attractions)
     end
   end
 end
