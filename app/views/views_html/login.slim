@@ -2,8 +2,12 @@
   .container 
     h4 User login
 
+  .button_container
   form role='form' action='/user/submit_login' method='POST' class='login'
     label for='nickname' Nick Name
     input type='text' id='nickname' name='nickname'
     input type='submit' value='Login' placeholder='e.g. tom999'
 
+  .button_container
+    form role="form" action="/mbti_test/start"
+      button name="go_to_mbti_test" type="submit" start journey
