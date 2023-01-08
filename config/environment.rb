@@ -24,8 +24,8 @@ module TravellingSuggestions
       end
       use Rack::Session::Cookie, secret: config.SESSION_SECRET
       CWB_TOKEN = config.CWB_TOKEN
-      DB = Sequel.connect(ENV.fetch('DATABASE_URL'))
-      def self.DB = DB
+      # DB = Sequel.connect(ENV.fetch('DATABASE_URL'))
+      # def self.DB = DB
     end
   end
 end
