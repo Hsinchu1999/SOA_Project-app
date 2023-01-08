@@ -99,7 +99,7 @@ module TravellingSuggestions
         end
         routing.is 'start' do
           if session[:current_user]
-            routing.redirect '/user'
+            routing.redirect '/user/recommendation/start'
           else
             session[:answered_cnt] = 0
             session[:mbti_answers] = Array.new(4, '')
@@ -180,7 +180,7 @@ module TravellingSuggestions
 
           else
             session[:current_user] = nickname
-            routing.redirect '/user'
+            routing.redirect '/user/recommendation/start'
           end
         end
 
