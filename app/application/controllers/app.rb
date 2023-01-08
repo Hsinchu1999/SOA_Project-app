@@ -180,7 +180,7 @@ module TravellingSuggestions
 
           else
             session[:current_user] = nickname
-            routing.redirect '/user'
+            routing.redirect '/user/recommendation/start'
           end
         end
 
