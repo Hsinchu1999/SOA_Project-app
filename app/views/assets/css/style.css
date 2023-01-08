@@ -12,3 +12,13 @@ ul.weather {
   list-style: none;
   line-height: 0.5;
 }
+
+div.mbti_icon_container {
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+}
+
+img {
+  width: 90%;
+}
